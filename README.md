@@ -36,7 +36,7 @@ Patches and instructions will be added here once a build is ready for public tes
 
 ## What is Jessie & James Edition?
 
-MrNightology's *Pokémon Team Rocket: Jessie & James Edition* is a complete, original Team Rocket adventure where you play as James alongside Jessie and Meowth. After yet another failed attempt to steal Pikachu, Giovanni calls the trio back to Kanto and gives them a different job. You'll be stealing Pokémon and items, investigating locations and interfering with other people's plans. All the things Team Rocket is supposed to be doing, really.
+Originally released in Spanish, MrNightology's *Pokémon Team Rocket: Jessie & James Edition* is a complete, original Team Rocket adventure where you play as James alongside Jessie and Meowth. After yet another failed attempt to steal Pikachu, Giovanni calls the trio back to Kanto and gives them a different job. You'll be stealing Pokémon and items, investigating locations and interfering with other people's plans. All the things Team Rocket is supposed to be doing, really.
 
 The game takes you through **Kanto and Johto**, with the **Battle Subway**, shop robberies, a Black/White-style Repel system, a day/night cycle, different wild Pokémon music for each region and puzzles in the **Ruins of Alph**. It also features dynamic overworld palettes and healing locations, expanded overworld sprite and music tables, additional trainer encounter themes and VS bars.
 

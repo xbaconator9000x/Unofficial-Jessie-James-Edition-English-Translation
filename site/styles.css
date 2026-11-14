@@ -8,6 +8,7 @@
   --red: #d41d32;
   --muted: #bababa;
   --width: 780px;
+  --r-icon: url("https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg");
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 16px; }
@@ -15,7 +16,7 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--white);
-  font: 16px/1.6 Verdana, Arial, sans-serif;
+  font: 19px/1.48 "PixelOperatorRegular", "Pixel Operator", monospace;
 }
 a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 a:hover { color: #ff6b7b; }
@@ -42,23 +43,23 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
   color: white;
   padding: 5px 16px 6px;
   margin: -3px auto 15px;
-  font: bold 12px/1.4 "Courier New", monospace;
+  font: bold 17px/1.3 "PixelOperatorMonoBold", "PixelOperatorRegular", monospace;
   letter-spacing: .12em;
 }
 .game-title h1 {
   margin: 0;
   color: var(--white);
-  font: bold clamp(25px, 5.5vw, 39px)/1.25 "Courier New", monospace;
+  font: bold clamp(30px, 5.5vw, 44px)/1.15 "PixelOperatorMonoBold", "PixelOperatorRegular", monospace;
   text-transform: uppercase;
 }
 .game-title h1 span { color: #ff5366; }
 .game-title p {
   margin: 13px 0 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 .version {
-  font: bold 11px/1.7 "Courier New", monospace;
+  font: bold 15px/1.5 "PixelOperatorRegular", monospace;
   color: var(--muted);
   margin: 11px 0 0;
 }
@@ -73,12 +74,18 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
   padding: 10px 6px;
   text-align: center;
   text-decoration: none;
-  font: bold 12px/1.3 "Courier New", monospace;
+  font: bold 17px/1.25 "PixelOperatorRegular", monospace;
   background: var(--black);
 }
 .main-menu a:hover, .main-menu a:focus-visible { background: var(--red); color: white; }
-.arrow { color: var(--red); font-size: 10px; }
-.main-menu a:hover .arrow { color: white; }
+.arrow {
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  background: var(--r-icon) center / contain no-repeat;
+  vertical-align: -3px;
+  margin-right: 5px;
+}
 .window {
   margin: 0 0 27px;
   border: 3px solid var(--white);
@@ -91,22 +98,30 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
   padding: 10px 17px;
   border-bottom: 3px solid var(--white);
   background: var(--red);
-  font: bold 19px/1.3 "Courier New", monospace;
+  font: bold 25px/1.25 "PixelOperatorMonoBold", "PixelOperatorRegular", monospace;
 }
 .window-body { padding: 21px 24px 24px; }
 .window-body h3 {
   margin: 24px 0 12px;
   padding-left: 12px;
   border-left: 5px solid var(--red);
-  font: bold 18px/1.4 "Courier New", monospace;
+  font: bold 24px/1.3 "PixelOperatorMonoBold", "PixelOperatorRegular", monospace;
 }
 p { margin: 0 0 15px; }
 p:last-child { margin-bottom: 0; }
 em { font-style: italic; }
 strong { color: white; }
-.plain-list { padding-left: 22px; margin: 10px 0 18px; }
-.plain-list li { padding: 0 0 8px 4px; }
-.plain-list li::marker { color: #ff5366; content: "▶  "; font-size: 11px; }
+.plain-list { list-style: none; padding-left: 0; margin: 10px 0 18px; }
+.plain-list li { position: relative; padding: 0 0 9px 27px; }
+.plain-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .39em;
+  width: 15px;
+  height: 15px;
+  background: var(--r-icon) center / contain no-repeat;
+}
 .link-line { margin-top: 19px; font-weight: bold; }
 .link-line a { color: #ff6779; }
 .screenshot { margin: 20px 0; }
@@ -114,7 +129,7 @@ strong { color: white; }
 .screenshot a:hover { border-color: var(--red); }
 .screenshot img { width: 100%; height: auto; object-fit: contain; display: block; }
 .screenshot figcaption {
-  font: bold 12px/1.6 "Courier New", monospace;
+  font: bold 16px/1.4 "PixelOperatorRegular", monospace;
   color: var(--muted);
   padding-top: 7px;
 }
@@ -125,7 +140,7 @@ strong { color: white; }
   border: 2px solid white;
   background: var(--red);
   color: white;
-  font: bold 14px/1.45 "Courier New", monospace;
+  font: bold 18px/1.4 "PixelOperatorRegular", monospace;
   text-decoration: none;
 }
 .menu-button:hover { color: white; background: #aa1428; }
@@ -141,20 +156,53 @@ strong { color: white; }
   border-top: 1px solid #555;
   padding-top: 17px;
   margin-top: 25px;
-  font: bold 13px "Courier New", monospace;
+  font: bold 18px "PixelOperatorRegular", monospace;
   letter-spacing: .12em;
 }
 .end-mark span { color: var(--red); font-size: 24px; }
 @media (max-width: 620px) {
-  body { font-size: 14px; line-height: 1.65; }
+  body { font-size: 18px; line-height: 1.43; }
   .masthead { padding-top: 26px; }
   .rocket-r { width: 97px; height: 97px; margin-bottom: 20px; }
   .main-menu { grid-template-columns: repeat(2, 1fr); }
-  .main-menu a { font-size: 12px; }
-  .window h2 { font-size: 17px; padding: 10px 12px; }
+  .main-menu a { font-size: 16px; }
+  .window h2 { font-size: 23px; padding: 10px 12px; }
   .window-body { padding: 16px; }
   .plain-list { padding-left: 19px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* Music stays off until the visitor chooses Play. */
+.music-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.music-strip button {
+  cursor: pointer;
+  border: 2px solid var(--white);
+  background: var(--black);
+  color: var(--white);
+  padding: 7px 15px;
+  font: bold 17px/1.3 "PixelOperatorRegular", monospace;
+}
+.music-strip button:hover, .music-strip button[aria-pressed="true"] {
+  background: var(--red);
+}
+.music-strip button:disabled { opacity: .55; cursor: wait; }
+.link-line a::before, .menu-button::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: -2px;
+  background: var(--r-icon) center / contain no-repeat;
 }

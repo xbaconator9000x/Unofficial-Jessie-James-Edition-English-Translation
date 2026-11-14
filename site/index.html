@@ -7,7 +7,9 @@
   <meta name="description" content="Pokémon Team Rocket: Jessie & James Edition v1.1, unofficial English translation of MrNightology's original Spanish game.">
   <title>Team Rocket: Jessie & James Edition | English Translation</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fontlibrary.org//face/pixel-operator" type="text/css">
   <link rel="stylesheet" href="styles.css">
+  <script src="player.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -24,11 +26,16 @@
       <p class="version">Original Spanish game by MrNightology &nbsp;|&nbsp; v1.1</p>
     </header>
 
+    <div class="music-strip" role="group" aria-label="Title music">
+      <button type="button" id="music-toggle" aria-pressed="false">♪ Play theme</button>
+      <span id="music-status" role="status">GM preview. Intro once, then loop.</span>
+    </div>
+
     <nav class="main-menu" aria-label="Website menu">
-      <a href="#story"><span class="arrow">▶</span> The game</a>
-      <a href="#translation"><span class="arrow">▶</span> English edition</a>
-      <a href="#screenshots"><span class="arrow">▶</span> Screenshots</a>
-      <a href="#report"><span class="arrow">▶</span> Report a bug</a>
+      <a href="#story"><span class="arrow" aria-hidden="true"></span> The game</a>
+      <a href="#translation"><span class="arrow" aria-hidden="true"></span> English edition</a>
+      <a href="#screenshots"><span class="arrow" aria-hidden="true"></span> Screenshots</a>
+      <a href="#report"><span class="arrow" aria-hidden="true"></span> Report a bug</a>
     </nav>
 
     <main id="content">
@@ -46,7 +53,7 @@
             <li>Region-specific wild Pokémon music and more trainer themes</li>
             <li>Expanded overworld and music tables, dynamic healing locations and VS bars</li>
           </ul>
-          <p class="link-line"><a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">▶ View the original Spanish release</a></p>
+          <p class="link-line"><a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">View the original Spanish release</a></p>
         </div>
       </section>
 
@@ -67,22 +74,22 @@
       </section>
 
       <section class="window" id="screenshots">
-        <h2>Screenshots</h2>
+        <h2>Original Spanish screenshots</h2>
         <div class="window-body">
-          <p>From MrNightology's original Spanish release, not the English translation.</p>
+          <p>These are screenshots from MrNightology's original Spanish version, not the English translation.</p>
           <figure class="screenshot">
             <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">
               <img src="https://i.imgur.com/dzyKZbR.png" alt="Original Spanish gameplay screenshots" loading="lazy">
             </a>
-            <figcaption>Original gameplay gallery</figcaption>
+            <figcaption>Original Spanish gameplay screenshots</figcaption>
           </figure>
           <figure class="screenshot">
             <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">
               <img src="https://i.imgur.com/XZrC1aW.png" alt="Kanto and Johto Battle Subway map" loading="lazy">
             </a>
-            <figcaption>Battle Subway map</figcaption>
+            <figcaption>Original Spanish release -- Battle Subway map</figcaption>
           </figure>
-          <p class="small">If the images don't load, they're also on the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original game page</a>.</p>
+          <p class="small">Images are from the original Spanish release. They may not reflect changes in this English translation. See the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original game page</a>.</p>
         </div>
       </section>
 
@@ -91,7 +98,7 @@
         <div class="window-body">
           <p>Testing is still ongoing. There's a lot of conditional dialogue and one-off events, so there may still be untranslated lines, odd wording, text errors or bugs that only show up under certain conditions.</p>
           <p>If you find something, send it through. Screenshots or a short video help, especially if you can include the location, emulator, patch version and how to reproduce it.</p>
-          <p><a class="menu-button" href="https://tally.so/r/M1N2oE" target="_blank" rel="noopener noreferrer">▶ Submit a private bug report</a></p>
+          <p><a class="menu-button" href="https://tally.so/r/M1N2oE" target="_blank" rel="noopener noreferrer">Submit a private bug report</a></p>
           <p class="small">No sign-in or personal details needed. Reports and attachments aren't public. Please don't upload ROMs or patches.</p>
         </div>
       </section>
@@ -100,7 +107,7 @@
         <h2>Releases</h2>
         <div class="window-body">
           <p>Patches and instructions will be added to GitHub when a build is ready for public testing. No pre-patched ROMs.</p>
-          <p class="link-line"><a href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">▶ GitHub repository</a></p>
+          <p class="link-line"><a href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
         </div>
       </section>
     </main>

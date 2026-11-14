@@ -3,192 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#08090d">
-  <meta name="description" content="Unofficial English fan translation of MrNightology's Pokémon Team Rocket: Jessie & James Edition v1.1.">
-  <meta property="og:title" content="Team Rocket: Jessie & James Edition | English Translation">
-  <meta property="og:description" content="An original Team Rocket adventure. Now in English.">
-  <title>Jessie & James Edition | Unofficial English Translation</title>
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Pokémon Team Rocket: Jessie & James Edition v1.1, unofficial English translation of MrNightology's original Spanish game.">
+  <title>Team Rocket: Jessie & James Edition | English Translation</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" type="image/svg+xml">
-  <style>
-:root{color-scheme:dark;--bg:#09090d;--surface:#14151b;--surface2:#1b1a21;--red:#e92742;--red2:#a7192e;--text:#f6f3f2;--muted:#bab0b6;--line:#393037;--w:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid #ff8ba0;outline-offset:4px}img{display:block;max-width:100%}.wrap{width:min(calc(100% - 48px),var(--w));margin-inline:auto}
-.skip{position:absolute;top:-100px;left:14px;padding:12px;background:white;color:black;z-index:10}.skip:focus{top:14px}
-.topbar{height:5px;background:repeating-linear-gradient(115deg,var(--red) 0 55px,#881525 55px 70px,#111015 70px 95px)}
-header{position:sticky;top:0;z-index:9;background:rgba(9,9,13,.94);border-bottom:1px solid #332a31;backdrop-filter:blur(13px)}
-nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:15px;letter-spacing:.08em;font-weight:900}
-.brand img{height:31px;width:33px;object-fit:contain}.brand b{color:var(--red)}
-.links{display:flex;align-items:center;gap:26px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#c8bfc5}
-.links a:hover,footer a:hover{color:#ff637b}
-.repo{font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:900;border:1px solid #5a4550;padding:10px 15px;white-space:nowrap}.repo:hover{border-color:var(--red)}
-.hero{position:relative;overflow:hidden;border-bottom:1px solid #3d2a32;background:radial-gradient(ellipse at 78% 38%,#52101e 0%,transparent 43%),linear-gradient(135deg,#111116,#09090c)}
-.hero:before{content:"";position:absolute;inset:0;opacity:.085;background-image:linear-gradient(90deg,white 1px,transparent 1px),linear-gradient(white 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent 5%,black 100%)}
-.hero-inner{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center;padding:84px 0 99px;min-height:630px}
-.kicker,.section-no,.micro,.index,.footer-bottom{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.13em;font-weight:800}
-.kicker{color:#f58b9c;font-size:11px;display:flex;align-items:center;gap:11px;margin:0 0 30px}
-.kicker i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 13px var(--red)}.kicker em{font-style:normal;color:#66515a}
-.overline{font-size:clamp(12px,1.8vw,18px);font-weight:950;letter-spacing:.27em;color:#ff5269;margin:0 0 8px}
-h1,h2,h3{line-height:1.07}h1{font-size:clamp(68px,9vw,124px);font-weight:1000;letter-spacing:-.08em;margin:0;line-height:.85}
-h1 span{display:block}h1 .amp{display:inline;color:var(--red)}h1 .edition{font-size:.27em;letter-spacing:.36em;margin:11px 0 0;color:#d0c1c7}
-.hero-divider{width:91px;height:4px;background:var(--red);margin:27px 0}
-.lead{font-size:clamp(23px,3vw,33px);font-weight:850;letter-spacing:-.027em;line-height:1.23;max-width:560px;margin:0 0 17px}
-.sublead{font-size:16px;color:#c8b9c0;line-height:1.8;max-width:540px;margin:0}
-.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:33px}
-.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:15px 20px;min-height:51px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-3px)}.primary{background:var(--red);box-shadow:7px 7px 0 #511220}.primary:hover{background:#ff455e}.secondary{border:1px solid #64515c}.secondary:hover{background:#25161e}
-.disclaimer{color:#8e828a;font-size:11px;margin:25px 0 0}
-.hero-art{min-height:420px;position:relative;display:grid;place-items:center}
-.ring{position:absolute;border:1px solid #4b303b;border-radius:50%;width:113%;aspect-ratio:1}
-.ring:before{content:"";position:absolute;inset:12%;border-radius:50%;border:1px dashed #5e3b48}
-.r-panel{width:100%;max-width:445px;min-height:440px;background:linear-gradient(140deg,#291018aa,#09090bbb 68%);border:1px solid #70303f;clip-path:polygon(9% 0,100% 0,100% 91%,91% 100%,0 100%,0 9%);padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 0 100px #84152630}
-.micro{font-size:9px;color:#b88793}.rocket-r{align-self:center;width:73%;max-height:282px;object-fit:contain;transform:rotate(-7deg);filter:drop-shadow(0 8px 12px #0008) drop-shadow(0 0 24px #ba1e4038)}
-.r-caption{display:flex;justify-content:space-between;gap:10px}
-.ribbon{background:var(--red2);border-top:1px solid #ef4761;border-bottom:1px solid #69212e;padding:14px 0;text-align:center;white-space:nowrap;overflow:hidden;color:#fff;font-weight:900;letter-spacing:.16em;font-size:11px}
-.ribbon b{color:#ff9dab;margin:0 17px}
-section{padding:95px 0;border-bottom:1px solid #332c33}
-.section-no{color:#fa506a;font-size:11px;margin:0 0 25px}
-h2{font-size:clamp(35px,5vw,60px);font-weight:950;letter-spacing:-.055em;margin:0 0 25px}
-h2 em{font-style:normal;color:#ed3b55}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:82px}
-.prose{font-size:16px;color:#c8bec3;line-height:1.83}.prose p{margin:0 0 18px}.prose strong{color:white}
-.textlink{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:850;border-bottom:1px solid var(--red);padding-bottom:7px;color:#ff7188;margin-top:13px}.textlink:hover{color:#fff}
-.game{background:#121318}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:38px}.sectionhead h2{margin:0;max-width:680px}.sectionhead p{max-width:360px;color:#aaa1a7;font-size:15px;line-height:1.7;margin:0}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid #39323a;border-top:1px solid #39323a}
-.tile{padding:28px 26px 35px;min-height:240px;border-right:1px solid #39323a;border-bottom:1px solid #39323a;background:#18171d}
-.tile:first-child{background:linear-gradient(135deg,#6b1327,#25151d)}
-.index{font-size:10px;color:#cc8391}.tile .symbol{display:block;color:var(--red);font-size:43px;font-weight:900;margin:18px 0 24px;line-height:1}
-.tile h3{font-size:20px;letter-spacing:-.025em;margin:0 0 9px}.tile p{font-size:13px;line-height:1.7;color:#b5abb2;margin:0}
-.translation{background:radial-gradient(ellipse at 76% 15%,#38101d,transparent 53%),#0b0b0e}
-.translation-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:15px}
-.translation-card{background:#c51e36;padding:38px;display:flex;flex-direction:column;min-height:430px}
-.translation-card .micro{color:#ffd3dc}.translation-card h3{font-size:clamp(31px,3.6vw,47px);letter-spacing:-.05em;margin:32px 0 20px}
-.translation-card p{color:#ffedf0;font-size:15px;line-height:1.78}
-.stamp{display:inline-block;align-self:start;margin-top:auto;border:1px solid #ffc1ca;padding:8px 11px;color:#fff;font-size:10px;letter-spacing:.10em;font-weight:800}
-.qols{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.qol{padding:22px;border:1px solid #48343e;background:#1a151b}
-.qol h3{font-size:18px;letter-spacing:-.02em;margin:13px 0 10px}.qol p{font-size:13px;line-height:1.72;color:#bcaeb5;margin:0}
-.qol:last-child{grid-column:1/-1}.qol .micro{color:#f57187}
-.gallery{background:#121218}.gallery-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
-.shot{display:block;border:1px solid #42313c;background:#1a161c;transition:transform .2s,border .2s}
-.shot:hover{transform:translateY(-3px);border-color:var(--red)}
-.shot-media{position:relative;aspect-ratio:1.47;background:linear-gradient(140deg,#39121e,#111116 70%);overflow:hidden}
-.shot-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#14121a}
-.shot .fallback{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:26px;text-align:center}
-.fallback strong{font-size:18px}.fallback span{font-size:12px;text-decoration:underline}.fallback .big{font-size:74px;color:var(--red);font-weight:1000;text-decoration:none}
-.shot.bad img{display:none}.shot.bad .fallback{display:flex}
-.shot-footer{display:flex;justify-content:space-between;padding:16px;gap:12px;font-size:10px;letter-spacing:.1em;font-family:ui-monospace,monospace;font-weight:800}.shot-footer b{font-size:17px;color:var(--red)}
-.gallery-note{font-size:12px;color:#a69ca4;margin-top:17px}
-.report{background:#09090d}.report-box{background:linear-gradient(125deg,#bd1c36,#861124);border-left:7px solid #ff6b80;padding:50px 55px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px}
-.report-box .section-no{color:#ffcfda}.report-box h2{margin-bottom:18px}.report-box p{color:#ffe1e7;line-height:1.8;font-size:15px}
-.report-action{justify-self:end}.report-action .btn{background:white;color:#170e13;min-width:200px}.report-action p{font-size:12px;margin-bottom:0;max-width:230px}
-.release{background:#131318}
-footer{background:#09090d;border-top:4px solid #b51a34;padding:60px 0 22px}
-.footer-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:65px}
-.footer-brand{display:flex;align-items:center;gap:16px;align-self:start;font-size:20px;letter-spacing:.09em;font-weight:950;line-height:1.2}
-.footer-brand img{width:58px}.footer-brand small{font-size:10px;color:#c2828d}
-footer h2{font-size:23px;letter-spacing:-.025em;margin-bottom:18px}
-footer p{color:#bbb0b8;font-size:13px;line-height:1.85}
-footer a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#b4384b}
-footer .legal{color:#88818a;font-size:11px}
-.footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #3b2d35;padding-top:18px;margin-top:35px;color:#91848d;font-size:10px}
-@media(max-width:950px){.hero-inner{grid-template-columns:1fr 300px;gap:10px}.r-panel{min-height:345px}.hero-art{min-height:345px}.split{gap:38px}.translation-grid{grid-template-columns:1fr}.translation-card{min-height:300px}}
-@media(max-width:760px){.wrap{width:calc(100% - 36px)}.links{display:none}.hero-inner{grid-template-columns:1fr;padding:62px 0 65px;gap:20px}.hero-art{min-height:280px;max-width:310px;margin:auto;width:100%}.r-panel{min-height:280px}.rocket-r{max-height:180px;width:65%}.hero-inner h1{font-size:clamp(69px,14vw,104px)}section{padding:66px 0}.split,.footer-layout,.report-box{grid-template-columns:1fr;gap:25px}.sectionhead{display:block}.sectionhead p{margin-top:23px}.tiles{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr}.report-box{padding:34px 27px}.report-action{justify-self:start}.footer-layout{gap:28px}}
-@media(max-width:470px){.brand{font-size:13px}.repo{font-size:10px;padding:9px}.kicker{font-size:9px}.overline{font-size:12px}.hero-inner h1{font-size:clamp(65px,18vw,89px)}.lead{font-size:27px}.sublead,.prose{font-size:15px}.buttons{display:grid}.btn{width:100%}.tiles,.qols{grid-template-columns:1fr}.tile{min-height:192px}.qol:last-child{grid-column:auto}.translation-card{padding:28px;min-height:360px}.sectionhead h2{font-size:38px}.footer-bottom{flex-wrap:wrap}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="topbar" aria-hidden="true"></div>
-<header>
-  <nav class="wrap" aria-label="Main navigation">
-    <a class="brand" href="#home"><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="" width="32" height="31"> ROCKET<b>.</b>ENGLISH</a>
-    <div class="links"><a href="#story">The story</a><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#credits">Credits</a></div>
-    <a class="repo" href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-  </nav>
-</header>
-<main id="main">
-  <section class="hero" id="home" aria-labelledby="title">
-    <div class="wrap hero-inner">
-      <div>
-        <p class="kicker"><i aria-hidden="true"></i> FAN TRANSLATION <em>/</em> ORIGINAL SPANISH v1.1</p>
-        <p class="overline">POKÉMON TEAM ROCKET</p>
-        <h1 id="title"><span>JESSIE <span class="amp">&</span></span><span>JAMES</span><span class="edition">EDITION</span></h1>
-        <div class="hero-divider"></div>
-        <p class="lead">The original Team Rocket adventure, now in English.</p>
-        <p class="sublead">Play as James alongside Jessie and Meowth. Follow Giovanni's orders, travel through Kanto and Johto, and get up to the usual Team Rocket trouble.</p>
-        <div class="buttons"><a class="btn primary" href="#story">About the game <span aria-hidden="true">↘</span></a><a class="btn secondary" href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">On GitHub <span aria-hidden="true">↗</span></a></div>
-        <p class="disclaimer">Unofficial fan translation. Not affiliated with or endorsed by the original developer.</p>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="page">
+    <header class="masthead">
+      <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg" aria-label="Team Rocket R logo, sourced from Wikimedia Commons">
+        <img class="rocket-r" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="Team Rocket R">
+      </a>
+      <div class="game-title">
+        <div class="title-strip">POKÉMON TEAM ROCKET</div>
+        <h1>Jessie &amp; James<br><span>Edition</span></h1>
+        <p>Unofficial English Translation</p>
       </div>
-      <div class="hero-art">
-        <div class="ring" aria-hidden="true"></div>
-        <div class="r-panel"><span class="micro">NO. 001 / ROCKET</span><img class="rocket-r" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="Red Team Rocket R logo"><span class="micro r-caption"><span>PREPARE FOR TROUBLE</span><span>MAKE IT DOUBLE</span></span></div>
-      </div>
-    </div>
-    <div class="ribbon" aria-hidden="true">TEAM ROCKET <b>◆</b> JESSIE & JAMES <b>◆</b> KANTO + JOHTO <b>◆</b> TEAM ROCKET</div>
-  </section>
-  <section id="story" aria-labelledby="story-head">
-    <div class="wrap split">
-      <div><p class="section-no">01 / THE ASSIGNMENT</p><h2 id="story-head">Another failed attempt.<br><em>A new mission.</em></h2></div>
-      <div class="prose">
-        <p>Originally released in Spanish, MrNightology's <strong>Pokémon Team Rocket: Jessie & James Edition</strong> puts you in James's shoes alongside Jessie and Meowth.</p>
-        <p>After yet another failed attempt to catch Pikachu, a Delibird turns up with a letter from Giovanni. The trio head back to Kanto and take on a new set of Team Rocket missions.</p>
-        <p>Steal Pokémon and items, investigate suspicious places and interfere with other people's plans. I won't spoil the missions themselves. That's half the fun.</p>
-        <a class="textlink" href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">Original Spanish release ↗</a>
-      </div>
-    </div>
-  </section>
-  <section class="game" aria-labelledby="game-head">
-    <div class="wrap"><p class="section-no">02 / THE ORIGINAL GAME</p><div class="sectionhead"><h2 id="game-head">More than a change of perspective.</h2><p>MrNightology's game has its own story and plenty of changes to FireRed.</p></div>
-      <div class="tiles">
-        <article class="tile"><span class="index">01</span><span class="symbol">K / J</span><h3>Kanto + Johto</h3><p>Two regions to explore as Team Rocket.</p></article>
-        <article class="tile"><span class="index">02</span><span class="symbol">▥</span><h3>Battle Subway</h3><p>A subway system spanning the two regions.</p></article>
-        <article class="tile"><span class="index">03</span><span class="symbol">◆</span><h3>Rocket business</h3><p>Shop robberies, missions and a different kind of adventure.</p></article>
-        <article class="tile"><span class="index">04</span><span class="symbol">☾</span><h3>Day + night</h3><p>A day/night cycle and dynamic overworld palettes.</p></article>
-        <article class="tile"><span class="index">05</span><span class="symbol">♫</span><h3>Regional music</h3><p>Different wild Pokémon music and more trainer encounter themes.</p></article>
-        <article class="tile"><span class="index">06</span><span class="symbol">◇</span><h3>Extra details</h3><p>Ruins of Alph puzzles, BW-style Repels, VS bars, and expanded sprite and music tables.</p></article>
-      </div>
-    </div>
-  </section>
-  <section class="translation" id="features" aria-labelledby="features-head">
-    <div class="wrap"><div class="sectionhead"><div><p class="section-no">03 / THE ENGLISH EDITION</p><h2 id="features-head">Same adventure.<br><em>A few extras.</em></h2></div><p>I've kept the original story, with some optional battle changes and conveniences alongside the translation.</p></div>
-      <div class="translation-grid">
-        <article class="translation-card"><span class="micro">TRANSLATION / 01</span><h3>From Spanish<br>to English.</h3><p>I used the official English FireRed text for matching entries, then went through the rest with the anime as a reference for how Jessie, James and Meowth should sound. I also repaired text wrapping and page breaks.</p><span class="stamp">ORIGINAL STORY PRESERVED</span></article>
-        <div class="qols">
-          <article class="qol"><span class="micro">BATTLE OPTIONS</span><h3>Classic / Modern</h3><p>Choose original Gen 3 mechanics or the physical/special split with updated ability effects.</p></article>
-          <article class="qol"><span class="micro">SUMMARY SCREEN</span><h3>Nature colours</h3><p>Red for increased stats, blue for decreased stats, like the modern Pokémon games.</p></article>
-          <article class="qol"><span class="micro">BATTLE INFO</span><h3>R for move details</h3><p>Check descriptions, power, accuracy and move categories without leaving battle.</p></article>
-          <article class="qol"><span class="micro">TYPE MATCHUPS</span><h3>Effectiveness icons</h3><p>See whether a move is super effective, neutral, resisted or has no effect.</p></article>
-          <article class="qol"><span class="micro">TITLE SCREEN</span><h3>Looping motto theme</h3><p>A looping version of the Team Rocket motto music on the title screen.</p></article>
+      <p class="version">Original Spanish game by MrNightology &nbsp;|&nbsp; v1.1</p>
+    </header>
+
+    <nav class="main-menu" aria-label="Website menu">
+      <a href="#story"><span class="arrow">▶</span> The game</a>
+      <a href="#translation"><span class="arrow">▶</span> English edition</a>
+      <a href="#screenshots"><span class="arrow">▶</span> Screenshots</a>
+      <a href="#report"><span class="arrow">▶</span> Report a bug</a>
+    </nav>
+
+    <main id="content">
+      <section class="window" id="story">
+        <h2>What is Jessie &amp; James Edition?</h2>
+        <div class="window-body">
+          <p><em>Pokémon Team Rocket: Jessie &amp; James Edition</em> is an original FireRed-based game by MrNightology, first released in Spanish. You play as James alongside Jessie and Meowth.</p>
+          <p>After another failed attempt to steal Pikachu, a Delibird arrives with a message from Giovanni. The trio return to Kanto to carry out Team Rocket missions. Expect to steal Pokémon and items, investigate places and get in other people's way. I won't spoil the missions themselves.</p>
+          <p>The game covers <strong>Kanto and Johto</strong>. It also includes:</p>
+          <ul class="plain-list">
+            <li>Battle Subway and shop robberies</li>
+            <li>Day/night cycle and dynamic overworld palettes</li>
+            <li>Black/White-style Repel system</li>
+            <li>Ruins of Alph puzzles</li>
+            <li>Region-specific wild Pokémon music and more trainer themes</li>
+            <li>Expanded overworld and music tables, dynamic healing locations and VS bars</li>
+          </ul>
+          <p class="link-line"><a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">▶ View the original Spanish release</a></p>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="gallery" id="screenshots" aria-labelledby="gallery-head">
-    <div class="wrap"><div class="sectionhead"><div><p class="section-no">04 / ORIGINAL RELEASE</p><h2 id="gallery-head">A look inside.</h2></div><p>Images from MrNightology's Spanish release, not screenshots of the English translation.</p></div>
-      <div class="gallery-grid">
-        <a class="shot" href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer"><div class="shot-media"><img src="https://i.imgur.com/dzyKZbR.png" alt="Screenshots of the original Spanish game" loading="lazy"><div class="fallback"><span class="big">R</span><strong>Original screenshot gallery</strong><span>View on Whack a Hack ↗</span></div></div><div class="shot-footer"><span>01 / GAMEPLAY SCREENSHOTS</span><b>↗</b></div></a>
-        <a class="shot" href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer"><div class="shot-media"><img src="https://i.imgur.com/XZrC1aW.png" alt="Original Kanto and Johto Battle Subway map" loading="lazy"><div class="fallback"><span class="big">▥</span><strong>Battle Subway map</strong><span>View on Whack a Hack ↗</span></div></div><div class="shot-footer"><span>02 / BATTLE SUBWAY MAP</span><b>↗</b></div></a>
-      </div>
-      <p class="gallery-note">Images are linked from the original release. If an image doesn't load, its card will take you to the original game page.</p>
-    </div>
-  </section>
-  <section class="report" id="report" aria-labelledby="report-head"><div class="wrap report-box"><div><p class="section-no">05 / HELP WITH TESTING</p><h2 id="report-head">Found something odd?</h2><p>There's a lot of conditional dialogue and one-off events in this game. If you find untranslated lines, broken text boxes, incorrect symbols or other bugs, send them through.</p><p>The form is private. No sign-in or personal information needed. Please don't upload ROMs or patches.</p></div><div class="report-action"><a class="btn" href="https://tally.so/r/M1N2oE" target="_blank" rel="noopener noreferrer">Report a bug <span aria-hidden="true">↗</span></a><p>Location, emulator, patch version and reproduction steps are helpful.</p></div></div></section>
-  <section class="release" aria-labelledby="release-head"><div class="wrap split"><div><p class="section-no">06 / RELEASES</p><h2 id="release-head">Patches, not ROMs.</h2></div><div class="prose"><p>Testing is still ongoing. Patches and instructions will be posted on GitHub when a build is ready for public testing. No pre-patched ROM downloads.</p><a class="textlink" href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">Check GitHub for releases ↗</a></div></div></section>
-</main>
-<footer id="credits">
-  <div class="wrap footer-layout"><div class="footer-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="" width="58"><span>ROCKET<br><small>ENGLISH EDITION</small></span></div><div><h2>Credits</h2><p>Full credit for the original game, story, maps, artwork and gameplay goes to <strong>MrNightology and the original project's contributors</strong>. The game was translated without author consultation.</p><p>English localisation and patcher maintenance by <a href="https://github.com/xbaconator9000x" target="_blank" rel="noopener noreferrer">@xbaconator9000x</a>.</p><p class="legal">Unofficial fan project. Not affiliated with or endorsed by the original developer, Nintendo, Game Freak or The Pokémon Company. Please support the original Spanish release.</p><p class="legal">Team Rocket R emblem from <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Screenshots linked from the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original release</a>.</p></div></div>
-  <div class="wrap footer-bottom"><span>TEAM ROCKET / JESSIE & JAMES EDITION</span><a href="#home">Back to top ↑</a></div>
-</footer>
-<script>
-"use strict";
-for (const card of document.querySelectorAll(".shot")) {
-  const image = card.querySelector("img");
-  const failed = () => card.classList.add("bad");
-  image.addEventListener("error", failed, {once:true});
-  if (image.complete && image.naturalWidth === 0) failed();
-}
-</script>
+      </section>
+
+      <section class="window" id="translation">
+        <h2>The English edition</h2>
+        <div class="window-body">
+          <p>This is my unofficial English translation of the completed v1.1 game. I'm not affiliated with the original developer.</p>
+          <p>I extracted the Spanish text and replaced matching FireRed lines with their official English versions. For the rest, I used Google Translate as a starting point, then went through the dialogue with the anime as a reference for the characters' voices. I also fixed text wrapping and page breaks where needed.</p>
+          <h3>Quality of life</h3>
+          <ul class="plain-list">
+            <li><strong>Classic / Modern battles</strong> -- Choose the original Gen 3 mechanics or the physical/special split and updated ability effects when starting a new game.</li>
+            <li><strong>Nature colours</strong> -- Increased stats in red, decreased stats in blue.</li>
+            <li><strong>Move details</strong> -- Press R when choosing a move to view its description, power, accuracy and category.</li>
+            <li><strong>Effectiveness indicators</strong> -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.</li>
+            <li><strong>Title music</strong> -- A looping version of the Team Rocket motto theme.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="window" id="screenshots">
+        <h2>Screenshots</h2>
+        <div class="window-body">
+          <p>From MrNightology's original Spanish release, not the English translation.</p>
+          <figure class="screenshot">
+            <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/dzyKZbR.png" alt="Original Spanish gameplay screenshots" loading="lazy">
+            </a>
+            <figcaption>Original gameplay gallery</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/XZrC1aW.png" alt="Kanto and Johto Battle Subway map" loading="lazy">
+            </a>
+            <figcaption>Battle Subway map</figcaption>
+          </figure>
+          <p class="small">If the images don't load, they're also on the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original game page</a>.</p>
+        </div>
+      </section>
+
+      <section class="window" id="report">
+        <h2>Testing and bug reports</h2>
+        <div class="window-body">
+          <p>Testing is still ongoing. There's a lot of conditional dialogue and one-off events, so there may still be untranslated lines, odd wording, text errors or bugs that only show up under certain conditions.</p>
+          <p>If you find something, send it through. Screenshots or a short video help, especially if you can include the location, emulator, patch version and how to reproduce it.</p>
+          <p><a class="menu-button" href="https://tally.so/r/M1N2oE" target="_blank" rel="noopener noreferrer">▶ Submit a private bug report</a></p>
+          <p class="small">No sign-in or personal details needed. Reports and attachments aren't public. Please don't upload ROMs or patches.</p>
+        </div>
+      </section>
+
+      <section class="window" id="releases">
+        <h2>Releases</h2>
+        <div class="window-body">
+          <p>Patches and instructions will be added to GitHub when a build is ready for public testing. No pre-patched ROMs.</p>
+          <p class="link-line"><a href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">▶ GitHub repository</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="credits">
+      <h2>Credits</h2>
+      <p>Full credit for the original game, story, maps, artwork and gameplay goes to <strong>MrNightology and the original project's contributors</strong>. The game was translated without author consultation.</p>
+      <p>English localisation and patcher maintenance -- <a href="https://github.com/xbaconator9000x" target="_blank" rel="noopener noreferrer">@xbaconator9000x</a>.</p>
+      <p class="small">Unofficial fan project. Not endorsed by the original developer. Please support the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original Spanish release</a>.</p>
+      <p class="small">R emblem from <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Images from MrNightology's original game page.</p>
+      <p class="end-mark">TEAM ROCKET <span>R</span></p>
+    </footer>
+  </div>
 </body>
 </html>

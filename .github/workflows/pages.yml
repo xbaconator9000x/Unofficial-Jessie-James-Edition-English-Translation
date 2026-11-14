@@ -52,11 +52,14 @@ jobs:
           css = (root/'styles.css').read_text()
           script = (root/'player.js').read_text()
           assert 'Original Spanish screenshots' in html
-          assert 'fontlibrary.org//face/pixel-operator' in html
+          assert 'cdn.jsdelivr.net' in html
+          assert 'Pokemon Classic' in css
+          assert 'music-status' not in html
+          assert 'music-status' not in script
           assert 'source.loopStart = INTRO_END' in script and 'source.loopEnd = LOOP_END' in script
           assert '--r-icon' in css
           assert 'autoplay' not in html
-          print('PASS: audio checksum, loop control, original screenshot labels, pixel font and Rocket markers')
+          print('PASS: audio checksum, loop control, original screenshot labels, classic font and Rocket markers')
           PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

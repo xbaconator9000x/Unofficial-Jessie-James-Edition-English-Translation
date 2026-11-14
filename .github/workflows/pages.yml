@@ -36,6 +36,28 @@ jobs:
           assert not list(site.rglob('*.gba')) and not list(site.rglob('*.sav'))
           print('PASS: static landing page and content checks')
           PY
+      - name: Check title audio and player
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check site/player.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root = Path('site')
+          audio = (root/'title-motto-loop.mp3').read_bytes()
+          assert len(audio) == 305938, len(audio)
+          assert hashlib.sha256(audio).hexdigest() == '555d43fdb42bea8874439b08a323b792f5a9d64f6abfc3f4f4248735386bf514'
+          html = (root/'index.html').read_text()
+          css = (root/'styles.css').read_text()
+          script = (root/'player.js').read_text()
+          assert 'Original Spanish screenshots' in html
+          assert 'fontlibrary.org//face/pixel-operator' in html
+          assert 'source.loopStart = INTRO_END' in script and 'source.loopEnd = LOOP_END' in script
+          assert '--r-icon' in css
+          assert 'autoplay' not in html
+          print('PASS: audio checksum, loop control, original screenshot labels, pixel font and Rocket markers')
+          PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

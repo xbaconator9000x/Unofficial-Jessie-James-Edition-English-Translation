@@ -5,12 +5,11 @@
   const INTRO_END = 7.993508;
   const LOOP_END = 30.523148;
   const button = document.getElementById("music-toggle");
-  const status = document.getElementById("music-status");
-  if (!button || !status) return;
+  if (!button) return;
   const AudioContextType = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextType) {
     button.disabled = true;
-    status.textContent = "Audio playback isn't supported here.";
+
     return;
   }
 
@@ -50,12 +49,12 @@
     previous.disconnect();
     button.textContent = "♪ Play theme";
     button.setAttribute("aria-pressed", "false");
-    status.textContent = "Paused";
+
   }
 
   async function play() {
     button.disabled = true;
-    status.textContent = "Loading...";
+
     try {
       await load();
       const source = context.createBufferSource();
@@ -69,9 +68,10 @@
       activeSource = source;
       button.textContent = "Ⅱ Pause theme";
       button.setAttribute("aria-pressed", "true");
-      status.textContent = "Playing | intro once, then loop";
+
     } catch (error) {
-      status.textContent = "Couldn't play the theme.";
+
+      button.textContent = "♪ Theme unavailable";
       console.warn("Title music unavailable:", error);
     } finally {
       button.disabled = false;

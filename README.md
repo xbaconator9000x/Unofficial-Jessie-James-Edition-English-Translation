@@ -1,4 +1,20 @@
-# Pokémon Team Rocket: Jessie & James Edition -- Unofficial English Translation
+<p align="center">
+  <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="Team Rocket R emblem" width="120">
+  </a>
+</p>
+
+<h1 align="center">Pokémon Team Rocket: Jessie & James Edition</h1>
+
+<p align="center"><strong>Unofficial English Translation</strong></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/ORIGINAL-SPANISH-B70018?style=for-the-badge&labelColor=181818" alt="Original Spanish release">
+  <img src="https://img.shields.io/badge/REGIONS-KANTO%20%2B%20JOHTO-B70018?style=for-the-badge&labelColor=181818" alt="Kanto and Johto">
+  <img src="https://img.shields.io/badge/ENGLISH-FAN%20TRANSLATION-B70018?style=for-the-badge&labelColor=181818" alt="English fan translation">
+</p>
+
+---
 
 This is an unofficial fan translation of MrNightology's *Pokémon Team Rocket: Jessie & James Edition v1.1*. It's unaffiliated with and not endorsed by the original developer. Please support the official release.
 
@@ -36,9 +52,28 @@ Patches and instructions will be added here once a build is ready for public tes
 
 ## What is Jessie & James Edition?
 
-Originally released in Spanish, MrNightology's *Pokémon Team Rocket: Jessie & James Edition* is a complete, original Team Rocket adventure where you play as James alongside Jessie and Meowth. After yet another failed attempt to steal Pikachu, Giovanni calls the trio back to Kanto and gives them a different job. You'll be stealing Pokémon and items, investigating locations and interfering with other people's plans. All the things Team Rocket is supposed to be doing, really.
+Originally released in Spanish, MrNightology's *Pokémon Team Rocket: Jessie & James Edition* puts you in James's shoes, alongside Jessie and Meowth. After another failed attempt to catch Pikachu, a Delibird arrives with a message from Giovanni. The trio head back to Kanto for a new set of Team Rocket missions. You'll be stealing Pokémon and items, investigating places and disrupting other people's plans. I won't spoil the missions themselves.
 
-The game takes you through **Kanto and Johto**, with the **Battle Subway**, shop robberies, a Black/White-style Repel system, a day/night cycle, different wild Pokémon music for each region and puzzles in the **Ruins of Alph**. It also features dynamic overworld palettes and healing locations, expanded overworld sprite and music tables, additional trainer encounter themes and VS bars.
+The game takes you through **Kanto and Johto**, with a **Battle Subway**, shop robberies, a Black/White-style Repel system, a day/night cycle, different wild Pokémon music for each region and puzzles in the **Ruins of Alph**. It also includes extra trainer themes, dynamic overworld palettes and healing locations, expanded sprite and music tables, and VS bars.
+
+## Screenshots
+
+<p align="center">
+  <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/">
+    <img src="https://i.imgur.com/dzyKZbR.png" alt="Original Spanish Jessie and James Edition gameplay screenshots" width="720">
+  </a>
+</p>
+
+<p align="center"><sub>Gameplay screenshots from MrNightology's original Spanish release.</sub></p>
+
+<details>
+<summary>Battle Subway map</summary>
+
+<p align="center">
+  <img src="https://i.imgur.com/XZrC1aW.png" alt="Original Kanto and Johto Battle Subway map" width="720">
+</p>
+
+</details>
 
 ## Credits
 

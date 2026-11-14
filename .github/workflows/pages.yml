@@ -52,8 +52,8 @@ jobs:
           css = (root/'styles.css').read_text()
           script = (root/'player.js').read_text()
           assert 'Original Spanish screenshots' in html
-          assert 'cdn.jsdelivr.net' in html
-          assert 'Pokemon Classic' in css
+          assert 'fonts.googleapis.com' in html
+          assert 'Pixelify Sans' in css and 'Silkscreen' in css
           assert 'music-status' not in html
           assert 'music-status' not in script
           assert 'source.loopStart = INTRO_END' in script and 'source.loopEnd = LOOP_END' in script

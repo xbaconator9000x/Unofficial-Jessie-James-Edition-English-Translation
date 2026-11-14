@@ -1,12 +1,5 @@
-/* Pokémon Classic by TheLouster115, CC BY-SA. */
-@font-face {
-  font-family: "Pokemon Classic";
-  src: url("https://cdn.jsdelivr.net/gh/jessikarochas/PixelPerfect@c11e4da2bce807d9cbde2e799508af68554a1a6f/Pokemon%20Classic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-/* Team Rocket: Jessie & James -- simple Game Boy-style layout */
+/* Jessie & James English Edition - retro GBA-style site.
+   Pixelify Sans and Silkscreen are open-licensed Google Fonts. */
 :root {
   color-scheme: dark;
   --black: #080808;
@@ -16,8 +9,8 @@
   --muted: #bcbcbc;
   --width: 780px;
   --r-icon: url("https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg");
-  --body-font: "Pokemon Classic", "Courier New", monospace;
-  --title-font: "Pokemon Classic", "Courier New", monospace;
+  --body-font: "Pixelify Sans", Verdana, Arial, sans-serif;
+  --pixel-font: "Silkscreen", "Pixelify Sans", monospace;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 16px; }
@@ -25,8 +18,7 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--white);
-  font: 400 16px/1.5 var(--body-font);
-  font-synthesis: none;
+  font: 500 18px/1.55 var(--body-font);
 }
 a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 a:hover { color: #ff6b7b; }
@@ -34,25 +26,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
 .page { width: min(calc(100% - 32px), var(--width)); margin: auto; }
 .skip { position: absolute; top: -100px; left: 12px; padding: 8px; background: white; color: black; }
 .skip:focus { top: 12px; }
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 
-/* Title */
+/* Header */
 .masthead { padding: 27px 0 14px; text-align: center; }
 .rocket-r { width: 105px; height: 105px; object-fit: contain; margin: 0 auto 22px; }
 .game-title {
   border: 3px solid var(--white);
   background: var(--panel);
-  padding: 0 18px 19px;
+  padding: 0 16px 20px;
   box-shadow: inset 0 0 0 3px var(--black);
 }
 .title-strip {
@@ -61,40 +42,39 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
   margin: -3px auto 18px;
   padding: 10px 12px;
   background: var(--red);
-  color: white;
-  font: 400 clamp(9px, 2.4vw, 12px)/1.5 var(--title-font);
-  letter-spacing: 0;
-  overflow-wrap: anywhere;
+  color: var(--white);
+  font: 400 clamp(11px, 2.25vw, 15px)/1.45 var(--pixel-font);
+  overflow-wrap: normal;
 }
 .game-title h1 {
   margin: 0;
-  font: 400 clamp(17px, 3.8vw, 26px)/1.7 var(--title-font);
+  font: 400 clamp(17px, 3.5vw, 26px)/1.65 var(--pixel-font);
   text-transform: uppercase;
-  letter-spacing: 0;
 }
 .game-title h1 span { color: #ff5366; }
-.game-title p { margin: 12px 0 0; font-size: 18px; font-weight: 700; line-height: 1.4; }
+.game-title p {
+  margin: 11px 0 0;
+  font: 600 18px/1.4 var(--body-font);
+}
 .version {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2px 15px;
+  gap: 1px 15px;
   margin: 12px 0 0;
   color: var(--muted);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.35;
+  font: 500 15px/1.3 var(--body-font);
 }
 
-/* Music and navigation */
-.music-strip { display: flex; justify-content: center; margin: 8px 0 14px; }
+/* Title music and menu */
+.music-strip { display: flex; justify-content: center; margin: 10px 0 15px; }
 .music-strip button {
   cursor: pointer;
   border: 2px solid var(--white);
-  padding: 8px 16px;
+  padding: 9px 16px;
   background: var(--black);
   color: var(--white);
-  font: 400 16px/1.35 var(--body-font);
+  font: 500 18px/1.3 var(--body-font);
 }
 .music-strip button:hover, .music-strip button[aria-pressed="true"] { background: var(--red); }
 .music-strip button:disabled { opacity: .55; cursor: wait; }
@@ -108,17 +88,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   min-width: 0;
-  min-height: 46px;
+  min-height: 48px;
   border: 2px solid var(--white);
-  padding: 9px 7px;
+  padding: 9px 6px;
   text-align: center;
   text-decoration: none;
-  font: 400 15px/1.25 var(--body-font);
+  font: 400 13px/1.5 var(--pixel-font);
   background: var(--black);
 }
-.main-menu a:hover, .main-menu a:focus-visible { background: var(--red); color: white; }
+.main-menu a:hover, .main-menu a:focus-visible { background: var(--red); color: var(--white); }
 .arrow {
   flex: 0 0 15px;
   display: inline-block;
@@ -127,7 +107,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
   background: var(--r-icon) center / contain no-repeat;
 }
 
-/* Game dialogue panels */
+/* Dialogue windows */
 .window {
   margin: 0 0 25px;
   border: 3px solid var(--white);
@@ -140,30 +120,30 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
   padding: 11px 16px 12px;
   border-bottom: 3px solid var(--white);
   background: var(--red);
-  font: 400 20px/1.25 var(--body-font);
+  font: 400 16px/1.65 var(--pixel-font);
 }
-.window-body { padding: 18px 22px 21px; }
+.window-body { padding: 19px 22px 22px; }
 .window-body h3 {
   margin: 22px 0 11px;
   padding-left: 12px;
   border-left: 4px solid var(--red);
-  font: 700 21px/1.25 var(--body-font);
+  font: 400 15px/1.6 var(--pixel-font);
 }
 p { margin: 0 0 13px; }
 p:last-child { margin-bottom: 0; }
-strong { color: white; font-weight: 700; }
-.plain-list { list-style: none; padding-left: 0; margin: 12px 0 17px; }
-.plain-list li { position: relative; padding: 0 0 9px 27px; }
+strong { color: var(--white); font-weight: 700; }
+.plain-list { list-style: none; padding: 0; margin: 12px 0 17px; }
+.plain-list li { position: relative; padding: 0 0 10px 28px; }
 .plain-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: .35em;
+  top: .37em;
   width: 15px;
   height: 15px;
   background: var(--r-icon) center / contain no-repeat;
 }
-.link-line { margin-top: 17px; font-weight: 700; }
+.link-line { margin-top: 17px; font-weight: 600; }
 .link-line a { color: #ff6779; }
 .link-line a::before, .menu-button::before {
   content: "";
@@ -178,63 +158,50 @@ strong { color: white; font-weight: 700; }
 .screenshot a { display: block; background: #0b0b0b; border: 2px solid #777; padding: 6px; }
 .screenshot a:hover { border-color: var(--red); }
 .screenshot img { display: block; width: 100%; height: auto; object-fit: contain; }
-.screenshot figcaption { padding-top: 7px; font-size: 15px; color: var(--muted); }
+.screenshot figcaption { padding-top: 7px; font-size: 16px; color: var(--muted); }
 .small { font-size: 14px; color: var(--muted); }
 .menu-button {
   display: inline-block;
-  padding: 9px 13px;
-  border: 2px solid white;
+  padding: 10px 13px;
+  border: 2px solid var(--white);
   background: var(--red);
-  color: white;
-  font: 700 17px/1.4 var(--body-font);
+  color: var(--white);
+  font: 600 17px/1.4 var(--body-font);
   text-decoration: none;
 }
-.menu-button:hover { color: white; background: #aa1428; }
+.menu-button:hover { color: var(--white); background: #aa1428; }
 
 /* Credits */
-.footer { border-top: 3px solid var(--red); margin: 12px 0 45px; padding: 19px 7px 0; font-size: 16px; }
-.footer h2 { margin: 0 0 12px; font: 700 23px/1.3 var(--body-font); }
+.footer { border-top: 3px solid var(--red); margin: 12px 0 45px; padding: 20px 7px 0; font-size: 16px; }
+.footer h2 { margin: 0 0 12px; font: 400 17px/1.5 var(--pixel-font); }
 .end-mark {
   margin-top: 24px;
-  padding-top: 14px;
+  padding-top: 15px;
   border-top: 1px solid #555;
   text-align: center;
-  font: 700 18px/1.4 var(--body-font);
-  letter-spacing: .03em;
+  font: 400 14px/1.5 var(--pixel-font);
 }
 .end-mark span { color: var(--red); font-size: 24px; }
-
 @media (max-width: 620px) {
-  body { font-size: 16px; line-height: 1.48; }
+  body { font-size: 17px; line-height: 1.55; }
   .masthead { padding-top: 26px; }
   .rocket-r { width: 97px; height: 97px; margin-bottom: 20px; }
-  .title-strip { padding: 9px 7px; margin-bottom: 15px; }
-  .game-title { padding: 0 12px 16px; }
-  .game-title h1 { font-size: clamp(20px, 5vw, 26px); line-height: 1.5; }
-  .game-title p { font-size: 15px; }
-  .version { font-size: 13px; gap: 2px 11px; }
+  .game-title { padding: 0 10px 17px; }
+  .title-strip { margin-bottom: 15px; padding: 8px 7px; font-size: clamp(10px, 2.6vw, 12px); }
+  .game-title h1 { font-size: clamp(14px, 3.45vw, 18px); line-height: 1.7; }
+  .game-title p { font-size: 17px; }
+  .version { font-size: 14px; gap: 2px 11px; }
   .main-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .main-menu a { padding: 8px 4px; font-size: 15px; gap: 6px; min-height: 44px; }
-  .window h2 { font-size: 19px; padding: 10px 12px; }
-  .window-body { padding: 16px; }
-  .window-body h3 { font-size: 20px; }
-  .plain-list li { padding-left: 25px; }
+  .main-menu a { padding: 8px 5px; font-size: 12px; gap: 5px; min-height: 47px; }
+  .window h2 { font-size: 14px; line-height: 1.7; padding: 11px 12px; }
+  .window-body { padding: 17px 16px; }
+  .window-body h3 { font-size: 13px; }
+  .plain-list li { padding-left: 26px; }
 }
 @media (max-width: 350px) {
-  .main-menu a { font-size: 14px; }
+  .main-menu a { font-size: 11px; }
   .game-title p { font-size: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-}
-
-/* Keep the classic 8-bit lettering compact on narrow phones. */
-.game-title h1 { font-size: clamp(21px, 4.25vw, 28px); line-height: 1.45; }
-.game-title p { font-size: 16px; }
-.window h2 { font-size: 20px; }
-@media (max-width: 620px) {
-  .game-title h1 { font-size: clamp(19px, 5vw, 23px); }
-  .game-title p { font-size: 15px; }
-  .window h2 { font-size: 19px; }
-  .main-menu a { font-size: 15px; }
 }

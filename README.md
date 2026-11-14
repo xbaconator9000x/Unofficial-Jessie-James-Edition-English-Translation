@@ -11,7 +11,7 @@ I extracted the Spanish text, parsed the Spanish FireRed localisation and replac
 I've also made a few changes beyond the translation:
 
 - **Classic or Modern battles** -- Choose when starting a new game. Classic keeps the original Gen 3 battle mechanics. Modern adds the physical/special split and updated effects for existing abilities.
-- **Nature colours** -- Increased stats appear in green and decreased stats in red on the Pokémon summary screen.
+- **Nature colours** -- Increased stats appear in red and decreased stats in blue on the Pokémon summary screen.
 - **Move descriptions** -- Press R when selecting a move in battle to see its description, power, accuracy and category.
 - **Type effectiveness** -- Move icons show whether a type matchup is super effective, neutral, not very effective or has no effect against the opposing Pokémon.
 - **Title music** -- The title screen uses a looping version of the Team Rocket motto theme.

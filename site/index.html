@@ -7,7 +7,9 @@
   <meta name="description" content="Pokémon Team Rocket: Jessie & James Edition v1.1, unofficial English translation of MrNightology's original Spanish game.">
   <title>Team Rocket: Jessie & James Edition | English Translation</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://fontlibrary.org//face/pixel-operator" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="player.js" defer></script>
 </head>
@@ -23,19 +25,19 @@
         <h1>Jessie &amp; James<br><span>Edition</span></h1>
         <p>Unofficial English Translation</p>
       </div>
-      <p class="version">Original Spanish game by MrNightology &nbsp;|&nbsp; v1.1</p>
+      <p class="version"><span>Original Spanish game by MrNightology</span><span>v1.1</span></p>
     </header>
 
     <div class="music-strip" role="group" aria-label="Title music">
       <button type="button" id="music-toggle" aria-pressed="false">♪ Play theme</button>
-      <span id="music-status" role="status">GM preview. Intro once, then loop.</span>
+      <span id="music-status" class="sr-only" role="status" aria-live="polite"></span>
     </div>
 
     <nav class="main-menu" aria-label="Website menu">
-      <a href="#story"><span class="arrow" aria-hidden="true"></span> The game</a>
-      <a href="#translation"><span class="arrow" aria-hidden="true"></span> English edition</a>
+      <a href="#story"><span class="arrow" aria-hidden="true"></span> Game</a>
+      <a href="#translation"><span class="arrow" aria-hidden="true"></span> Translation</a>
       <a href="#screenshots"><span class="arrow" aria-hidden="true"></span> Screenshots</a>
-      <a href="#report"><span class="arrow" aria-hidden="true"></span> Report a bug</a>
+      <a href="#report"><span class="arrow" aria-hidden="true"></span> Bug reports</a>
     </nav>
 
     <main id="content">

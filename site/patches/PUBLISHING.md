@@ -4,6 +4,6 @@ Keep each previous BPS unchanged. For each new English version, generate a BPS f
 
 Before publishing verify both clean- and incremental-patch outputs byte-for-byte, including the final output checksum. Back up saves and separately test in-game save compatibility. The patcher does not modify save files.
 
-For v1.0, place the supplied verified BPS at site/patches/jessie-james-english-v1.0.bps. Its SHA-256 is c6b07a2cc6fdfa1a32c923ae6b1d0aa747a5c2c4d15ceb0c1663ba2a675130bf. The earlier English v1.0 ROM is supported through jessie-james-english-v1.0-hotswap.bps (SHA-256 b6f0f9eb81ecc509a82cf2359af8be382593130561ec2771c1be5f7533e5c3b7). The site refuses mismatches. Both patches must be present and verified before deployment.
+For v1.0, place the supplied verified BPS at site/patches/jessie-james-english-v1.0.bps. Its SHA-256 is df832fba47d571295b56d92480bab9462e39725e4fa98c8d0f723be3c2190263. The earlier English v1.0 ROM is supported through jessie-james-english-v1.0-hotswap.bps (SHA-256 b6f0f9eb81ecc509a82cf2359af8be382593130561ec2771c1be5f7533e5c3b7). The site refuses mismatches. The second same-version correction upgrades CRC32 610FFD7B to 6C2FC9B2 using jessie-james-english-v1.0-hotswap-2.bps (SHA-256 a3b62df69cd1d8efea6ae89d217ef6183fda318bf0bc1e6beb10741fe425e518). All required patches must be present and verified before deployment.
 
 Run node tests/bps.test.mjs before publishing. GitHub Pages also checks the manifest and every hosted BPS before deploying.

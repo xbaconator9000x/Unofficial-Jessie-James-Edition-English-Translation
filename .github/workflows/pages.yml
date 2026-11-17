@@ -74,12 +74,18 @@ jobs:
           assert m['target'] in m['versions']
           for key in m['versions']:
               assert key in m['romSha256'] and len(m['romSha256'][key]) == 64
+          # Every supported ROM must have an update path to the current build.
+          reachable = {m['target']}
+          while True:
+              expanded = reachable | {e['from'] for e in m['patches'] if e['to'] in reachable}
+              if expanded == reachable:
+                  break
+              reachable = expanded
+          assert set(m['versions']) <= reachable
           for edge in m['patches']:
               assert edge['from'] in m['versions'] and edge['to'] in m['versions']
               p = site / edge['path']
-              if not p.exists():
-                  print('NOT HOSTED:', edge['path'])
-                  continue
+              assert p.is_file(), f'Missing required patch: {edge["path"]}'
               b = p.read_bytes()
               assert len(b) == edge['bytes'] and b[:4] == b'BPS1'
               assert hashlib.sha256(b).hexdigest() == edge['sha256']

@@ -2,18 +2,28 @@
   "latest": "1.0",
   "versions": {
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
-    "16777216:5EF16DAD": "English v1.0"
+    "16777216:5EF16DAD": "English v1.0 (earlier build)",
+    "16777216:610FFD7B": "English v1.0"
   },
-  "target": "16777216:5EF16DAD",
+  "target": "16777216:610FFD7B",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:5EF16DAD",
+      "to": "16777216:610FFD7B",
       "version": "1.0",
       "path": "patches/jessie-james-english-v1.0.bps",
-      "crc": "43E526C4",
-      "bytes": 1510118,
-      "sha256": "1465ae91e0c55b328d7b5fa871387525a361fa9746e71f4083dea84c66aecbb9"
+      "crc": "5CCB4545",
+      "bytes": 1531208,
+      "sha256": "c6b07a2cc6fdfa1a32c923ae6b1d0aa747a5c2c4d15ceb0c1663ba2a675130bf"
+    },
+    {
+      "from": "16777216:5EF16DAD",
+      "to": "16777216:610FFD7B",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0-hotswap.bps",
+      "crc": "F05F4579",
+      "bytes": 116242,
+      "sha256": "b6f0f9eb81ecc509a82cf2359af8be382593130561ec2771c1be5f7533e5c3b7"
     }
   ],
   "changelog": [
@@ -29,6 +39,7 @@
   ],
   "romSha256": {
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
-    "16777216:5EF16DAD": "0a28656db8f4b29278167d532cb9e06760050b72e6e03a9c159a756b03257d83"
+    "16777216:5EF16DAD": "0a28656db8f4b29278167d532cb9e06760050b72e6e03a9c159a756b03257d83",
+    "16777216:610FFD7B": "320b11dbae94934d73221de21e132392bfbcfca76c67355bfdf572fdddd9d1e1"
   }
 }

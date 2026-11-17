@@ -15,3 +15,5 @@ The English release manifest remains separate from spanish-releases.json. Do not
 ## Same-version crash correction and English gallery
 
 Both editions remain v1.0. Current English target 15810EE0, Spanish QoL target 343C20A7. The manifests are authoritative for current patch names and checksums; the published canonical download URLs serve the latest verified full patch in each edition. Keep earlier update edges. The three gallery assets are required and checksum-verified before deployment.
+
+English v1.0 same-version replacement: target D8616D2C, with incremental edge 15810EE0 to D8616D2C. See releases.json for current fingerprints. Spanish QoL remains unchanged.

@@ -6,18 +6,19 @@
     "16777216:610FFD7B": "English v1.0 (earlier build)",
     "16777216:6C2FC9B2": "English v1.0 (earlier build)",
     "16777216:3E48128C": "English v1.0 (earlier build)",
-    "16777216:15810EE0": "English v1.0"
+    "16777216:15810EE0": "English v1.0 (earlier build)",
+    "16777216:D8616D2C": "English v1.0"
   },
-  "target": "16777216:15810EE0",
+  "target": "16777216:D8616D2C",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:15810EE0",
+      "to": "16777216:D8616D2C",
       "version": "1.0",
-      "path": "patches/jessie-james-english-v1.0-15810ee0.bps",
-      "crc": "8875D75C",
-      "bytes": 1590324,
-      "sha256": "56a98f8cd51bd3fbd9b8787107ffe9a0ec5d05c86373b97bd4de4c002a7bf103"
+      "path": "patches/jessie-james-english-v1.0-d8616d2c.bps",
+      "crc": "77B957CC",
+      "bytes": 1597508,
+      "sha256": "f90e629eb25e3617fb4a48ec847e0f3e627924d262a11e5eabd9aa04f554aaf0"
     },
     {
       "from": "16777216:5EF16DAD",
@@ -54,6 +55,15 @@
       "crc": "2054238A",
       "bytes": 2048,
       "sha256": "a65c0c5cf7708728022d8f3113c7178fc47210750f38b38e20e5d49c31a1d9b8"
+    },
+    {
+      "from": "16777216:15810EE0",
+      "to": "16777216:D8616D2C",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0-15810ee0-to-d8616d2c.bps",
+      "crc": "DEDB611D",
+      "bytes": 7079,
+      "sha256": "6555a15fa028fa128f4e4eab157aff7514148380755797fac1391a314d6858d8"
     }
   ],
   "changelog": [
@@ -73,6 +83,7 @@
     "16777216:610FFD7B": "320b11dbae94934d73221de21e132392bfbcfca76c67355bfdf572fdddd9d1e1",
     "16777216:6C2FC9B2": "89468d8c450388f19591fa6aed0dcd3e5721ecfd3c84fccfe20996cd3d7e7a4f",
     "16777216:3E48128C": "72654c93a05c728f9be278678c2d2fa21bbca602fec9b34f0f6a89bceac0c5ab",
-    "16777216:15810EE0": "e8813102cba9a7ba87922ccdeba8e91c0e85bc1e5893ad4ff3a29084b26311c4"
+    "16777216:15810EE0": "e8813102cba9a7ba87922ccdeba8e91c0e85bc1e5893ad4ff3a29084b26311c4",
+    "16777216:D8616D2C": "89c6750899bea6c617cc0910d76a1007cf44dd69748128f3191409acef58c813"
   }
 }

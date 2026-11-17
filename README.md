@@ -13,6 +13,8 @@
   &nbsp;|&nbsp;
   <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases"><strong>Patch your ROM</strong></a>
   &nbsp;|&nbsp;
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#changelog">Changelogs</a>
+  &nbsp;|&nbsp;
   <a href="https://tally.so/r/M1N2oE">Submit a private bug report</a>
 </p>
 

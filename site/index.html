@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script src="player.js?v=4" defer></script>
   <script type="module" src="patcher.mjs"></script>
 </head>
@@ -29,11 +29,14 @@
       <p class="version"><span>Original Spanish game by MrNightology</span><span>v1.1</span></p>
     </header>
 
+    <nav class="release-shortcuts" aria-label="Release shortcuts">
+      <a class="menu-button" href="#releases">Patch ROM</a>
+      <a class="menu-button changelog-shortcut" href="#changelog">Changelogs</a>
+    </nav>
+
     <div class="music-strip" role="group" aria-label="Title music">
       <button type="button" id="music-toggle" aria-pressed="false">♪ Play theme</button>
     </div>
-
-    <p class="patch-shortcut"><a class="menu-button" href="#releases">Patch ROM</a></p>
 
     <nav class="main-menu" aria-label="Website menu">
       <a href="#story"><span class="arrow" aria-hidden="true"></span> Game</a>

@@ -26,5 +26,9 @@
         "Classic and Modern battle options, nature colours, move details and effectiveness indicators, and title music."
       ]
     }
-  ]
+  ],
+  "romSha256": {
+    "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
+    "16777216:5EF16DAD": "0a28656db8f4b29278167d532cb9e06760050b72e6e03a9c159a756b03257d83"
+  }
 }

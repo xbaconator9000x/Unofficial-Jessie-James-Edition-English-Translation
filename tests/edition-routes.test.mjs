@@ -13,9 +13,12 @@ for(const m of [en,es]) {
  assert.deepEqual(findRoute(m.patches,m.target,m.target),[]);
 }
 for(const key of Object.keys(en.versions).filter(x=>x!==original)) assert.equal(findRoute(es.patches,key,es.target),null);
-assert.equal(findRoute(en.patches,es.target,en.target),null);
+for(const key of Object.keys(es.versions).filter(x=>x!==original)) assert.equal(findRoute(en.patches,key,en.target),null);
 const html=read("index.html"), nav=html.match(/<nav class="main-menu"[\s\S]*?<\/nav>/)[0];
 assert.deepEqual([...nav.matchAll(/href="#([^"]+)"/g)].map(x=>x[1]),[...html.matchAll(/<section class="window" id="([^"]+)"/g)].map(x=>x[1]));
 for(const id of ["rom-file","patch-file","patch-run","patch-download","patch-status","patch-log","copy-report","rom-info","latest-version","hosted-patch-status"]) assert.equal([...html.matchAll(new RegExp('id="es-'+id+'"','g'))].length,1);
 assert.equal(read("spanish-patcher.mjs").includes('patches/spanish-releases.json'),true);
+const gallery=html.match(/<section class="window" id="english-screenshots">[\s\S]*?<\/section>/)[0];
+assert.deepEqual([...gallery.matchAll(/<img src="([^"]+)"/g)].map(x=>x[1]),["english-featured-gameplay.gif","english-dialogue.png","pokerail-english-map.jpg"]);
+assert.equal([...nav.matchAll(/href="#([^"]+)"/g)].length,8);
 console.log("Independent edition routes, navigation order and separate Spanish controls passed");

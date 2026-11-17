@@ -51,7 +51,7 @@ jobs:
           html = (root/'index.html').read_text()
           css = (root/'styles.css').read_text()
           script = (root/'player.js').read_text()
-          assert 'Original Spanish screenshots' in html
+          assert 'Spanish Screenshots' in html and 'English Screenshots' in html
           assert 'fonts.googleapis.com' in html
           assert 'Pixelify Sans' in css and 'Silkscreen' in css
           assert 'music-status' not in html
@@ -99,6 +99,16 @@ jobs:
                   assert f'{tc:08X}' == edge['to'].split(':')[1]
                   assert f'{pc:08X}' == edge['crc'] and zlib.crc32(b[:-4]) == pc
                   print('VERIFIED:', edge['path'])
+          # Required English screenshot assets must match the submitted originals.
+          asset = (site/'english-featured-gameplay.gif').read_bytes()
+          assert len(asset) == 2084378 and hashlib.sha256(asset).hexdigest() == 'a1529536cf7d5331fa6822423ede6ea5750031e69d35158384bc23ab570d6d30'
+          print('VERIFIED: english-featured-gameplay.gif')
+          asset = (site/'english-dialogue.png').read_bytes()
+          assert len(asset) == 235868 and hashlib.sha256(asset).hexdigest() == '5cf3683476859539a2e0c61416be8eb530e8b2f81eabe0a2a320ab94eca42381'
+          print('VERIFIED: english-dialogue.png')
+          asset = (site/'pokerail-english-map.jpg').read_bytes()
+          assert len(asset) == 128811 and hashlib.sha256(asset).hexdigest() == '266f1ec49ce6cab0ceba8d095d20e6511e3672b2f50ef3f7bf4ed5b9842dc307'
+          print('VERIFIED: pokerail-english-map.jpg')
           # Stable legacy URL always serves the verified current complete English BPS.
           from shutil import copyfile
           current = next(e for e in english['patches'] if e['from'] == '16777216:805E24CA' and e['to'] == english['target'])
@@ -106,6 +116,11 @@ jobs:
           if site / current['path'] != canonical:
               copyfile(site / current['path'], canonical)
           assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']
+          current_es = next(e for e in spanish['patches'] if e['from'] == '16777216:805E24CA' and e['to'] == spanish['target'])
+          canonical_es = site / 'patches/jessie-james-spanish-qol-v1.0.bps'
+          if site / current_es['path'] != canonical_es:
+              copyfile(site / current_es['path'], canonical_es)
+          assert hashlib.sha256(canonical_es.read_bytes()).hexdigest() == current_es['sha256']
           PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

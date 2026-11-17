@@ -80,7 +80,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
 .music-strip button:disabled { opacity: .55; cursor: wait; }
 .main-menu {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 5px;
   padding: 0 0 26px;
 }
@@ -213,3 +213,7 @@ strong { color: var(--white); font-weight: 700; }
 #es-patch-status { font-weight: bold; }
 #spanish details { margin: .75rem 0; }
 #spanish button { margin: .25rem 0; max-width: 100%; white-space: normal; }
+
+/* The featured English gameplay GIF retains its original aspect ratio. */
+.featured-gameplay { margin-top: 14px; }
+.featured-gameplay a { border-color: var(--red); }

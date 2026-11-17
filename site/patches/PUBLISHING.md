@@ -11,3 +11,7 @@ Run node tests/bps.test.mjs before publishing. GitHub Pages also checks the mani
 ## Independent Spanish QoL edition
 
 The English release manifest remains separate from spanish-releases.json. Do not add the Spanish QoL target to the English update graph or vice versa. Both start from the exact original Spanish FINAL v1.1 ROM. The Spanish patch is jessie-james-spanish-qol-v1.0.bps, SHA-256 6763fe3cb2566fd1725ab2725d22cca5942a3d48f172655f12d801b0dabda43d. Its target CRC32 is 79880DD1. The English v1.0 replacement is jessie-james-english-v1.0-3e48128c.bps, SHA-256 c60e05f88e388149826d58a801069020eae1a8ac927bfa11cb76668db3d3e32a, with the additional update edge jessie-james-english-v1.0-hotswap-3.bps. GitHub Pages publishes the validated current full English BPS at the stable original download URL as well. The English changelog is unchanged.
+
+## Same-version crash correction and English gallery
+
+Both editions remain v1.0. Current English target 15810EE0, Spanish QoL target 343C20A7. The manifests are authoritative for current patch names and checksums; the published canonical download URLs serve the latest verified full patch in each edition. Keep earlier update edges. The three gallery assets are required and checksum-verified before deployment.

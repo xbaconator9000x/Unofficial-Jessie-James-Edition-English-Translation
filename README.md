@@ -48,6 +48,8 @@ Finally, I added some additional quality of life features that were not included
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
 - **Title music** -- A looping version of the Team Rocket motto theme.
 
+I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
+
 ## Original Spanish Screenshots
 
 These are screenshots from MrNightology's original Spanish version, not the English translation.

@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script src="player.js?v=4" defer></script>
   <script type="module" src="patcher.mjs"></script>
+  <script type="module" src="spanish-patcher.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -39,6 +40,7 @@
       <a href="#screenshots"><span class="arrow" aria-hidden="true"></span> Screenshots</a>
       <a href="#report"><span class="arrow" aria-hidden="true"></span> Bug reports</a>
       <a href="#releases"><span class="arrow" aria-hidden="true"></span> Patch ROM</a>
+      <a href="#spanish"><span class="arrow" aria-hidden="true"></span> Español QoL</a>
       <a href="#changelog"><span class="arrow" aria-hidden="true"></span> Changelogs</a>
     </nav>
 
@@ -125,6 +127,27 @@
           <p><button class="menu-button" id="copy-report" type="button">Download diagnostic report</button></p>
           <p class="small">If patching fails, send the diagnostic report with your <a href="https://tally.so/r/M1N2oE">private bug report</a>. Do not send ROM files. No pre-patched ROMs are distributed.</p>
           <noscript>Enable JavaScript to use the local ROM patcher.</noscript>
+        </div>
+      </section>
+
+      <section class="window" id="spanish">
+        <h2>Prefer to play español?</h2>
+        <div class="window-body" lang="es">
+          <p>Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.</p>
+          <p><strong>Parche de mejoras para la versión en español: v<span id="es-latest-version">1.0</span></strong></p>
+          <p class="small" id="es-hosted-patch-status" role="status">Comprobando la disponibilidad del parche…</p>
+          <p>Selecciona tu propia ROM de <em>Jessie &amp; James Edition FINAL v1.1</em> en español. No utilices una ROM de FireRed sin modificar ni la versión inglesa. El parcheador comprueba la compatibilidad y descarga la ROM con las mejoras aplicadas.</p>
+          <p class="small">La ROM no sale de tu dispositivo. Guarda una copia de la ROM original y de tu partida antes de aplicar el parche.</p>
+          <label for="es-rom-file"><strong>1. Selecciona tu ROM (.gba)</strong></label>
+          <input class="patch-input" id="es-rom-file" type="file" accept=".gba,application/octet-stream">
+          <p id="es-rom-info" class="small">Selecciona una ROM para comprobar su compatibilidad.</p>
+          <details><summary>Opcional -- utilizar un parche que ya has descargado</summary><label for="es-patch-file">Selecciona el parche BPS de la versión española</label><input class="patch-input" id="es-patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">Solo para una actualización de un paso. Si no seleccionas ningún archivo, el parcheador utilizará el parche de esta web.</p></details>
+          <p><button class="menu-button" id="es-patch-run" type="button" disabled>2. Aplicar parche y descargar ROM</button> <button class="menu-button" id="es-patch-download" type="button" disabled>Descargar parche BPS</button></p>
+          <p id="es-patch-status" role="status" aria-live="polite"></p>
+          <pre id="es-patch-log" class="patch-log" aria-label="Informe de diagnóstico" tabindex="0"></pre>
+          <p><button class="menu-button" id="es-copy-report" type="button">Descargar informe de diagnóstico</button></p>
+          <p class="small">Si encuentras algún problema, puedes adjuntar el informe al <a href="https://tally.so/r/M1N2oE">formulario privado de errores</a>. No envíes archivos ROM. No distribuyo ROMs ya parcheadas.</p>
+          <noscript>Activa JavaScript para utilizar el parcheador local.</noscript>
         </div>
       </section>
 

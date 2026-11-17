@@ -1,0 +1,23 @@
+{
+  "latest": "1.0",
+  "versions": {
+    "16777216:805E24CA": "Versión original en español FINAL v1.1",
+    "16777216:79880DD1": "Versión en español con mejoras QoL v1.0"
+  },
+  "target": "16777216:79880DD1",
+  "patches": [
+    {
+      "from": "16777216:805E24CA",
+      "to": "16777216:79880DD1",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-qol-v1.0.bps",
+      "crc": "F09EEB31",
+      "bytes": 271137,
+      "sha256": "6763fe3cb2566fd1725ab2725d22cca5942a3d48f172655f12d801b0dabda43d"
+    }
+  ],
+  "romSha256": {
+    "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
+    "16777216:79880DD1": "04e9201a01fcfec5315224195e62390144968a9d2673442033871d43193ae320"
+  }
+}

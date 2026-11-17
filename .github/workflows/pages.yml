@@ -65,35 +65,47 @@ jobs:
         run: |
           node --check site/bps.mjs
           node --check site/patcher.mjs
+          node --check site/spanish-patcher.mjs
+          node tests/edition-routes.test.mjs
           node tests/bps.test.mjs
           python3 - <<'PY'
           import hashlib, json, struct, zlib
           from pathlib import Path
           site = Path('site')
-          m = json.loads((site/'patches/releases.json').read_text())
-          assert m['target'] in m['versions']
-          for key in m['versions']:
-              assert key in m['romSha256'] and len(m['romSha256'][key]) == 64
-          # Every supported ROM must have an update path to the current build.
-          reachable = {m['target']}
-          while True:
-              expanded = reachable | {e['from'] for e in m['patches'] if e['to'] in reachable}
-              if expanded == reachable:
-                  break
-              reachable = expanded
-          assert set(m['versions']) <= reachable
-          for edge in m['patches']:
-              assert edge['from'] in m['versions'] and edge['to'] in m['versions']
-              p = site / edge['path']
-              assert p.is_file(), f'Missing required patch: {edge["path"]}'
-              b = p.read_bytes()
-              assert len(b) == edge['bytes'] and b[:4] == b'BPS1'
-              assert hashlib.sha256(b).hexdigest() == edge['sha256']
-              sc, tc, pc = struct.unpack('<III', b[-12:])
-              assert f'{sc:08X}' == edge['from'].split(':')[1]
-              assert f'{tc:08X}' == edge['to'].split(':')[1]
-              assert f'{pc:08X}' == edge['crc'] and zlib.crc32(b[:-4]) == pc
-              print('VERIFIED:', edge['path'])
+          english = json.loads((site/'patches/releases.json').read_text())
+          spanish = json.loads((site/'patches/spanish-releases.json').read_text())
+          assert set(english['versions']) & set(spanish['versions']) == {'16777216:805E24CA'}
+          for m in (english, spanish):
+              assert m['target'] in m['versions']
+              for key in m['versions']:
+                  assert key in m['romSha256'] and len(m['romSha256'][key]) == 64
+              # Every supported ROM must have an update path to the current build.
+              reachable = {m['target']}
+              while True:
+                  expanded = reachable | {e['from'] for e in m['patches'] if e['to'] in reachable}
+                  if expanded == reachable:
+                      break
+                  reachable = expanded
+              assert set(m['versions']) <= reachable
+              for edge in m['patches']:
+                  assert edge['from'] in m['versions'] and edge['to'] in m['versions']
+                  p = site / edge['path']
+                  assert p.is_file(), f'Missing required patch: {edge["path"]}'
+                  b = p.read_bytes()
+                  assert len(b) == edge['bytes'] and b[:4] == b'BPS1'
+                  assert hashlib.sha256(b).hexdigest() == edge['sha256']
+                  sc, tc, pc = struct.unpack('<III', b[-12:])
+                  assert f'{sc:08X}' == edge['from'].split(':')[1]
+                  assert f'{tc:08X}' == edge['to'].split(':')[1]
+                  assert f'{pc:08X}' == edge['crc'] and zlib.crc32(b[:-4]) == pc
+                  print('VERIFIED:', edge['path'])
+          # Stable legacy URL always serves the verified current complete English BPS.
+          from shutil import copyfile
+          current = next(e for e in english['patches'] if e['from'] == '16777216:805E24CA' and e['to'] == english['target'])
+          canonical = site / 'patches/jessie-james-english-v1.0.bps'
+          if site / current['path'] != canonical:
+              copyfile(site / current['path'], canonical)
+          assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']
           PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

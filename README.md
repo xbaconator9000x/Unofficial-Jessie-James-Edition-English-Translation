@@ -71,7 +71,23 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Releases
 
-Patches and instructions will be added here once a build is ready for public testing. No pre-patched ROMs.
+**English v1.0** -- 17 November 2026.
+
+[Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
+
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), or a supported earlier English ROM. The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+
+Expected English v1.0 output CRC32: `5EF16DAD`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
+
+## Changelog
+
+### English v1.0 -- 17 November 2026
+
+- Initial public English translation release.
+- English dialogue, menus and text formatting.
+- Classic and Modern battle options and the quality of life additions listed above.
+
+[Release history and patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#changelog).
 
 ## Credits
 

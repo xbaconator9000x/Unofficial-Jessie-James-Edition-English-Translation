@@ -1,0 +1,30 @@
+{
+  "latest": "1.0",
+  "versions": {
+    "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
+    "16777216:5EF16DAD": "English v1.0"
+  },
+  "target": "16777216:5EF16DAD",
+  "patches": [
+    {
+      "from": "16777216:805E24CA",
+      "to": "16777216:5EF16DAD",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0.bps",
+      "crc": "43E526C4",
+      "bytes": 1510118,
+      "sha256": "1465ae91e0c55b328d7b5fa871387525a361fa9746e71f4083dea84c66aecbb9"
+    }
+  ],
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "17 November 2026",
+      "changes": [
+        "Initial public English translation release.",
+        "English dialogue, menus and text formatting.",
+        "Classic and Modern battle options, nature colours, move details and effectiveness indicators, and title music."
+      ]
+    }
+  ]
+}

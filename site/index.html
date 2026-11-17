@@ -10,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script src="player.js?v=4" defer></script>
+  <script type="module" src="patcher.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -33,6 +34,8 @@
     </div>
 
     <nav class="main-menu" aria-label="Website menu">
+      <a href="#releases"><span class="arrow" aria-hidden="true"></span> Patch ROM</a>
+      <a href="#changelog"><span class="arrow" aria-hidden="true"></span> Changelog</a>
       <a href="#story"><span class="arrow" aria-hidden="true"></span> Game</a>
       <a href="#translation"><span class="arrow" aria-hidden="true"></span> Translation</a>
       <a href="#screenshots"><span class="arrow" aria-hidden="true"></span> Screenshots</a>
@@ -40,6 +43,28 @@
     </nav>
 
     <main id="content">
+      <section class="window" id="releases">
+        <h2>Patch your ROM</h2>
+        <div class="window-body">
+          <p><strong>Latest English patch: v<span id="latest-version">1.0</span></strong></p>
+          <p>Choose your own compatible original Spanish FINAL v1.1 ROM or an earlier supported English version. No clean FireRed ROM. The patcher checks the exact ROM and applies any required updates in order.</p>
+          <p class="small">Your ROM stays on your device. Nothing is uploaded to a server. Keep a backup of your original ROM and save before updating.</p>
+          <label for="rom-file"><strong>1. Choose ROM (.gba)</strong></label>
+          <input class="patch-input" id="rom-file" type="file" accept=".gba,application/octet-stream">
+          <p id="rom-info" class="small">Choose a ROM to check compatibility.</p>
+          <details><summary>Optional -- use a patch file you already downloaded</summary><label for="patch-file">Choose official BPS patch</label><input class="patch-input" id="patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">For a single-step update only. Leave empty to use the hosted patch automatically.</p></details>
+          <p><button class="menu-button" id="patch-run" type="button" disabled>2. Patch &amp; download ROM</button> <button class="menu-button" id="patch-download" type="button" disabled>Download BPS patch</button></p>
+          <p id="patch-status" role="status" aria-live="polite"></p>
+          <pre id="patch-log" class="patch-log" aria-label="Patch diagnostic report" tabindex="0"></pre>
+          <p><button class="menu-button" id="copy-report" type="button">Download diagnostic report</button></p>
+          <p class="small">If patching fails, send the diagnostic report with your <a href="https://tally.so/r/M1N2oE">private bug report</a>. Do not send ROM files. No pre-patched ROMs are distributed.</p>
+          <noscript>Enable JavaScript to use the local ROM patcher.</noscript>
+        </div>
+      </section>
+      <section class="window" id="changelog">
+        <h2>Changelog</h2>
+        <div class="window-body" id="changes"><p>English translation release history.</p></div>
+      </section>
       <section class="window" id="story">
         <h2>What is Jessie &amp; James Edition?</h2>
         <div class="window-body">
@@ -105,13 +130,7 @@
         </div>
       </section>
 
-      <section class="window" id="releases">
-        <h2>Releases</h2>
-        <div class="window-body">
-          <p>Patches and instructions will be added to GitHub when a build is ready for public testing. No pre-patched ROMs.</p>
-          <p class="link-line"><a href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
-        </div>
-      </section>
+
     </main>
 
     <footer class="footer" id="credits">

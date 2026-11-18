@@ -17,3 +17,5 @@ The English release manifest remains separate from spanish-releases.json. Do not
 Both editions remain v1.0. Current English target 15810EE0, Spanish QoL target 343C20A7. The manifests are authoritative for current patch names and checksums; the published canonical download URLs serve the latest verified full patch in each edition. Keep earlier update edges. The three gallery assets are required and checksum-verified before deployment.
 
 English v1.0 same-version replacement: target D8616D2C, with incremental edge 15810EE0 to D8616D2C. See releases.json for current fingerprints. Spanish QoL remains unchanged.
+
+Same-version EXP. ALL update: English target E1DDF011, Spanish QoL target 252AE8A8. The supplied Spanish BPS targeted vanilla Spanish FINAL v1.1 and contained 951 changed bytes, none overlapping the previous Spanish QoL build's 268,779 changed bytes. The new Spanish full patch preserves all earlier QoL edits and adds the supplied changes; full and incremental outputs were verified byte-for-byte. Gameplay behavior and save compatibility remain unverified. See manifests for authoritative checksums.

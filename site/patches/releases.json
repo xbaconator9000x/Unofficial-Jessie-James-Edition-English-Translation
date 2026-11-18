@@ -7,18 +7,19 @@
     "16777216:6C2FC9B2": "English v1.0 (earlier build)",
     "16777216:3E48128C": "English v1.0 (earlier build)",
     "16777216:15810EE0": "English v1.0 (earlier build)",
-    "16777216:D8616D2C": "English v1.0"
+    "16777216:D8616D2C": "English v1.0 (earlier build)",
+    "16777216:E1DDF011": "English v1.0"
   },
-  "target": "16777216:D8616D2C",
+  "target": "16777216:E1DDF011",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:D8616D2C",
+      "to": "16777216:E1DDF011",
       "version": "1.0",
-      "path": "patches/jessie-james-english-v1.0-d8616d2c.bps",
-      "crc": "77B957CC",
-      "bytes": 1597508,
-      "sha256": "f90e629eb25e3617fb4a48ec847e0f3e627924d262a11e5eabd9aa04f554aaf0"
+      "path": "patches/jessie-james-english-v1.0-e1ddf011.bps",
+      "crc": "8F809258",
+      "bytes": 1598479,
+      "sha256": "09e0b3655b8b9d954d67e8bc937b4f0242c2566f68f0e8b7bc88bd60f14816cf"
     },
     {
       "from": "16777216:5EF16DAD",
@@ -64,6 +65,15 @@
       "crc": "DEDB611D",
       "bytes": 7079,
       "sha256": "6555a15fa028fa128f4e4eab157aff7514148380755797fac1391a314d6858d8"
+    },
+    {
+      "from": "16777216:D8616D2C",
+      "to": "16777216:E1DDF011",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0-d8616d2c-to-e1ddf011.bps",
+      "crc": "4BF44F41",
+      "bytes": 1025,
+      "sha256": "f3fdfe838250e11bdf0008e3214fd9a205444d5f7fb39937908bbb9878cff96e"
     }
   ],
   "changelog": [
@@ -84,6 +94,7 @@
     "16777216:6C2FC9B2": "89468d8c450388f19591fa6aed0dcd3e5721ecfd3c84fccfe20996cd3d7e7a4f",
     "16777216:3E48128C": "72654c93a05c728f9be278678c2d2fa21bbca602fec9b34f0f6a89bceac0c5ab",
     "16777216:15810EE0": "e8813102cba9a7ba87922ccdeba8e91c0e85bc1e5893ad4ff3a29084b26311c4",
-    "16777216:D8616D2C": "89c6750899bea6c617cc0910d76a1007cf44dd69748128f3191409acef58c813"
+    "16777216:D8616D2C": "89c6750899bea6c617cc0910d76a1007cf44dd69748128f3191409acef58c813",
+    "16777216:E1DDF011": "52a746aa93d8733587549abdd7e72c8609215d116729462a3e8bdbf3105ff3a9"
   }
 }

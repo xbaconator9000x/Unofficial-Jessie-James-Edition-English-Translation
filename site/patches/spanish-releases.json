@@ -3,18 +3,19 @@
   "versions": {
     "16777216:805E24CA": "Versión original en español FINAL v1.1",
     "16777216:79880DD1": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:343C20A7": "Versión en español con mejoras QoL v1.0"
+    "16777216:343C20A7": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
+    "16777216:252AE8A8": "Versión en español con mejoras QoL v1.0"
   },
-  "target": "16777216:343C20A7",
+  "target": "16777216:252AE8A8",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:343C20A7",
+      "to": "16777216:252AE8A8",
       "version": "1.0",
-      "path": "patches/jessie-james-spanish-qol-v1.0-343c20a7.bps",
-      "crc": "3292FC31",
-      "bytes": 271193,
-      "sha256": "7186f5c0a59fe35a21abbcb9078398856b63c1436f639151c2c58210f6ae237d"
+      "path": "patches/jessie-james-spanish-qol-v1.0-252ae8a8.bps",
+      "crc": "3AC1BB56",
+      "bytes": 274275,
+      "sha256": "8bdf28f675cd151e0c0ebf96fb07f3dea60bae3e3c459fe63be5321c4b40751d"
     },
     {
       "from": "16777216:79880DD1",
@@ -24,11 +25,21 @@
       "crc": "9B2DD30E",
       "bytes": 2287,
       "sha256": "15bbb97f63fbbccd5a42d00734da86aab918ed319b4cc39652610e32ad5b388b"
+    },
+    {
+      "from": "16777216:343C20A7",
+      "to": "16777216:252AE8A8",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-v1.0-343c20a7-to-252ae8a8.bps",
+      "crc": "8360769D",
+      "bytes": 1042,
+      "sha256": "99a2a3fc5cdf2ef9f500cbe3f73591c5c1e8f247e2932895e23750a6f63abd92"
     }
   ],
   "romSha256": {
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
     "16777216:79880DD1": "04e9201a01fcfec5315224195e62390144968a9d2673442033871d43193ae320",
-    "16777216:343C20A7": "9acc82cefa6abe95c4acbb56c2481528b1f0042006ae347e8b304fc302201977"
+    "16777216:343C20A7": "9acc82cefa6abe95c4acbb56c2481528b1f0042006ae347e8b304fc302201977",
+    "16777216:252AE8A8": "0ce45435acb37394306b2bc36bfd08863361f7895678fd1b828ad1bef53f84da"
   }
 }

@@ -109,6 +109,15 @@ jobs:
           asset = (site/'pokerail-english-map.jpg').read_bytes()
           assert len(asset) == 128811 and hashlib.sha256(asset).hexdigest() == '266f1ec49ce6cab0ceba8d095d20e6511e3672b2f50ef3f7bf4ed5b9842dc307'
           print('VERIFIED: pokerail-english-map.jpg')
+          asset = (site/'english-morning.png').read_bytes()
+          assert len(asset) == 431019 and hashlib.sha256(asset).hexdigest() == '9534c0ff52040a8028cfdb23ee17ba1a5f37747cc390c6011684e1e61413325f'
+          print('VERIFIED: english-morning.png')
+          asset = (site/'english-daytime.png').read_bytes()
+          assert len(asset) == 468430 and hashlib.sha256(asset).hexdigest() == 'b258d95059a698439b5bdf2b0cc1f1e57690c2e4e934ac4d4e7472c1d4358e1e'
+          print('VERIFIED: english-daytime.png')
+          asset = (site/'english-nighttime.png').read_bytes()
+          assert len(asset) == 377622 and hashlib.sha256(asset).hexdigest() == '13645f497061cd626d7e85f550a0af109c50e3ea7798ed081fb3605cbcc869e9'
+          print('VERIFIED: english-nighttime.png')
           # Stable legacy URL always serves the verified current complete English BPS.
           from shutil import copyfile
           current = next(e for e in english['patches'] if e['from'] == '16777216:805E24CA' and e['to'] == english['target'])

@@ -217,3 +217,9 @@ strong { color: var(--white); font-weight: 700; }
 /* The featured English gameplay GIF retains its original aspect ratio. */
 .featured-gameplay { margin-top: 14px; }
 .featured-gameplay a { border-color: var(--red); }
+
+/* Compare the same overworld scene at different times of day. */
+.time-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.time-gallery .screenshot { margin: 0 0 12px; min-width: 0; }
+.time-gallery figcaption { text-align: center; }
+@media (max-width: 620px) { .time-gallery { grid-template-columns: minmax(0, 1fr); } }

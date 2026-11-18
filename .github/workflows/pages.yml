@@ -121,6 +121,9 @@ jobs:
           asset = (site/'english-battle-qol.gif').read_bytes()
           assert len(asset) == 56584 and hashlib.sha256(asset).hexdigest() == 'df17469d30080671dff1d19addfce9ed09dd833ca507e371d79372c15b9eddbb'
           print('VERIFIED: english-battle-qol.gif')
+          asset = (site/'english-battle-qol-2.gif').read_bytes()
+          assert len(asset) == 59442 and hashlib.sha256(asset).hexdigest() == '585ec554660007a01b40fe1c43496a2375ccb7c8a8be75b5bb93a562297df5cd'
+          print('VERIFIED: english-battle-qol-2.gif')
           # Stable legacy URL always serves the verified current complete English BPS.
           from shutil import copyfile
           current = next(e for e in english['patches'] if e['from'] == '16777216:805E24CA' and e['to'] == english['target'])

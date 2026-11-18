@@ -223,3 +223,7 @@ strong { color: var(--white); font-weight: 700; }
 .time-gallery .screenshot { margin: 0 0 12px; min-width: 0; }
 .time-gallery figcaption { text-align: center; }
 @media (max-width: 620px) { .time-gallery { grid-template-columns: minmax(0, 1fr); } }
+
+.battle-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.battle-gallery .screenshot { margin: 0 0 12px; min-width: 0; }
+@media (max-width: 620px) { .battle-gallery { grid-template-columns: minmax(0, 1fr); } }

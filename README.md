@@ -11,6 +11,12 @@
 <p align="center">
   <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/"><strong>Visit the Team Rocket website</strong></a>
   &nbsp;|&nbsp;
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases"><strong>Patch your ROM</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish">Español QoL</a>
+  &nbsp;|&nbsp;
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#changelog">Changelogs</a>
+  &nbsp;|&nbsp;
   <a href="https://tally.so/r/M1N2oE">Submit a private bug report</a>
 </p>
 
@@ -26,7 +32,7 @@ The game covers **Kanto and Johto**. It also includes the Battle Subway, shop ro
 
 [View MrNightology's original Spanish release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
 
-## The English Edition
+## Translation
 
 This is my unofficial English translation of the completed v1.1 game. I'm not affiliated with the original developer.
 
@@ -40,7 +46,10 @@ Finally, I added some additional quality of life features that were not included
 - **Nature colours** -- Increased stats in red, decreased stats in blue.
 - **Move details** -- Press R when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
+- **Optional and toggleable EXP. ALL key item**
 - **Title music** -- A looping version of the Team Rocket motto theme.
+
+I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
 
 ## Original Spanish Screenshots
 
@@ -71,7 +80,31 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Releases
 
-Patches and instructions will be added here once a build is ready for public testing. No pre-patched ROMs.
+**English v1.0** -- 17 November 2026.
+
+[Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
+
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), or a supported earlier English ROM. The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+
+Expected English v1.0 output CRC32: `01EB7D14`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
+
+## Prefer to play español?
+
+Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.
+
+[Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
+
+Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`). La ROM parcheada permanece en español (CRC32 `B4BC72F6`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
+
+## Changelog
+
+### English v1.0 -- 17 November 2026
+
+- Initial public English translation release.
+- English dialogue, menus and text formatting.
+- Classic and Modern battle options and the quality of life additions listed above.
+
+[Release history and patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#changelog).
 
 ## Credits
 

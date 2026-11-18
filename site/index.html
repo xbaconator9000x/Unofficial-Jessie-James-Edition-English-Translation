@@ -10,8 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script src="player.js?v=4" defer></script>
+  <script type="module" src="patcher.mjs"></script>
+  <script type="module" src="spanish-patcher.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -33,10 +35,14 @@
     </div>
 
     <nav class="main-menu" aria-label="Website menu">
-      <a href="#story"><span class="arrow" aria-hidden="true"></span> Game</a>
-      <a href="#translation"><span class="arrow" aria-hidden="true"></span> Translation</a>
-      <a href="#screenshots"><span class="arrow" aria-hidden="true"></span> Screenshots</a>
-      <a href="#report"><span class="arrow" aria-hidden="true"></span> Bug reports</a>
+      <a href="#story">Game</a>
+      <a href="#translation">Translation</a>
+      <a href="#screenshots">Spanish Screenshots</a>
+      <a href="#english-screenshots">English Screenshots</a>
+      <a href="#report">Bug reports</a>
+      <a href="#releases">Patch ROM</a>
+      <a href="#spanish">Español QoL</a>
+      <a href="#changelog">Changelogs</a>
     </nav>
 
     <main id="content">
@@ -59,7 +65,7 @@
       </section>
 
       <section class="window" id="translation">
-        <h2>The English edition</h2>
+        <h2>Translation</h2>
         <div class="window-body">
           <p>This is my unofficial English translation of the completed v1.1 game. I'm not affiliated with the original developer.</p>
           <p>I extracted the Spanish text and replaced matching FireRed lines with their official English versions. For the rest, I used Google Translate as a starting point, then went through the dialogue with the anime as a reference for the characters' voices. I also fixed text wrapping and page breaks where needed.</p>
@@ -70,13 +76,15 @@
             <li><strong>Nature colours</strong> -- Increased stats in red, decreased stats in blue.</li>
             <li><strong>Move details</strong> -- Press R when choosing a move to view its description, power, accuracy and category.</li>
             <li><strong>Effectiveness indicators</strong> -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.</li>
+            <li><strong>Optional and toggleable EXP. ALL key item</strong></li>
             <li><strong>Title music</strong> -- A looping version of the Team Rocket motto theme.</li>
           </ul>
+          <p>I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the <a href="#report">bug reporting section of this page</a>. Providing screenshots or a .sav file would also be incredibly helpful!</p>
         </div>
       </section>
 
       <section class="window" id="screenshots">
-        <h2>Original Spanish screenshots</h2>
+        <h2>Spanish Screenshots</h2>
         <div class="window-body">
           <p>These are screenshots from MrNightology's original Spanish version, not the English translation.</p>
           <figure class="screenshot">
@@ -95,6 +103,51 @@
         </div>
       </section>
 
+      <section class="window" id="english-screenshots">
+        <h2>English Screenshots</h2>
+        <div class="window-body">
+          <p>These are screenshots from my English build. They show the current translation and some of the quality of life additions included in the patch.</p>
+          <figure class="screenshot featured-gameplay">
+            <a href="english-featured-gameplay.gif" target="_blank" rel="noopener noreferrer"><img src="english-featured-gameplay.gif" alt="English gameplay animation" width="720" height="480" loading="eager"></a>
+            <figcaption>English build gameplay</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <a href="english-dialogue.png" target="_blank" rel="noopener noreferrer"><img src="english-dialogue.png" alt="Jessie and James English dialogue" width="1620" height="1080" loading="lazy"></a>
+            <figcaption>Example of the English dialogue in-game</figcaption>
+          </figure>
+          <h3>Move details and type-effectiveness indicators</h3>
+          <div class="battle-gallery">
+            <figure class="screenshot">
+              <a href="english-battle-qol.gif" target="_blank" rel="noopener noreferrer"><img src="english-battle-qol.gif" alt="Battle move information panel and type-effectiveness indicators" width="720" height="480" loading="lazy"></a>
+              <figcaption>Move details and type-effectiveness indicators</figcaption>
+            </figure>
+            <figure class="screenshot">
+              <a href="english-battle-qol-2.gif" target="_blank" rel="noopener noreferrer"><img src="english-battle-qol-2.gif" alt="Additional battle move categories and type-effectiveness indicators" width="720" height="480" loading="lazy"></a>
+              <figcaption>Additional move and effectiveness indicators</figcaption>
+            </figure>
+          </div>
+          <h3>Day / night cycle</h3>
+          <div class="time-gallery">
+            <figure class="screenshot">
+              <a href="english-morning.png" target="_blank" rel="noopener noreferrer"><img src="english-morning.png" alt="Team Rocket dialogue scene -- Morning" width="1620" height="1080" loading="lazy"></a>
+              <figcaption>Morning</figcaption>
+            </figure>
+            <figure class="screenshot">
+              <a href="english-daytime.png" target="_blank" rel="noopener noreferrer"><img src="english-daytime.png" alt="Team Rocket dialogue scene -- Daytime" width="1620" height="1080" loading="lazy"></a>
+              <figcaption>Daytime</figcaption>
+            </figure>
+            <figure class="screenshot">
+              <a href="english-nighttime.png" target="_blank" rel="noopener noreferrer"><img src="english-nighttime.png" alt="Team Rocket dialogue scene -- Night-time" width="1620" height="1080" loading="lazy"></a>
+              <figcaption>Night-time</figcaption>
+            </figure>
+          </div>
+          <figure class="screenshot">
+            <a href="pokerail-english-map.jpg" target="_blank" rel="noopener noreferrer"><img src="pokerail-english-map.jpg" alt="Updated English PokéRail Commuter Services map" width="1536" height="536" loading="lazy"></a>
+            <figcaption>Updated PokéRail map</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="window" id="report">
         <h2>Testing and bug reports</h2>
         <div class="window-body">
@@ -106,11 +159,49 @@
       </section>
 
       <section class="window" id="releases">
-        <h2>Releases</h2>
+        <h2>Patch your ROM</h2>
         <div class="window-body">
-          <p>Patches and instructions will be added to GitHub when a build is ready for public testing. No pre-patched ROMs.</p>
-          <p class="link-line"><a href="https://github.com/xbaconator9000x/Unofficial-Jessie-James-Edition-English-Translation" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+          <p><strong>Latest English patch: v<span id="latest-version">1.0</span></strong></p>
+          <p class="small" id="hosted-patch-status" role="status">Checking hosted patch availability…</p>
+          <p>Choose your own compatible original Spanish FINAL v1.1 ROM or an earlier supported English version. No clean FireRed ROM. The patcher checks the exact ROM and applies any required updates in order.</p>
+          <p class="small">Your ROM stays on your device. Nothing is uploaded to a server. Keep a backup of your original ROM and save before updating.</p>
+          <label for="rom-file"><strong>1. Choose ROM (.gba)</strong></label>
+          <input class="patch-input" id="rom-file" type="file" accept=".gba,application/octet-stream">
+          <p id="rom-info" class="small">Choose a ROM to check compatibility.</p>
+          <details><summary>Optional -- use a patch file you already downloaded</summary><label for="patch-file">Choose official BPS patch</label><input class="patch-input" id="patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">For a single-step update only. Leave empty to use the hosted patch automatically.</p></details>
+          <p><button class="menu-button" id="patch-run" type="button" disabled>2. Patch &amp; download ROM</button> <button class="menu-button" id="patch-download" type="button" disabled>Download BPS patch</button></p>
+          <p id="patch-status" role="status" aria-live="polite"></p>
+          <pre id="patch-log" class="patch-log" aria-label="Patch diagnostic report" tabindex="0"></pre>
+          <p><button class="menu-button" id="copy-report" type="button">Download diagnostic report</button></p>
+          <p class="small">If patching fails, send the diagnostic report with your <a href="https://tally.so/r/M1N2oE">private bug report</a>. Do not send ROM files. No pre-patched ROMs are distributed.</p>
+          <noscript>Enable JavaScript to use the local ROM patcher.</noscript>
         </div>
+      </section>
+
+      <section class="window" id="spanish">
+        <h2>Prefer to play español?</h2>
+        <div class="window-body" lang="es">
+          <p>Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.</p>
+          <p><strong>Parche de mejoras para la versión en español: v<span id="es-latest-version">1.0</span></strong></p>
+          <p class="small" id="es-hosted-patch-status" role="status">Comprobando la disponibilidad del parche…</p>
+          <p>Selecciona tu propia ROM de <em>Jessie &amp; James Edition FINAL v1.1</em> en español. No utilices una ROM de FireRed sin modificar ni la versión inglesa. El parcheador comprueba la compatibilidad y descarga la ROM con las mejoras aplicadas.</p>
+          <p class="small">La ROM no sale de tu dispositivo. Guarda una copia de la ROM original y de tu partida antes de aplicar el parche.</p>
+          <label for="es-rom-file"><strong>1. Selecciona tu ROM (.gba)</strong></label>
+          <input class="patch-input" id="es-rom-file" type="file" accept=".gba,application/octet-stream">
+          <p id="es-rom-info" class="small">Selecciona una ROM para comprobar su compatibilidad.</p>
+          <details><summary>Opcional -- utilizar un parche que ya has descargado</summary><label for="es-patch-file">Selecciona el parche BPS de la versión española</label><input class="patch-input" id="es-patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">Solo para una actualización de un paso. Si no seleccionas ningún archivo, el parcheador utilizará el parche de esta web.</p></details>
+          <p><button class="menu-button" id="es-patch-run" type="button" disabled>2. Aplicar parche y descargar ROM</button> <button class="menu-button" id="es-patch-download" type="button" disabled>Descargar parche BPS</button></p>
+          <p id="es-patch-status" role="status" aria-live="polite"></p>
+          <pre id="es-patch-log" class="patch-log" aria-label="Informe de diagnóstico" tabindex="0"></pre>
+          <p><button class="menu-button" id="es-copy-report" type="button">Descargar informe de diagnóstico</button></p>
+          <p class="small">Si encuentras algún problema, puedes adjuntar el informe al <a href="https://tally.so/r/M1N2oE">formulario privado de errores</a>. No envíes archivos ROM. No distribuyo ROMs ya parcheadas.</p>
+          <noscript>Activa JavaScript para utilizar el parcheador local.</noscript>
+        </div>
+      </section>
+
+      <section class="window" id="changelog">
+        <h2>Changelog</h2>
+        <div class="window-body" id="changes"><p>English translation release history.</p></div>
       </section>
     </main>
 

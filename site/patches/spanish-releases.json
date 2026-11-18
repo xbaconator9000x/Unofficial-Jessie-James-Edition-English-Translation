@@ -1,0 +1,67 @@
+{
+  "latest": "1.0",
+  "versions": {
+    "16777216:805E24CA": "Versión original en español FINAL v1.1",
+    "16777216:79880DD1": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
+    "16777216:343C20A7": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
+    "16777216:252AE8A8": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
+    "16777216:E67818B3": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
+    "16777216:B4BC72F6": "Versión en español con mejoras QoL v1.0"
+  },
+  "target": "16777216:B4BC72F6",
+  "patches": [
+    {
+      "from": "16777216:805E24CA",
+      "to": "16777216:B4BC72F6",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-qol-v1.0-b4bc72f6.bps",
+      "crc": "F78107CD",
+      "bytes": 272577,
+      "sha256": "7fe60270e45f3eae4007a8ddde766f53695ad7ba62397068980a3c20bff2e29e"
+    },
+    {
+      "from": "16777216:79880DD1",
+      "to": "16777216:343C20A7",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-v1.0-79880dd1-to-343c20a7.bps",
+      "crc": "9B2DD30E",
+      "bytes": 2287,
+      "sha256": "15bbb97f63fbbccd5a42d00734da86aab918ed319b4cc39652610e32ad5b388b"
+    },
+    {
+      "from": "16777216:343C20A7",
+      "to": "16777216:252AE8A8",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-v1.0-343c20a7-to-252ae8a8.bps",
+      "crc": "8360769D",
+      "bytes": 1042,
+      "sha256": "99a2a3fc5cdf2ef9f500cbe3f73591c5c1e8f247e2932895e23750a6f63abd92"
+    },
+    {
+      "from": "16777216:252AE8A8",
+      "to": "16777216:E67818B3",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-v1.0-252ae8a8-to-e67818b3.bps",
+      "crc": "FD261933",
+      "bytes": 149,
+      "sha256": "2732d57f9b5a15a89d650934fee59453e826a15db2bdab80b337fa4c655be6c9"
+    },
+    {
+      "from": "16777216:E67818B3",
+      "to": "16777216:B4BC72F6",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-v1.0-e67818b3-to-b4bc72f6.bps",
+      "crc": "3AA56537",
+      "bytes": 508,
+      "sha256": "54124e53b092929194d910da0166aee54039f57f19637aaa5187175cdf784472"
+    }
+  ],
+  "romSha256": {
+    "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
+    "16777216:79880DD1": "04e9201a01fcfec5315224195e62390144968a9d2673442033871d43193ae320",
+    "16777216:343C20A7": "9acc82cefa6abe95c4acbb56c2481528b1f0042006ae347e8b304fc302201977",
+    "16777216:252AE8A8": "0ce45435acb37394306b2bc36bfd08863361f7895678fd1b828ad1bef53f84da",
+    "16777216:E67818B3": "cf8370525042a267711ed96e8fcb335c7426e9cad51fe3f144dadc9769c3e85a",
+    "16777216:B4BC72F6": "dfa72683ce86fec81a409101a86329449c25c1ac2e1a2df0e4ce0e166045e681"
+  }
+}

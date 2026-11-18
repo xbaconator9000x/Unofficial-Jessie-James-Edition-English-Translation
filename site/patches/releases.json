@@ -9,18 +9,19 @@
     "16777216:15810EE0": "English v1.0 (earlier build)",
     "16777216:D8616D2C": "English v1.0 (earlier build)",
     "16777216:E1DDF011": "English v1.0 (earlier build)",
-    "16777216:532F1751": "English v1.0"
+    "16777216:532F1751": "English v1.0 (earlier build)",
+    "16777216:01EB7D14": "English v1.0"
   },
-  "target": "16777216:532F1751",
+  "target": "16777216:01EB7D14",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:532F1751",
+      "to": "16777216:01EB7D14",
       "version": "1.0",
-      "path": "patches/jessie-james-english-v1.0-532f1751.bps",
-      "crc": "881DA947",
-      "bytes": 1598479,
-      "sha256": "7825af2cde510c0af407652780cc0f17caa3b5db28dcefbcabffdf259df9e76c"
+      "path": "patches/jessie-james-english-v1.0-01eb7d14.bps",
+      "crc": "5D7688A7",
+      "bytes": 1598866,
+      "sha256": "110c6d47a63268c559cda8609b379537e950c6ccd95f50396283c2a2dac15ac0"
     },
     {
       "from": "16777216:5EF16DAD",
@@ -84,6 +85,15 @@
       "crc": "65226B93",
       "bytes": 168,
       "sha256": "8fc85a5c874317701bf6b4166e1bd8e927ed74a2d27b5b09c8de5f03fe7ec758"
+    },
+    {
+      "from": "16777216:532F1751",
+      "to": "16777216:01EB7D14",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0-532f1751-to-01eb7d14.bps",
+      "crc": "FD6FCAF7",
+      "bytes": 508,
+      "sha256": "7d922e9bbb4b9b2184428d00695aef5dcd2f97771703d783710922bdcb6665f0"
     }
   ],
   "changelog": [
@@ -106,6 +116,7 @@
     "16777216:15810EE0": "e8813102cba9a7ba87922ccdeba8e91c0e85bc1e5893ad4ff3a29084b26311c4",
     "16777216:D8616D2C": "89c6750899bea6c617cc0910d76a1007cf44dd69748128f3191409acef58c813",
     "16777216:E1DDF011": "52a746aa93d8733587549abdd7e72c8609215d116729462a3e8bdbf3105ff3a9",
-    "16777216:532F1751": "b2d76bb9ae72dc481fdd8844a157600f598ae086c9edda0a2ffce81f3537e509"
+    "16777216:532F1751": "b2d76bb9ae72dc481fdd8844a157600f598ae086c9edda0a2ffce81f3537e509",
+    "16777216:01EB7D14": "34e80f78f5f7388ff1df7a9bab7ffee49921971939c1582a131078654476140c"
   }
 }

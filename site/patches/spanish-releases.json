@@ -6,18 +6,19 @@
     "16777216:343C20A7": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
     "16777216:252AE8A8": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
     "16777216:E67818B3": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:B4BC72F6": "Versión en español con mejoras QoL v1.0"
+    "16777216:B4BC72F6": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
+    "16777216:ED932AB3": "Versión en español con mejoras QoL v1.0"
   },
-  "target": "16777216:B4BC72F6",
+  "target": "16777216:ED932AB3",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:B4BC72F6",
+      "to": "16777216:ED932AB3",
       "version": "1.0",
-      "path": "patches/jessie-james-spanish-qol-v1.0-b4bc72f6.bps",
-      "crc": "F78107CD",
-      "bytes": 272577,
-      "sha256": "7fe60270e45f3eae4007a8ddde766f53695ad7ba62397068980a3c20bff2e29e"
+      "path": "patches/jessie-james-spanish-qol-v1.0-ed932ab3.bps",
+      "crc": "40C81DC2",
+      "bytes": 272624,
+      "sha256": "d581e021f047292ac68aea3abda86af7aff27b2f8dce3505dd7d6a520d0fc340"
     },
     {
       "from": "16777216:79880DD1",
@@ -54,6 +55,15 @@
       "crc": "3AA56537",
       "bytes": 508,
       "sha256": "54124e53b092929194d910da0166aee54039f57f19637aaa5187175cdf784472"
+    },
+    {
+      "from": "16777216:B4BC72F6",
+      "to": "16777216:ED932AB3",
+      "version": "1.0",
+      "path": "patches/jessie-james-spanish-v1.0-b4bc72f6-to-ed932ab3.bps",
+      "crc": "DBEA13AE",
+      "bytes": 79,
+      "sha256": "effc6f86d1b9f40adec240739dd76cfe97ccefc7efa9ff969ba3448ca330e05d"
     }
   ],
   "romSha256": {
@@ -62,6 +72,7 @@
     "16777216:343C20A7": "9acc82cefa6abe95c4acbb56c2481528b1f0042006ae347e8b304fc302201977",
     "16777216:252AE8A8": "0ce45435acb37394306b2bc36bfd08863361f7895678fd1b828ad1bef53f84da",
     "16777216:E67818B3": "cf8370525042a267711ed96e8fcb335c7426e9cad51fe3f144dadc9769c3e85a",
-    "16777216:B4BC72F6": "dfa72683ce86fec81a409101a86329449c25c1ac2e1a2df0e4ce0e166045e681"
+    "16777216:B4BC72F6": "dfa72683ce86fec81a409101a86329449c25c1ac2e1a2df0e4ce0e166045e681",
+    "16777216:ED932AB3": "40e208d4af52be09171337b4efe897c2a7d1abd86b6f61d2edc9291d92c8e0ec"
   }
 }

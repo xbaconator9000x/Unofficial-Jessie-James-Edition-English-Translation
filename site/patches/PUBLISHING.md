@@ -19,3 +19,5 @@ Both editions remain v1.0. Current English target 15810EE0, Spanish QoL target 3
 English v1.0 same-version replacement: target D8616D2C, with incremental edge 15810EE0 to D8616D2C. See releases.json for current fingerprints. Spanish QoL remains unchanged.
 
 Same-version EXP. ALL update: English target E1DDF011, Spanish QoL target 252AE8A8. The supplied Spanish BPS targeted vanilla Spanish FINAL v1.1 and contained 951 changed bytes, none overlapping the previous Spanish QoL build's 268,779 changed bytes. The new Spanish full patch preserves all earlier QoL edits and adds the supplied changes; full and incremental outputs were verified byte-for-byte. Gameplay behavior and save compatibility remain unverified. See manifests for authoritative checksums.
+
+Same-version replacement: English target 532F1751 (77 bytes different from the preceding build), Spanish QoL target E67818B3 (53 bytes different). The complete supplied patches are preserved byte-for-byte. Both incremental patches were applied to the previous exact ROM and verified against the new output. Gameplay behavior and save compatibility remain unverified.

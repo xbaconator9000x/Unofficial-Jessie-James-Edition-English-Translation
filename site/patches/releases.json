@@ -11,18 +11,19 @@
     "16777216:E1DDF011": "English v1.0 (earlier build)",
     "16777216:532F1751": "English v1.0 (earlier build)",
     "16777216:01EB7D14": "English v1.0 (earlier build)",
-    "16777216:91D1183A": "English v1.0"
+    "16777216:91D1183A": "English v1.0 (earlier build)",
+    "16777216:80DA34B3": "English v1.0"
   },
-  "target": "16777216:91D1183A",
+  "target": "16777216:80DA34B3",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:91D1183A",
+      "to": "16777216:80DA34B3",
       "version": "1.0",
-      "path": "patches/jessie-james-english-v1.0-91d1183a.bps",
-      "crc": "6B441C29",
+      "path": "patches/jessie-james-english-v1.0-80da34b3.bps",
+      "crc": "B2F86C02",
       "bytes": 1598775,
-      "sha256": "3f4a625b08fb1da2d5a135d2595777684996e654405dceaa4130ffe3a0be3871"
+      "sha256": "ba73bc2e54275b2c806a3db678b068298b8dde224c8451c977834087f54595de"
     },
     {
       "from": "16777216:5EF16DAD",
@@ -104,6 +105,15 @@
       "crc": "E1C3E83C",
       "bytes": 205,
       "sha256": "151e77ee330d698c451775f3dad96ae86ac8549d71f5ee37276247d4cf569714"
+    },
+    {
+      "from": "16777216:91D1183A",
+      "to": "16777216:80DA34B3",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0-91d1183a-to-80da34b3.bps",
+      "crc": "4417AA24",
+      "bytes": 118,
+      "sha256": "80a8c8cc463a5c0b2340ec35c8059418268dbeab987d25456175dbd4dfc011de"
     }
   ],
   "changelog": [
@@ -128,6 +138,7 @@
     "16777216:E1DDF011": "52a746aa93d8733587549abdd7e72c8609215d116729462a3e8bdbf3105ff3a9",
     "16777216:532F1751": "b2d76bb9ae72dc481fdd8844a157600f598ae086c9edda0a2ffce81f3537e509",
     "16777216:01EB7D14": "34e80f78f5f7388ff1df7a9bab7ffee49921971939c1582a131078654476140c",
-    "16777216:91D1183A": "641c2c6ff0c2cdbd4664b5d975450527314bfb18c794c330e40c121f26404cfc"
+    "16777216:91D1183A": "641c2c6ff0c2cdbd4664b5d975450527314bfb18c794c330e40c121f26404cfc",
+    "16777216:80DA34B3": "944117c4dbf111eab6e0029761e577268d849dc3ed9fcc709f1eba96de249f8e"
   }
 }

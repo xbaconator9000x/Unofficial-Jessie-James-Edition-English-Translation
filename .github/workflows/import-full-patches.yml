@@ -1,0 +1,71 @@
+name: Import verified full v1.0 patches
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/import-full-patches.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct and validate both patches
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v zstd || { sudo apt-get update && sudo apt-get install -y zstd; }
+          python3 - <<'PY'
+          import base64, hashlib, json, struct, subprocess, zlib
+          from pathlib import Path
+          records=json.loads("[{\"lang\":\"English\",\"old\":\"4B94C286\",\"oldsha\":\"702db2e6268723140bb903a0c0d60b292ccbc6ddb09b84760903870c4ed51b11\",\"basefile\":\"jessie-james-english-v1.0-804c969e.bps\",\"basepatchsha\":\"ffd47fb0f86f5b6034312c51fa6601dfb52e8ed8e8fd6a352aa1e4dc8a72f4be\",\"target\":\"C043455C\",\"sha\":\"a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a\",\"full\":{\"path\":\"patches/jessie-james-english-v1.0-c043455c.bps\",\"crc\":\"2C5B132F\",\"bytes\":1751571,\"sha256\":\"1efc4ef63c2da89d0f4c7b22ec8c8db9cf81d1a1514f489f6fa20c60d761fad9\"},\"blob\":\"a21e56afe06a12099b77aabfdcb00f5a19cb52df\",\"transfer_sha\":\"69b4b214dc88b396013293963b05cef8970a25e2f319d4effab0db2e409fb3f0\",\"b64\":\"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\"},{\"lang\":\"Spanish\",\"old\":\"8209F6BB\",\"oldsha\":\"4a2a0a69dcf546b1dc1ffb33add93c548e081525a949453cb50c09da9834a38c\",\"basefile\":\"jessie-james-spanish-qol-v1.0-9901ee6e.bps\",\"basepatchsha\":\"198e3272991b405eadb352cc577e436b464e782e692a371570026bcf75161c65\",\"target\":\"7C042814\",\"sha\":\"7a9587b11af0385a589b9b7ad309edea1f3dac58705da2a3cd8ae84164e41a18\",\"full\":{\"path\":\"patches/jessie-james-spanish-qol-v1.0-7c042814.bps\",\"crc\":\"C98CD5EB\",\"bytes\":427112,\"sha256\":\"adb19917976b3ce193eaede82f66fd66db53378007793dcaf1b6fd2a285f07f7\"},\"blob\":\"283e7168b38639668a628601b915b9aac7f7f22d\",\"transfer_sha\":\"de25917f7f813b9241ef0e51170e66ad9ca2c41542943c316990aa05343591ab\",\"b64\":\"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\"}]")
+          source="16777216:805E24CA"
+          for r in records:
+              old=Path("site/patches")/r["basefile"]
+              new=Path("site")/r["full"]["path"]
+              assert hashlib.sha256(old.read_bytes()).hexdigest()==r["basepatchsha"]
+              assert not new.exists()
+              delta=base64.b64decode(r["b64"],validate=True)
+              assert hashlib.sha256(delta).hexdigest()==r["transfer_sha"]
+              tmp=Path("/tmp")/(r["lang"]+".zst")
+              tmp.write_bytes(delta)
+              subprocess.run(["zstd","-d","--patch-from="+str(old),str(tmp),"-o",str(new)],check=True)
+              b=new.read_bytes()
+              e=r["full"]
+              assert b[:4]==b"BPS1" and len(b)==e["bytes"] and hashlib.sha256(b).hexdigest()==e["sha256"]
+              assert subprocess.check_output(["git","hash-object",str(new)],text=True).strip()==r["blob"]
+              s,t,c=struct.unpack("<III",b[-12:])
+              assert s==0x805E24CA and t==int(r["target"],16) and c==int(e["crc"],16) and zlib.crc32(b[:-4])==c
+              path=Path("site/patches")/("releases.json" if r["lang"]=="English" else "spanish-releases.json")
+              m=json.loads(path.read_text())
+              prev="16777216:"+r["old"]
+              target="16777216:"+r["target"]
+              assert m["target"]==prev and m["latest"]=="1.0" and len(m["patches"])==1
+              assert m["romSha256"][prev]==r["oldsha"]
+              m["target"]=target
+              m["versions"]={source:m["versions"][source],target:m["versions"][prev]}
+              m["romSha256"]={source:m["romSha256"][source],target:r["sha"]}
+              m["patches"]=[dict(e,**{"from":source,"to":target,"version":"1.0"})]
+              path.write_text(json.dumps(m,ensure_ascii=False,indent=2)+"\n")
+              print(r["lang"],"verified exact BPS",r["target"],e["sha256"])
+          for path in ["README.md","site/index.html"]:
+              p=Path(path)
+              s=p.read_text()
+              for old,new in [("I've reworked trainer teams and improved the battle AI for those who want a bit more of a challenge, without increasing levels or placing restrictions on the player.","I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player."),("He modificado los equipos de los entrenadores y mejorado la IA de combate para quienes busquen un poco más de dificultad, sin subir los niveles ni imponer restricciones al jugador.","He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.")]:
+                  assert s.count(old)==1
+                  s=s.replace(old,new)
+              if path=="README.md":
+                  for old,new in [("output CRC32: `4B94C286`","output CRC32: `C043455C`"),("permanece en español (CRC32 `8209F6BB`)","permanece en español (CRC32 `7C042814`)")]:
+                      assert s.count(old)==1
+                      s=s.replace(old,new)
+              p.write_text(s)
+          p=Path("site/patches/PUBLISHING.md")
+          p.write_text(p.read_text()+"\nSame-version full-patch replacement: English C043455C, Spanish QoL 7C042814. Both full BPS attachments preserved byte-for-byte, applied locally against the exact original Spanish FINAL v1.1 ROM, and GitHub import verifies SHA-256, Git blob identity and BPS CRCs. Updated the English and Spanish Hard Mode descriptions to mention custom scripts, team depth and moveset variety. No incremental patches, ROM files or saves published. Gameplay and save compatibility remain unverified.\n")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/patches/jessie-james-english-v1.0-c043455c.bps site/patches/jessie-james-spanish-qol-v1.0-7c042814.bps site/patches/releases.json site/patches/spanish-releases.json README.md site/index.html site/patches/PUBLISHING.md
+          git diff --cached --stat
+          git commit -m 'Update v1.0 patches and Hard Mode description'
+          git push origin HEAD:main

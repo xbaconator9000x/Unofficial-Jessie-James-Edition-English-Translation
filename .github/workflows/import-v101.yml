@@ -1,0 +1,74 @@
+name: Import verified English v1.01
+on:
+  push:
+    branches: ['release/v1.01-20261120']
+    paths:
+      - '.github/workflows/import-v101.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and prepare release
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v zstd || { sudo apt-get update && sudo apt-get install -y zstd; }
+          python3 - <<'PY'
+          import base64, hashlib, json, struct, subprocess, zlib
+          from pathlib import Path
+          base=Path("site/patches/jessie-james-english-v1.0-804c969e.bps")
+          assert hashlib.sha256(base.read_bytes()).hexdigest()=="ffd47fb0f86f5b6034312c51fa6601dfb52e8ed8e8fd6a352aa1e4dc8a72f4be"
+          delta=base64.b64decode("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",validate=True)
+          assert len(delta)==4670 and hashlib.sha256(delta).hexdigest()=="9a3c68747c17f60a83ffe234b0e45709e8b0f7bdc264b890db6ecc033a724ecf"
+          Path("/tmp/v101.zst").write_bytes(delta)
+          path=Path("site/patches/jessie-james-english-v1.01-a3e3cc2f.bps")
+          assert not path.exists()
+          subprocess.run(["zstd","-d","--patch-from="+str(base),"/tmp/v101.zst","-o",str(path)],check=True)
+          b=path.read_bytes()
+          assert b[:4]==b"BPS1" and len(b)==1751815 and hashlib.sha256(b).hexdigest()=="634a9867c57707e1951b54b5f33b0975452c649d099185915713625f6ef08ba7"
+          assert subprocess.check_output(["git","hash-object",str(path)],text=True).strip()=="aaf31971e7546bafca06654c4a057227ef43e94a"
+          assert struct.unpack("<III",b[-12:])==(0x805E24CA,0xA3E3CC2F,0x86519001)
+          assert zlib.crc32(b[:-4])==0x86519001
+          print("Verified exact full English v1.01 BPS")
+          manifest=Path("site/patches/releases.json")
+          m=json.loads(manifest.read_text())
+          source="16777216:805E24CA"
+          prev="16777216:C043455C"
+          target="16777216:A3E3CC2F"
+          assert m["latest"]=="1.0" and m["target"]==prev and len(m["patches"])==1
+          assert m["romSha256"][prev]=="a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a"
+          m["latest"]="1.01"
+          m["target"]=target
+          m["versions"]={source:m["versions"][source],target:"English v1.01"}
+          m["romSha256"]={source:m["romSha256"][source],target:"06d9c87234400f45f1fc3a356881f0ad8bd9b977bc5cbed450e5c7eedd01b632"}
+          m["patches"]=[{"path":"patches/"+path.name,"crc":"86519001","bytes":len(b),"sha256":hashlib.sha256(b).hexdigest(),"from":source,"to":target,"version":"1.01"}]
+          assert len(m["changelog"])==1 and m["changelog"][0]["version"]=="1.0"
+          m["changelog"][0]["date"]="20 November 2026"
+          notes=["Fixed graphical issue during blast-off sequence","Corrected byte allocation overlap for EXP. ALL and Hard mode","Corrected game-breaking freeze in Oak's lab."]
+          m["changelog"].insert(0,{"version":"1.01","date":"20 November 2026","changes":notes})
+          manifest.write_text(json.dumps(m,ensure_ascii=False,indent=2)+"\n")
+          def replace(file,old,new):
+              p=Path(file)
+              s=p.read_text()
+              assert s.count(old)==1,(file,old)
+              p.write_text(s.replace(old,new))
+          replace("README.md","**English v1.0** -- 17 November 2026.","**English v1.01** -- 20 November 2026.")
+          replace("README.md","Expected English v1.0 output CRC32: `C043455C`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.","Expected English v1.01 output CRC32: `A3E3CC2F`. Apply the full patch to the original Spanish FINAL v1.1 ROM, including when updating from v1.0. Keep backups of your ROM and save. No pre-patched ROMs.")
+          replace("README.md","### English v1.0 -- 17 November 2026","### English v1.01 -- 20 November 2026\n\n"+"\n".join("- "+n for n in notes)+"\n\n### English v1.0 -- 20 November 2026")
+          replace("site/index.html",'id="latest-version">1.0</span>','id="latest-version">1.01</span>')
+          replace("site/patches/PUBLISHING.md","| English | 1.0 | C043455C | jessie-james-english-v1.0-c043455c.bps |","| English | 1.01 | A3E3CC2F | jessie-james-english-v1.01-a3e3cc2f.bps |")
+          replace("site/patches/PUBLISHING.md","- For a new numbered release, update the version and changelog, and provide verified incremental update paths from supported earlier releases.\n- For a same-version correction to v1.0, retain the version and original release date. The current manifests accept the original ROM and recognise the latest patched output. Earlier v1.0 builds require reapplying the full patch to the original ROM.","- For a new numbered release, update the version and changelog. For a same-version correction, retain the version and original release date.\n- The current manifests accept the original ROM and recognise the latest patched output. Earlier builds require reapplying the full patch to the original ROM.")
+          replace(".github/workflows/pages.yml","          assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']","          assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']\n          canonical_current = site / ('patches/jessie-james-english-v' + english['latest'] + '.bps')\n          if site / current['path'] != canonical_current:\n              copyfile(site / current['path'], canonical_current)\n          assert hashlib.sha256(canonical_current.read_bytes()).hexdigest() == current['sha256']")
+          PY
+          node tests/bps.test.mjs
+          node tests/edition-routes.test.mjs
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/import-v101.yml
+          git add site/patches/jessie-james-english-v1.01-a3e3cc2f.bps site/patches/releases.json README.md site/index.html site/patches/PUBLISHING.md .github/workflows/pages.yml
+          git diff --cached --stat
+          git commit -m 'Release English v1.01'
+          git push origin HEAD:release/v1.01-20261120

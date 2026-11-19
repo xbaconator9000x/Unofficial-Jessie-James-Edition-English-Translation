@@ -42,7 +42,7 @@ Finally, I added some additional quality of life features that were not included
 
 ### Quality of life
 
-- **Classic / Modern battles** -- Choose the original Gen 3 mechanics or the physical/special split and updated ability effects when starting a new game.
+- **Classic / Modern battles** -- Choose the original Gen 3 mechanics or the physical/special split and updated ability effects when starting a new game. I've also made TMs reusable in Modern Mode, though they remain single use in Classic Mode.
 - **Nature colours** -- Increased stats in red, decreased stats in blue.
 - **Move details** -- Press R when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.

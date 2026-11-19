@@ -144,6 +144,10 @@ jobs:
           if site / current['path'] != canonical:
               copyfile(site / current['path'], canonical)
           assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']
+          canonical_current = site / ('patches/jessie-james-english-v' + english['latest'] + '.bps')
+          if site / current['path'] != canonical_current:
+              copyfile(site / current['path'], canonical_current)
+          assert hashlib.sha256(canonical_current.read_bytes()).hexdigest() == current['sha256']
           current_es = next(e for e in spanish['patches'] if e['from'] == '16777216:805E24CA' and e['to'] == spanish['target'])
           canonical_es = site / 'patches/jessie-james-spanish-qol-v1.0.bps'
           if site / current_es['path'] != canonical_es:

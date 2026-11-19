@@ -85,9 +85,9 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 [Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
 
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`). The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`) or the released English v1.0 ROM (CRC32 `C043455C`). The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.01 output CRC32: `A3E3CC2F`. Apply the full patch to the original Spanish FINAL v1.1 ROM, including when updating from v1.0. Keep backups of your ROM and save. No pre-patched ROMs.
+Expected English v1.01 output CRC32: `A3E3CC2F`. The patcher automatically selects the full patch for the original Spanish ROM or the incremental update for the released English v1.0 ROM. Keep backups of your ROM and save. No pre-patched ROMs.
 
 ## Prefer to play español?
 

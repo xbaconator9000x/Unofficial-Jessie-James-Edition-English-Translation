@@ -14,6 +14,13 @@ for(const m of [en,es]) {
 }
 for(const key of Object.keys(en.versions).filter(x=>x!==original)) assert.equal(findRoute(es.patches,key,es.target),null);
 for(const key of Object.keys(es.versions).filter(x=>x!==original)) assert.equal(findRoute(en.patches,key,en.target),null);
+const publicV10="16777216:C043455C";
+assert.equal(en.versions[publicV10],"English v1.0");
+const upgrade=findRoute(en.patches,publicV10,en.target);
+assert.ok(upgrade?.length,"Released English v1.0 must have a verified upgrade path");
+assert.equal(upgrade[0].from,publicV10);
+assert.equal(upgrade[upgrade.length-1].to,en.target);
+assert.equal(findRoute(es.patches,publicV10,es.target),null);
 const html=read("index.html"), nav=html.match(/<nav class="main-menu"[\s\S]*?<\/nav>/)[0];
 assert.deepEqual([...nav.matchAll(/href="#([^"]+)"/g)].map(x=>x[1]),[...html.matchAll(/<section class="window" id="([^"]+)"/g)].map(x=>x[1]));
 for(const id of ["rom-file","patch-file","patch-run","patch-download","patch-status","patch-log","copy-report","rom-info","latest-version","hosted-patch-status"]) assert.equal([...html.matchAll(new RegExp('id="es-'+id+'"','g'))].length,1);

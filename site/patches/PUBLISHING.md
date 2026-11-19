@@ -17,7 +17,7 @@ The manifests are authoritative for patch filenames, sizes, CRC32 and SHA-256 fi
 - Verify the patched ROM byte-for-byte against the intended output.
 - Update the appropriate manifest with the target ROM fingerprint, patch filename, size, CRC32 and SHA-256.
 - For a new numbered release, update the version and changelog. For a same-version correction, retain the version and original release date.
-- The current manifests accept the original ROM and recognise the latest patched output. Earlier builds require reapplying the full patch to the original ROM.
+- Maintain independently verified incremental BPS update paths for supported earlier releases. Record the exact source and target ROM fingerprints and the patch integrity values in the relevant manifest. Unsupported builds require the full patch applied to the original ROM.
 - Update the README checksums and run `node tests/bps.test.mjs` and `node tests/edition-routes.test.mjs`.
 
 GitHub Pages validates the release manifests, BPS files and gallery assets before deployment. Only patches are distributed, not complete ROMs or save files. Save compatibility and gameplay behaviour require separate in-game testing; the patcher does not modify save files.

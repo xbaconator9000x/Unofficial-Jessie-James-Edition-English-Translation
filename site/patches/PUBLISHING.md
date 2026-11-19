@@ -43,3 +43,5 @@ Same-version bug-fix and text replacement: English target C3100CC9 (856 changed 
 Verified both imported Git blob identities and active manifests; temporary import workflow removed.
 
 Same-version Classic Mode fix: English target 4B94C286, Spanish QoL target 8209F6BB. The supplied English attachment was a complete ROM; a full BPS was generated against the exact original Spanish FINAL v1.1 ROM and independently applied to reproduce the supplied ROM byte-for-byte. The supplied Spanish full BPS was preserved exactly and applied to the same original ROM. GitHub import validates SHA-256, Git blob identity and BPS CRCs. No ROM files, save files, or incremental ROM patches published. Classic Mode behavior and save compatibility remain unverified.
+
+Verified both imported Git blob identities and active manifests; temporary import workflow removed.

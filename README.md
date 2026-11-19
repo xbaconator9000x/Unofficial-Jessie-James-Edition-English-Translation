@@ -81,13 +81,13 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Releases
 
-**English v1.0** -- 17 November 2026.
+**English v1.01** -- 20 November 2026.
 
 [Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
 
 Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`). The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.0 output CRC32: `C043455C`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
+Expected English v1.01 output CRC32: `A3E3CC2F`. Apply the full patch to the original Spanish FINAL v1.1 ROM, including when updating from v1.0. Keep backups of your ROM and save. No pre-patched ROMs.
 
 ## Prefer to play español?
 
@@ -101,7 +101,13 @@ Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`). La ROM parche
 
 ## Changelog
 
-### English v1.0 -- 17 November 2026
+### English v1.01 -- 20 November 2026
+
+- Fixed graphical issue during blast-off sequence
+- Corrected byte allocation overlap for EXP. ALL and Hard mode
+- Corrected game-breaking freeze in Oak's lab.
+
+### English v1.0 -- 20 November 2026
 
 - Initial public English translation release.
 - English dialogue, menus and text formatting.

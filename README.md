@@ -87,7 +87,7 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`). The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.0 output CRC32: `9EA90390`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
+Expected English v1.0 output CRC32: `804C969E`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
 
 ## Prefer to play español?
 

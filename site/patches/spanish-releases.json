@@ -2,99 +2,22 @@
   "latest": "1.0",
   "versions": {
     "16777216:805E24CA": "Versión original en español FINAL v1.1",
-    "16777216:79880DD1": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:343C20A7": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:252AE8A8": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:E67818B3": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:B4BC72F6": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:ED932AB3": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:A7935E07": "Versión en español con mejoras QoL v1.0 (compilación anterior)",
-    "16777216:5B141B2B": "Versión en español con mejoras QoL v1.0"
+    "16777216:9901EE6E": "Versión en español con mejoras QoL v1.0"
   },
-  "target": "16777216:5B141B2B",
+  "target": "16777216:9901EE6E",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:5B141B2B",
+      "to": "16777216:9901EE6E",
       "version": "1.0",
-      "path": "patches/jessie-james-spanish-qol-v1.0-5b141b2b.bps",
-      "crc": "48B1D4A4",
-      "bytes": 425146,
-      "sha256": "8021323b9515d0a1f95e03a020ec120d97c7335f2243c97a537f0115d6f9b3c2"
-    },
-    {
-      "from": "16777216:79880DD1",
-      "to": "16777216:343C20A7",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-79880dd1-to-343c20a7.bps",
-      "crc": "9B2DD30E",
-      "bytes": 2287,
-      "sha256": "15bbb97f63fbbccd5a42d00734da86aab918ed319b4cc39652610e32ad5b388b"
-    },
-    {
-      "from": "16777216:343C20A7",
-      "to": "16777216:252AE8A8",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-343c20a7-to-252ae8a8.bps",
-      "crc": "8360769D",
-      "bytes": 1042,
-      "sha256": "99a2a3fc5cdf2ef9f500cbe3f73591c5c1e8f247e2932895e23750a6f63abd92"
-    },
-    {
-      "from": "16777216:252AE8A8",
-      "to": "16777216:E67818B3",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-252ae8a8-to-e67818b3.bps",
-      "crc": "FD261933",
-      "bytes": 149,
-      "sha256": "2732d57f9b5a15a89d650934fee59453e826a15db2bdab80b337fa4c655be6c9"
-    },
-    {
-      "from": "16777216:E67818B3",
-      "to": "16777216:B4BC72F6",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-e67818b3-to-b4bc72f6.bps",
-      "crc": "3AA56537",
-      "bytes": 508,
-      "sha256": "54124e53b092929194d910da0166aee54039f57f19637aaa5187175cdf784472"
-    },
-    {
-      "from": "16777216:B4BC72F6",
-      "to": "16777216:ED932AB3",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-b4bc72f6-to-ed932ab3.bps",
-      "crc": "DBEA13AE",
-      "bytes": 79,
-      "sha256": "effc6f86d1b9f40adec240739dd76cfe97ccefc7efa9ff969ba3448ca330e05d"
-    },
-    {
-      "from": "16777216:ED932AB3",
-      "to": "16777216:A7935E07",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-ed932ab3-to-a7935e07.bps",
-      "crc": "280DCF0A",
-      "bytes": 79854,
-      "sha256": "d8f002030166489a48ea38f34fde0a5a7d005fc1438a2b3f208433d0c19cdf97"
-    },
-    {
-      "from": "16777216:A7935E07",
-      "to": "16777216:5B141B2B",
-      "version": "1.0",
-      "path": "patches/jessie-james-spanish-v1.0-a7935e07-to-5b141b2b.bps",
-      "crc": "76AB7404",
-      "bytes": 102930,
-      "sha256": "e12b721690118d06d0fb1f55e1494eec917680594881ce4e798ac0660b4f40ef"
+      "path": "patches/jessie-james-spanish-qol-v1.0-9901ee6e.bps",
+      "crc": "1CCE735F",
+      "bytes": 425275,
+      "sha256": "198e3272991b405eadb352cc577e436b464e782e692a371570026bcf75161c65"
     }
   ],
   "romSha256": {
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
-    "16777216:79880DD1": "04e9201a01fcfec5315224195e62390144968a9d2673442033871d43193ae320",
-    "16777216:343C20A7": "9acc82cefa6abe95c4acbb56c2481528b1f0042006ae347e8b304fc302201977",
-    "16777216:252AE8A8": "0ce45435acb37394306b2bc36bfd08863361f7895678fd1b828ad1bef53f84da",
-    "16777216:E67818B3": "cf8370525042a267711ed96e8fcb335c7426e9cad51fe3f144dadc9769c3e85a",
-    "16777216:B4BC72F6": "dfa72683ce86fec81a409101a86329449c25c1ac2e1a2df0e4ce0e166045e681",
-    "16777216:ED932AB3": "40e208d4af52be09171337b4efe897c2a7d1abd86b6f61d2edc9291d92c8e0ec",
-    "16777216:A7935E07": "f1484efd0e0b5b2b6d2e85eebd50bf90f08135d2507ea323c1a5a05282fcf62e",
-    "16777216:5B141B2B": "695d68b817b5b03c0b65e07eda0e270f5f94c0112ff6c9fd90622746ff69be3f"
+    "16777216:9901EE6E": "0bc4dcd2462ec9a3954567af97cb631a0dc03ba579f6bb53d0aefe4b4672e4da"
   }
 }

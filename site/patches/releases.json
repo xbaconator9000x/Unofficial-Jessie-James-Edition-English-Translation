@@ -13,18 +13,19 @@
     "16777216:01EB7D14": "English v1.0 (earlier build)",
     "16777216:91D1183A": "English v1.0 (earlier build)",
     "16777216:80DA34B3": "English v1.0 (earlier build)",
-    "16777216:D44FDE23": "English v1.0"
+    "16777216:D44FDE23": "English v1.0 (earlier build)",
+    "16777216:68CB83E3": "English v1.0"
   },
-  "target": "16777216:D44FDE23",
+  "target": "16777216:68CB83E3",
   "patches": [
     {
       "from": "16777216:805E24CA",
-      "to": "16777216:D44FDE23",
+      "to": "16777216:68CB83E3",
       "version": "1.0",
-      "path": "patches/jessie-james-english-v1.0-d44fde23.bps",
-      "crc": "662C315E",
-      "bytes": 1674835,
-      "sha256": "b917302836f92f09d0963311786fd02f4b70b2498c659fb38a3942afbafa2cb9"
+      "path": "patches/jessie-james-english-v1.0-68cb83e3.bps",
+      "crc": "0D25D3B1",
+      "bytes": 1749641,
+      "sha256": "8d8e3215237938ec5251f5f148071b5c011d587331325b5655c29f6b98c1c136"
     },
     {
       "from": "16777216:5EF16DAD",
@@ -124,6 +125,15 @@
       "crc": "53BC92BB",
       "bytes": 83419,
       "sha256": "d048ffa6cb8880c08dfceb74b75e341193afde347bac7a5fa9d4f07af0e75e84"
+    },
+    {
+      "from": "16777216:D44FDE23",
+      "to": "16777216:68CB83E3",
+      "version": "1.0",
+      "path": "patches/jessie-james-english-v1.0-d44fde23-to-68cb83e3.bps",
+      "crc": "1F43F48E",
+      "bytes": 102939,
+      "sha256": "ab00ab76aa8e552db944e969d95b4a673b91a45cebae4cbc50cea2438d687130"
     }
   ],
   "changelog": [
@@ -150,6 +160,7 @@
     "16777216:01EB7D14": "34e80f78f5f7388ff1df7a9bab7ffee49921971939c1582a131078654476140c",
     "16777216:91D1183A": "641c2c6ff0c2cdbd4664b5d975450527314bfb18c794c330e40c121f26404cfc",
     "16777216:80DA34B3": "944117c4dbf111eab6e0029761e577268d849dc3ed9fcc709f1eba96de249f8e",
-    "16777216:D44FDE23": "cd88259d13af95070d149bdd1d0623cda112b715bf988fb78656743592c0d05b"
+    "16777216:D44FDE23": "cd88259d13af95070d149bdd1d0623cda112b715bf988fb78656743592c0d05b",
+    "16777216:68CB83E3": "488dcdbcbbb336782cf4837b58cce454cb6852d76295237548a45a9629b5177e"
   }
 }

@@ -47,7 +47,7 @@ Finally, I added some additional quality of life features that were not included
 - **Move details** -- Press R when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
 - **Optional and toggleable EXP. ALL key item**
-- **Optional Hard Mode** -- For those who are looking for a bit more of a challenge, I've reworked the trainer teams and made some improvements to the battle AI. Some trainers will use setup moves, use items during battle and even switch out their Pokémon when they're at a disadvantage. I wanted to make the battles a bit more challenging without simply increasing the levels of the opposing Pokémon or placing restrictions on the player. If you prefer to play at the original difficulty, you can leave Hard Mode off.
+- **Optional Hard Mode** -- I've reworked trainer teams and improved the battle AI for those who want a bit more of a challenge, without increasing levels or placing restrictions on the player.
 - **Title music** -- A looping version of the Team Rocket motto theme.
 
 I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
@@ -93,7 +93,7 @@ Expected English v1.0 output CRC32: `4B94C286`. Keep backups of your ROM and sav
 
 Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.
 
-**Modo difícil opcional** -- Para quienes busquen un poco más de dificultad, he modificado los equipos de los entrenadores y he hecho algunas mejoras en la IA de combate. Algunos entrenadores utilizarán movimientos para potenciar a sus Pokémon, usarán objetos durante el combate e incluso cambiarán de Pokémon cuando estén en desventaja. Quería que los combates fueran un poco más difíciles sin limitarme a subir los niveles de los Pokémon rivales ni imponer restricciones al jugador. Si prefieres jugar con la dificultad original, puedes dejar el modo difícil desactivado.
+**Modo difícil opcional** -- He modificado los equipos de los entrenadores y mejorado la IA de combate para quienes busquen un poco más de dificultad, sin subir los niveles ni imponer restricciones al jugador.
 
 [Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 

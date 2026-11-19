@@ -1,6 +1,6 @@
 "use strict";
 (() => {
-  // The supplied Option B MP3 is a General MIDI preview, not a GBA voicebank render.
+  // The MP3 uses General MIDI rather than a GBA voicebank render.
   // Its source MIDI contains markers at 7.993508 and 30.523148 seconds.
   const INTRO_END = 7.993508;
   const LOOP_END = 30.523148;

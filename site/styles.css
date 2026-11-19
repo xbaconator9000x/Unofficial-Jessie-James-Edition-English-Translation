@@ -205,3 +205,25 @@ strong { color: var(--white); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Local ROM patcher */
+.patch-input{display:block;max-width:100%;width:100%;padding:.65rem;margin:.5rem 0;background:#fff;color:#111;border:2px solid #111;font:inherit;box-sizing:border-box}.patch-log{white-space:pre-wrap;overflow-wrap:anywhere;max-height:16rem;overflow:auto;padding:.7rem;border:2px solid #111;background:#f4f4f4;color:#111;font:inherit;font-size:.85rem}.patch-log:empty{display:none}.menu-button:disabled{opacity:.45;cursor:not-allowed}#patch-status{font-weight:bold}#releases details{margin:.75rem 0}#releases button{margin:.25rem 0;max-width:100%;white-space:normal}
+
+
+#es-patch-status { font-weight: bold; }
+#spanish details { margin: .75rem 0; }
+#spanish button { margin: .25rem 0; max-width: 100%; white-space: normal; }
+
+/* The featured English gameplay GIF retains its original aspect ratio. */
+.featured-gameplay { margin-top: 14px; }
+.featured-gameplay a { border-color: var(--red); }
+
+/* Compare the same overworld scene at different times of day. */
+.time-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.time-gallery .screenshot { margin: 0 0 12px; min-width: 0; }
+.time-gallery figcaption { text-align: center; }
+@media (max-width: 620px) { .time-gallery { grid-template-columns: minmax(0, 1fr); } }
+
+.battle-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.battle-gallery .screenshot { margin: 0 0 12px; min-width: 0; }
+@media (max-width: 620px) { .battle-gallery { grid-template-columns: minmax(0, 1fr); } }

@@ -19,6 +19,6 @@ assert.deepEqual([...nav.matchAll(/href="#([^"]+)"/g)].map(x=>x[1]),[...html.mat
 for(const id of ["rom-file","patch-file","patch-run","patch-download","patch-status","patch-log","copy-report","rom-info","latest-version","hosted-patch-status"]) assert.equal([...html.matchAll(new RegExp('id="es-'+id+'"','g'))].length,1);
 assert.equal(read("spanish-patcher.mjs").includes('patches/spanish-releases.json'),true);
 const gallery=html.match(/<section class="window" id="english-screenshots">[\s\S]*?<\/section>/)[0];
-assert.deepEqual([...gallery.matchAll(/<img src="([^"]+)"/g)].map(x=>x[1]),["english-featured-gameplay.gif","english-dialogue.png","english-battle-qol.gif","english-battle-qol-2.gif","english-morning.png","english-daytime.png","english-nighttime.png","pokerail-english-map.jpg"]);
+assert.deepEqual([...gallery.matchAll(/<img src="([^"]+)"/g)].map(x=>x[1]),["english-featured-gameplay.gif","english-dialogue.gif","english-train-dialogue.gif","english-rocket-base.gif","english-team-rocket-motto.gif","english-battle-mode.gif","english-hard-mode.gif","english-exp-all.png","english-save-mode.png","english-battle-qol.gif","english-battle-qol-2.gif","pokerail-english-map.jpg"]);
 assert.equal([...nav.matchAll(/href="#([^"]+)"/g)].length,8);
 console.log("Independent edition routes, navigation order and separate Spanish controls passed");

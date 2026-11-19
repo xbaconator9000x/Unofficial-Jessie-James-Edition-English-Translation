@@ -61,14 +61,12 @@ jobs:
           replace("site/index.html",'id="latest-version">1.0</span>','id="latest-version">1.01</span>')
           replace("site/patches/PUBLISHING.md","| English | 1.0 | C043455C | jessie-james-english-v1.0-c043455c.bps |","| English | 1.01 | A3E3CC2F | jessie-james-english-v1.01-a3e3cc2f.bps |")
           replace("site/patches/PUBLISHING.md","- For a new numbered release, update the version and changelog, and provide verified incremental update paths from supported earlier releases.\n- For a same-version correction to v1.0, retain the version and original release date. The current manifests accept the original ROM and recognise the latest patched output. Earlier v1.0 builds require reapplying the full patch to the original ROM.","- For a new numbered release, update the version and changelog. For a same-version correction, retain the version and original release date.\n- The current manifests accept the original ROM and recognise the latest patched output. Earlier builds require reapplying the full patch to the original ROM.")
-          replace(".github/workflows/pages.yml","          assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']","          assert hashlib.sha256(canonical.read_bytes()).hexdigest() == current['sha256']\n          canonical_current = site / ('patches/jessie-james-english-v' + english['latest'] + '.bps')\n          if site / current['path'] != canonical_current:\n              copyfile(site / current['path'], canonical_current)\n          assert hashlib.sha256(canonical_current.read_bytes()).hexdigest() == current['sha256']")
           PY
           node tests/bps.test.mjs
           node tests/edition-routes.test.mjs
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git rm .github/workflows/import-v101.yml
-          git add site/patches/jessie-james-english-v1.01-a3e3cc2f.bps site/patches/releases.json README.md site/index.html site/patches/PUBLISHING.md .github/workflows/pages.yml
+          git add site/patches/jessie-james-english-v1.01-a3e3cc2f.bps site/patches/releases.json README.md site/index.html site/patches/PUBLISHING.md
           git diff --cached --stat
           git commit -m 'Release English v1.01'
           git push origin HEAD:release/v1.01-20261120

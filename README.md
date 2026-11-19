@@ -44,7 +44,7 @@ Finally, I added some additional quality of life features that were not included
 
 - **Classic / Modern battles** -- Choose the original Gen 3 mechanics or the physical/special split and updated ability effects when starting a new game. I've also made TMs reusable in Modern Mode, though they remain single use in Classic Mode.
 - **Nature colours** -- Increased stats in red, decreased stats in blue.
-- **Move details** -- Press R when choosing a move to view its description, power, accuracy and category.
+- **Move details** -- Press L when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
 - **Optional and toggleable EXP. ALL key item**
 - **Optional Hard Mode** -- I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player.

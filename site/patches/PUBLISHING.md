@@ -39,3 +39,5 @@ Same-version English-only full-patch replacement: target 804C969E (2,368 bytes d
 The corrected English full BPS was transferred directly via a one-time GitHub Actions import, with SHA-256, Git blob identity, patch CRC and source/target CRC validation before commit. The temporary import workflow was removed. No new incremental ROM patch was published.
 
 Same-version bug-fix and text replacement: English target C3100CC9 (856 changed ROM bytes), Spanish QoL target 4265331D (896 changed ROM bytes). No restored original bytes in either edition. Both full patches preserved byte-for-byte, applied to the exact original ROM and locally verified; GitHub import checks SHA-256, Git blob identity and all BPS CRCs. No incremental ROM patches generated. Gameplay and save compatibility remain unverified.
+
+Verified both imported Git blob identities and active manifests; temporary import workflow removed.

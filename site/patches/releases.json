@@ -2,17 +2,17 @@
   "latest": "1.0",
   "versions": {
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
-    "16777216:C3100CC9": "English v1.0"
+    "16777216:4B94C286": "English v1.0"
   },
-  "target": "16777216:C3100CC9",
+  "target": "16777216:4B94C286",
   "patches": [
     {
-      "path": "patches/jessie-james-english-v1.0-c3100cc9.bps",
-      "crc": "5456B2B0",
-      "bytes": 1750551,
-      "sha256": "a3203f71d18b1e94bc1c39b1db9bac03b07b4c0d09e9754c87d0eed5cba3fff5",
+      "path": "patches/jessie-james-english-v1.0-4b94c286.bps",
+      "crc": "24E38DEC",
+      "bytes": 1751209,
+      "sha256": "e77f06bdeff4e7e49a0d43b42bc9eb97aa2d2f82f2b07def637e7d8ef3ae32fd",
       "from": "16777216:805E24CA",
-      "to": "16777216:C3100CC9",
+      "to": "16777216:4B94C286",
       "version": "1.0"
     }
   ],
@@ -29,6 +29,6 @@
   ],
   "romSha256": {
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
-    "16777216:C3100CC9": "03318eb3be6804456a9e58a87a48c985c0db9e86a1885574f977e4c7a56a77c1"
+    "16777216:4B94C286": "702db2e6268723140bb903a0c0d60b292ccbc6ddb09b84760903870c4ed51b11"
   }
 }

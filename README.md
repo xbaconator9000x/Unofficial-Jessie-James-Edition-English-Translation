@@ -47,6 +47,7 @@ Finally, I added some additional quality of life features that were not included
 - **Move details** -- Press R when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
 - **Optional and toggleable EXP. ALL key item**
+- **Optional Hard Mode** -- Smarter AI and better-built teams, without higher levels or player restrictions. Bosses and trainers have more team depth, set up, use items mid-battle and switch out of bad matchups, rewarding planning rather than grinding. Normal Mode remains unchanged.
 - **Title music** -- A looping version of the Team Rocket motto theme.
 
 I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
@@ -86,15 +87,17 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), or a supported earlier English ROM. The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.0 output CRC32: `80DA34B3`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
+Expected English v1.0 output CRC32: `D44FDE23`. Keep backups of your ROM and save. Future releases will include verified update paths from earlier versions. No pre-patched ROMs.
 
 ## Prefer to play español?
 
 Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.
 
+**Modo difícil opcional** -- IA más inteligente y equipos mejor confeccionados, sin aumentar los niveles ni imponer restricciones al jugador. Los jefes y entrenadores cuentan con equipos más completos, utilizan movimientos de preparación y objetos durante el combate, y cambian de Pokémon cuando tienen un enfrentamiento desfavorable. El modo normal no cambia.
+
 [Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 
-Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`). La ROM parcheada permanece en español (CRC32 `ED932AB3`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
+Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`). La ROM parcheada permanece en español (CRC32 `A7935E07`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
 
 ## Changelog
 

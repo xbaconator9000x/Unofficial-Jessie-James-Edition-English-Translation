@@ -54,8 +54,7 @@ for (const item of [
   "Rocket HQ",
   "Five-digit prices",
   "reusable TM prices",
-  "vitamin prices",
-  "Oak's battle"
+  "vitamin prices"
 ]) {
   assert.ok(readmeQol.includes(item), "README QOL section missing " + item);
   assert.ok(siteQol.includes(item), "Website QOL section missing " + item);

@@ -18,10 +18,12 @@ class Tests(unittest.TestCase):
     def test_unconfigured_is_noop(self):
         self.assertEqual(module.inject(HTML, ""), HTML)
 
-    def test_inject_events_only(self):
+    def test_inject_counts_pageviews_and_events(self):
         result = module.inject(HTML, "jessie-james-tracker")
         self.assertIn('data-goatcounter="https://jessie-james-tracker.goatcounter.com/count"', result)
-        self.assertIn('data-goatcounter-settings=\'{"no_onload":true}\'', result)
+        self.assertNotIn("no_onload", result, "GoatCounter must count visits for daily email summaries")
+        self.assertNotIn("data-goatcounter-settings", result)
+        self.assertIn("Cookie-free website visits and anonymous patch events", result)
         self.assertEqual(result.count("gc.zgo.at/count.js"), 1)
         self.assertLess(result.index("gc.zgo.at/count.js"), result.index("</body>"))
         self.assertEqual(result.count("</body>"), 1)

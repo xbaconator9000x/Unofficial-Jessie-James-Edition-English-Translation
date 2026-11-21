@@ -237,5 +237,9 @@ strong { color: var(--white); font-weight: 700; }
 .fan-cover a { display: block; border: 2px solid #747474; background: #000; }
 .fan-cover a:hover { border-color: var(--red); }
 .fan-cover img { display: block; width: 100%; height: auto; }
-.fan-cover figcaption { padding-top: 9px; text-align: center; color: var(--muted); font-size: 15px; }
 .cover-actions { text-align: center; margin: 16px 0 18px; }
+
+/* Compact artwork download with attribution at the footer anchor. */
+.artwork-files { margin: -4px 0 0; padding-left: 25px; }
+.artwork-files li { padding: 2px 0; }
+.art-credit-footer { text-align: center; margin: 17px 0 0; color: var(--muted); font-size: 14px; scroll-margin-top: 32px; }

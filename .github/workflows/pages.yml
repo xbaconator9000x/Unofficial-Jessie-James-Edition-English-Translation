@@ -31,6 +31,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Assemble verified v1.02 full BPS patches without ROM data
         run: python3 site/patches/assemble_release.py
+      - name: Package approved fan artwork
+        run: python3 site/media/build_art_pack.py
       - name: Check static site
         run: |
           python3 - <<'PY'

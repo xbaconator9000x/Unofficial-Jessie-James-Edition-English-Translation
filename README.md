@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#fanart">
+  <a href="#art-credit">
     <img src="site/media/jessie-james-logo-snowmudk99.webp" alt="Jessie & James fan logo with Rocket R, by SnowMudK99" width="320">
   </a>
 </p>
@@ -47,7 +47,7 @@ Finally, I added some additional quality of life features that were not included
 - **Move details** -- Press L when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
 - **Optional and toggleable EXP. ALL key item**
-- **Optional Hard Mode** -- I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player. In v1.02, I also added Oak's battle to the boss pool for improved combat AI in HARD mode.
+- **Optional Hard Mode** -- I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player.
 - **Title music** -- A looping version of the Team Rocket motto theme.
 
 #### Major QOL additions in v1.02
@@ -83,18 +83,19 @@ These are screenshots from MrNightology's original Spanish version, not the Engl
 ## Fan art and emulator box art
 
 <p align="center">
-  <a href="site/media/jessie-james-cover-snowmudk99.jpg">
-    <img src="site/media/jessie-james-cover-snowmudk99.jpg" alt="Unofficial Game Boy Advance-style cover for Pokémon Team Rocket: Jessie & James Edition" width="320">
+  <a href="#art-credit">
+    <img src="site/media/jessie-james-cover-snowmudk99.jpg" alt="Unofficial GBA box art for Pokémon Team Rocket: Jessie & James Edition" width="320">
   </a>
 </p>
 
-**Fan box art and logo by SnowMudK99, used with permission.** These are unofficial community artwork for the fan translation, not official Nintendo packaging or artwork by the game's original developer.
+Download for use in emulators that use GBA cover art.
 
-[Download full-resolution box art (JPG)](site/media/jessie-james-cover-snowmudk99.jpg) | [Logo with Rocket R](site/media/jessie-james-logo-snowmudk99.webp) | [Alternate clean logo](site/media/jessie-james-logo-clean-snowmudk99.webp)
+[Download artwork (ZIP)](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/media/jessie-james-fan-art-pack.zip)
 
-GBA ROMs do not have a universal embedded album-art field. Emulators and game-library frontends that support custom artwork can use this image as a separate cover file, generally by assigning it to the game or matching a filename. **The artwork does not change the ROM, BPS patches, gameplay or save files.**
-
-[Open the fan art and cover downloads on the website](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#fanart) or read the [frontend artwork notes](site/media/README.md).
+Includes:
+- GBA box art (JPG)
+- Logo with Rocket R (WEBP)
+- Logo without Rocket R (WEBP)
 
 ## Testing and Bug Reports
 
@@ -165,4 +166,7 @@ Full credit for the original game, story, maps, artwork and gameplay goes to **M
 
 English localisation and patcher maintenance -- [@xbaconator9000x](https://github.com/xbaconator9000x).
 
-Fan header artwork, alternate logo and cover art -- **SnowMudK99**, used with permission. Small Team Rocket R icons and the website favicon are sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg). Original Spanish screenshots are from [MrNightology's release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
+Small Team Rocket R icons and the website favicon are sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg). Original Spanish screenshots are from [MrNightology's release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
+
+<a id="art-credit"></a>
+Box art and logos by **u/SnowMudK99**, used with permission.

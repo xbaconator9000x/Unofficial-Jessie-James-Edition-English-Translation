@@ -1,6 +1,6 @@
 # Jessie & James Edition fan artwork
 
-The fan-made header logo, alternate logo and Game Boy Advance-style box art were created by **SnowMudK99** and supplied with permission for this unofficial English localisation. Please credit SnowMudK99 when sharing these images. Permission to use them for this release is not a general open-source licence or an endorsement by Nintendo, The Pokémon Company, or the original game's creator, MrNightology.
+The fan-made header logo, alternate logo and Game Boy Advance-style box art were created by **u/SnowMudK99** and supplied with permission for this unofficial English localisation. Please credit u/SnowMudK99 when sharing these images. Permission to use them for this release is not a general open-source licence or an endorsement by Nintendo, The Pokémon Company, or the original game's creator, MrNightology.
 
 ## Artwork files
 
@@ -27,3 +27,7 @@ For an ES-DE/EmulationStation `gamelist.xml` entry, adapt the path and game file
 Place the JPG at that image path (relative to the gamelist) and use your actual ROM filename. This is an example only, not universal auto-detection.
 
 The images are not embedded in or distributed as a modified ROM.
+
+## Complete artwork pack
+
+The website offers `jessie-james-fan-art-pack.zip` containing the three images listed above. GitHub Pages generates the ZIP from the approved repository media during each deployment; no ROMs, patches, or saves are included.

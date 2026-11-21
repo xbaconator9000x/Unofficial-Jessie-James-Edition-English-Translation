@@ -25,7 +25,7 @@ for (const [path, expectedGitSha, type] of files) {
   assert.ok(html.includes(path.replace(/^site\//,"")), "Website must link approved media " + path);
 }
 assert.ok(html.includes('id="fanart"') && html.includes('href="#fanart"'));
-assert.ok(readme.includes("SnowMudK99") && html.includes("SnowMudK99"));
+assert.ok(readme.includes("u/SnowMudK99") && html.includes("u/SnowMudK99"));
 assert.ok(html.includes("og:image") && html.includes("media/jessie-james-cover-snowmudk99.jpg"));
 assert.ok(css.includes(".fan-cover") && css.includes(".rocket-hero"));
 assert.ok(!html.includes('class="rocket-r"'), "Old standalone masthead should be replaced");
@@ -66,6 +66,34 @@ for (const feature of latestQol) {
   assert.ok(readmeQol.toLowerCase().includes(key.toLowerCase()), "README missing a released QOL feature: " + key);
   assert.ok(siteQol.toLowerCase().includes(key.toLowerCase()), "Website missing a released QOL feature: " + key);
 }
+
+import {execFileSync} from "node:child_process";
+execFileSync("python3", ["site/media/build_art_pack.py"], {cwd:new URL("../",import.meta.url),stdio:"pipe"});
+const zip = asset("site/media/jessie-james-fan-art-pack.zip");
+assert.ok(zip.length > 1000 && zip.toString("ascii",0,2)==="PK");
+const archiveCheck = `from zipfile import ZipFile
+from pathlib import Path
+p=Path("site/media")
+z=ZipFile(p/"jessie-james-fan-art-pack.zip")
+expected={"GBA-Box-Art.jpg":"jessie-james-cover-snowmudk99.jpg","Logo-with-Rocket-R.webp":"jessie-james-logo-snowmudk99.webp","Logo-without-Rocket-R.webp":"jessie-james-logo-clean-snowmudk99.webp"}
+assert set(z.namelist())==set(expected)
+for item, source in expected.items():
+    assert z.read(item)==(p/source).read_bytes()
+print("Verified 3-image artwork ZIP")
+`;
+execFileSync("python3", ["-c", archiveCheck], {cwd:new URL("../",import.meta.url),stdio:"pipe"});
+const section = html.split('id="fanart"')[1]?.split('id="report"')[0];
+assert.ok(section && section.includes('href="#art-credit"'));
+assert.ok(!section.includes("SnowMudK99") && !section.includes("media notes"));
+assert.ok(!html.includes('class="artist-credit"'));
+assert.ok(html.includes('id="art-credit"') && html.includes("u/SnowMudK99"));
+assert.ok(readme.includes('<a id="art-credit"></a>'));
+for (const line of ["Download for use in emulators that use GBA cover art", "GBA box art (JPG)", "Logo with Rocket R (WEBP)", "Logo without Rocket R (WEBP)"]) {
+    assert.ok(readme.includes(line) && html.includes(line), "Artwork summary mismatch: " + line);
+}
+const path = "media/jessie-james-fan-art-pack.zip";
+assert.ok(html.includes('href="' + path + '"'));
+assert.ok(readme.includes(path));
 assert.ok(readme.includes("## Fan art and emulator box art"));
 assert.ok(content("site/media/README.md").includes("SnowMudK99"));
 assert.ok(content(".github/workflows/pages.yml").includes("README.md"), "Site deploy must run when README changes");

@@ -186,7 +186,7 @@ def main():
             final_edge["crc"] = f"{zlib.crc32(final_bytes[:-4]):08X}"
             check_edge(final_bytes, final_edge)
             (ROOT / final_name).write_bytes(final_bytes)
-            (ROOT / manifest_file).write_text(json.dumps(manifest, indent=2) + "\\n")
+            (ROOT / manifest_file).write_text(json.dumps(manifest, indent=2) + "\n")
             print("VERIFIED: English v1.03.2, CRC32 5DAE93EA, full BPS", len(final_bytes), final_edge["sha256"])
 
 

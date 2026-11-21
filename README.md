@@ -65,6 +65,7 @@ Finally, I added some additional quality of life features that were not included
 - **Reusable Escape Rope** -- Now a key item.
 - **EV training Power items** -- Power Anklet, Band, Belt, Bracer, Lens and Weight.
 - **EV/IV reader fix** -- Fixed a glitch in the reader.
+- Repaired movement pointer/dialogue overmap which would cause CTD.
 
 I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
 
@@ -141,13 +142,13 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Releases
 
-**English v1.03** -- 22 November 2026.
+**English v1.03.2** -- 22 November 2026.
 
 [Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
 
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`) or either English v1.02 build (`CADC8480` or `D2866130`). The browser patcher verifies the selected ROM, applies the verified BPS update path locally and downloads English v1.03. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`) or either English v1.02 build (`CADC8480` or `D2866130`). The browser patcher verifies the selected ROM, applies the verified BPS update path locally and downloads English v1.03.2. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.03 output CRC32: `6E1E5095`. The patcher handles earlier releases automatically, including both v1.02 builds. The original Spanish ROM uses the complete v1.03 patch. Keep backups of your ROM and save. No pre-patched ROMs.
+Expected English v1.03.2 output CRC32: `5DAE93EA`. The patcher handles earlier releases automatically, including both v1.02 builds and the v1.03 Aqua ship hotfix. The original Spanish ROM uses the complete v1.03.2 patch. Keep backups of your ROM and save. No pre-patched ROMs.
 
 ## Prefer to play español?
 
@@ -167,6 +168,7 @@ Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión e
 - Escape rope is now a reuseable key item
 - Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)
 - Fixed EV/IV reader glitch
+- Repaired movement pointer/dialogue overmap which would cause CTD.
 
 ### English v1.02 -- 21 November 2026
 

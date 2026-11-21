@@ -1,14 +1,16 @@
 {
-  "latest": "1.03",
+  "latest": "1.03.2",
   "versions": {
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
     "16777216:A3E3CC2F": "English v1.01",
     "16777216:C043455C": "English v1.0",
     "16777216:CADC8480": "English v1.02 (earlier build)",
     "16777216:D2866130": "English v1.02 (final release)",
-    "16777216:6E1E5095": "English v1.03"
+    "16777216:6E1E5095": "English v1.03",
+    "16777216:519E0696": "English v1.03 with Aqua ship hotfix",
+    "16777216:5DAE93EA": "English v1.03.2"
   },
-  "target": "16777216:6E1E5095",
+  "target": "16777216:5DAE93EA",
   "patches": [
     {
       "path": "patches/jessie-james-english-v1.01-a3e3cc2f.bps",
@@ -90,6 +92,24 @@
       "from": "16777216:D2866130",
       "to": "16777216:6E1E5095",
       "version": "1.03"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.03-6e1e5095-to-v1.03.2-5dae93ea.bps",
+      "crc": "7E1E11EE",
+      "bytes": 51,
+      "sha256": "b02a561b4ab5d16eda1ba3187e1c479368738cb70bd615fffd75d5a80335e42c",
+      "from": "16777216:6E1E5095",
+      "to": "16777216:5DAE93EA",
+      "version": "1.03.2"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.03-aqua-hotfix-519e0696-to-v1.03.2-5dae93ea.bps",
+      "crc": "D2A90E6F",
+      "bytes": 44,
+      "sha256": "b7db8d2bc0577f34067148796d94e95cc838f28e50fdf8dd20ce4d034272fac6",
+      "from": "16777216:519E0696",
+      "to": "16777216:5DAE93EA",
+      "version": "1.03.2"
     }
   ],
   "changelog": [
@@ -100,7 +120,8 @@
         "Expanded bag item storage",
         "Escape rope is now a reuseable key item",
         "Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)",
-        "Fixed EV/IV reader glitch"
+        "Fixed EV/IV reader glitch",
+        "Repaired movement pointer/dialogue overmap which would cause CTD."
       ]
     },
     {
@@ -150,6 +171,8 @@
     "16777216:C043455C": "a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a",
     "16777216:CADC8480": "36525c0d68c8ed07044284fc391bcd9f705e6dac323e67118ee27426e2384773",
     "16777216:D2866130": "286eb8b201dfca10057620f8aba3232565e90a83c4462a7a2a9c4dd277ff43ed",
-    "16777216:6E1E5095": "46db7e5d85684a74de5640379e906fa8668f2f1f447879503ff201e6d316165d"
+    "16777216:6E1E5095": "46db7e5d85684a74de5640379e906fa8668f2f1f447879503ff201e6d316165d",
+    "16777216:519E0696": "52a324288d83d11556f6f7b13443a90b4426d06ef6b56b92e9f3107719fda4e2",
+    "16777216:5DAE93EA": "b4c38765487980f6f366078895005848bbd1641688abd95b60dac8b2e5f59590"
   }
 }

@@ -89,6 +89,14 @@ assert.ok(section && section.includes('href="#art-credit"'));
 assert.ok(!section.includes("SnowMudK99") && !section.includes("media notes"));
 assert.ok(!html.includes('class="artist-credit"'));
 assert.ok(html.includes('id="art-credit"') && html.includes("u/SnowMudK99"));
+const footer = html.split('<footer class="footer" id="credits">')[1]?.split('</footer>')[0];
+assert.ok(footer, "Missing website credits footer");
+const artistPosition = footer.indexOf('id="art-credit"');
+assert.ok(artistPosition > footer.indexOf('English localisation and patcher maintenance') && artistPosition < footer.indexOf('class="end-mark"'), "Artwork credit must appear with the other credits, above the end mark");
+assert.ok(!html.includes('class="art-credit-footer"'), "No separate artist credit below the end mark");
+const readmeCredits = readme.split('## Credits')[1];
+assert.ok(readmeCredits.indexOf('Box art and logos -- **u/SnowMudK99**') > readmeCredits.indexOf('English localisation and patcher maintenance'), "Artist credit should sit alongside other README credits");
+assert.ok(readmeCredits.indexOf('Box art and logos -- **u/SnowMudK99**') < readmeCredits.indexOf('Small Team Rocket R icons'), "README artist credit should precede source/media credits");
 assert.ok(readme.includes('<a id="art-credit"></a>'));
 for (const line of ["Download for use in emulators that use GBA cover art", "GBA box art (JPG)", "Logo with Rocket R (WEBP)", "Logo without Rocket R (WEBP)"]) {
     assert.ok(readme.includes(line) && html.includes(line), "Artwork summary mismatch: " + line);

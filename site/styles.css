@@ -242,4 +242,4 @@ strong { color: var(--white); font-weight: 700; }
 /* Compact artwork download with attribution at the footer anchor. */
 .artwork-files { margin: -4px 0 0; padding-left: 25px; }
 .artwork-files li { padding: 2px 0; }
-.art-credit-footer { text-align: center; margin: 17px 0 0; color: var(--muted); font-size: 14px; scroll-margin-top: 32px; }
+#art-credit { scroll-margin-top: 32px; }

@@ -166,7 +166,8 @@ Full credit for the original game, story, maps, artwork and gameplay goes to **M
 
 English localisation and patcher maintenance -- [@xbaconator9000x](https://github.com/xbaconator9000x).
 
+<a id="art-credit"></a>
+Box art and logos -- **u/SnowMudK99**, used with permission.
+
 Small Team Rocket R icons and the website favicon are sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg). Original Spanish screenshots are from [MrNightology's release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
 
-<a id="art-credit"></a>
-Box art and logos by **u/SnowMudK99**, used with permission.

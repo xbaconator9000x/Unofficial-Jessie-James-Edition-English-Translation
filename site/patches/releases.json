@@ -110,6 +110,15 @@
       "from": "16777216:519E0696",
       "to": "16777216:5DAE93EA",
       "version": "1.03.2"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.03.2-5dae93ea.bps",
+      "crc": "GENERATED",
+      "bytes": 0,
+      "sha256": "GENERATED",
+      "from": "16777216:805E24CA",
+      "to": "16777216:5DAE93EA",
+      "version": "1.03.2"
     }
   ],
   "changelog": [
@@ -121,7 +130,7 @@
         "Escape rope is now a reuseable key item",
         "Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)",
         "Fixed EV/IV reader glitch",
-        "Repaired movement pointer/dialogue overmap which would cause CTD."
+        "Repaired movement pointer/dialogue overlap which would cause CTD."
       ]
     },
     {

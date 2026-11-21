@@ -28,6 +28,14 @@
   ],
   "changelog": [
     {
+      "version": "1.02",
+      "date": "21 November 2026",
+      "changes": [
+        "Translated additional hidden Spanish dialogue",
+        "Fixed pick-up table bug"
+      ]
+    },
+    {
       "version": "1.01",
       "date": "20 November 2026",
       "changes": [

@@ -171,6 +171,15 @@ jobs:
         env:
           CLOUDFLARE_WEB_ANALYTICS_TOKEN: ${{ vars.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
         run: python3 scripts/inject_web_analytics.py site/index.html
+      - name: Test patcher conversion analytics (privacy-safe, optional)
+        run: |
+          node --check site/patch-events.mjs
+          node tests/patch-events.test.mjs
+          python3 tests/patch-events-injection.test.py
+      - name: Configure patcher conversion counts for deployed pages (optional)
+        env:
+          GOATCOUNTER_SITE_CODE: ${{ vars.GOATCOUNTER_SITE_CODE }}
+        run: python3 scripts/inject_patch_events.py site/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

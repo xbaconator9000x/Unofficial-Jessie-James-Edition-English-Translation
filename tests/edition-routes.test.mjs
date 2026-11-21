@@ -14,11 +14,14 @@ for(const m of [en,es]) {
 }
 for(const key of Object.keys(en.versions).filter(x=>x!==original)) assert.equal(findRoute(es.patches,key,es.target),null);
 for(const key of Object.keys(es.versions).filter(x=>x!==original)) assert.equal(findRoute(en.patches,key,en.target),null);
-assert.equal(en.latest,"1.03");
+assert.equal(en.latest,"1.03.2");
 assert.equal(es.latest,"1.03");
-assert.equal(en.target,"16777216:6E1E5095");
+assert.equal(findRoute(en.patches,"16777216:6E1E5095",en.target)?.length,1);
+assert.equal(findRoute(en.patches,"16777216:519E0696",en.target)?.length,1);
+assert.equal(findRoute(en.patches,original,en.target)?.length,1);
+assert.equal(en.target,"16777216:5DAE93EA");
 assert.ok(findRoute(en.patches,"16777216:CADC8480",en.target)?.length>0);
-assert.equal(findRoute(en.patches,"16777216:D2866130",en.target).length,1);
+assert.ok(findRoute(en.patches,"16777216:D2866130",en.target).length>0);
 assert.equal(es.target,"16777216:222A0072");
 assert.ok(findRoute(es.patches,"16777216:0486144D",es.target)?.length>0);
 assert.equal(findRoute(es.patches,"16777216:58F089B9",es.target).length,1);
@@ -27,7 +30,7 @@ assert.ok(findRoute(es.patches,"16777216:7C042814",es.target)?.length>0);
 const publicV10="16777216:C043455C";
 assert.equal(en.versions[publicV10],"English v1.0");
 const upgrade=findRoute(en.patches,publicV10,en.target);
-assert.ok(upgrade?.length>0,"Released English v1.0 must upgrade to v1.03");
+assert.ok(upgrade?.length>0,"Released English v1.0 must upgrade to v1.03.2");
 assert.equal(upgrade[0].from,publicV10);
 assert.equal(upgrade[upgrade.length-1].to,en.target);
 assert.equal(findRoute(es.patches,publicV10,es.target),null);

@@ -113,6 +113,26 @@ The Jessie & James GitHub Pages launcher has privacy-friendly, cookie-free [Clou
 - It does **not** track ROM contents, save files, patch file contents, completed patch downloads or identities. GitHub repository traffic and Reddit views are separate from launcher visits.
 - The site identifier is public (as Cloudflare's embed snippet requires), not a credential. The deploy workflow injects the beacon into the published HTML only. To change accounts, set the Actions variable `CLOUDFLARE_WEB_ANALYTICS_TOKEN` to another 32-character site token; the variable takes priority over the default.
 
+## Patcher conversions (optional event counts)
+
+GitHub Pages is a static website, and **Cloudflare Web Analytics does not support custom events**. To measure verified patcher outcomes separately from Cloudflare's site-visit metrics, the English and Spanish browser patchers now have privacy-limited event hooks for:
+
+- `english-rom-download-started`: English ROM was patched and verified against the target checksums, and browser save was initiated.
+- `spanish-rom-download-started`: Spanish QoL ROM was patched and verified, and browser save was initiated.
+- `english-bps-download-started`: Verified English BPS download was initiated.
+- `spanish-bps-download-started`: Verified Spanish QoL BPS download was initiated.
+
+These events are deliberately named **download started**, rather than download completed: browser JavaScript cannot verify whether the user kept the downloaded file or loaded it into an emulator. Only these four fixed event names and human-readable titles are transmitted. **No ROM bytes, names, file paths, save files, checksums, input revisions, patches or user-identifying fields are sent.** Tracking errors never block patching.
+
+**Activate counts using GoatCounter** (hosted free for reasonable usage):
+
+1. Sign up at <https://www.goatcounter.com/signup> and create a site for the Jessie & James launcher. Choose any available subdomain code, for example `jessie-james-patches`, which would produce `https://jessie-james-patches.goatcounter.com`.
+2. Open this repository's **Settings → Secrets and variables → Actions → Variables** and add `GOATCOUNTER_SITE_CODE` with the **subdomain code only** (not the whole URL).
+3. Re-run **Actions → Publish Team Rocket landing page → Run workflow**. The deploy step injects GoatCounter's `count.js` beacon configured with `no_onload=true`, so GoatCounter records **custom patcher events only**, not redundant website pageviews.
+4. Use your GoatCounter dashboard's **Events** view to inspect the four counts. Cloudflare continues measuring overall pageviews and referrers independently.
+
+Until the variable is supplied, the event hooks remain harmless no-ops and the live site does not load GoatCounter. No past patching counts can be recovered.
+
 ## Testing and Bug Reports
 
 Testing is still ongoing. There's a lot of conditional dialogue and one-off events, so there may still be untranslated lines, odd wording, text errors or bugs that only show up under certain conditions.

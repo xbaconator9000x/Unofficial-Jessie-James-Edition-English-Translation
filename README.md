@@ -47,8 +47,17 @@ Finally, I added some additional quality of life features that were not included
 - **Move details** -- Press L when choosing a move to view its description, power, accuracy and category.
 - **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
 - **Optional and toggleable EXP. ALL key item**
-- **Optional Hard Mode** -- I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player.
+- **Optional Hard Mode** -- I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player. In v1.02, I also added Oak's battle to the boss pool for improved combat AI in HARD mode.
 - **Title music** -- A looping version of the Team Rocket motto theme.
+
+#### Major QOL additions in v1.02
+
+- **Nature mints**
+- **Bottle caps and Golden bottle caps**
+- **EV berries** -- Restored their original function.
+- **IV and EV readers** -- Available through the scientists at Rocket HQ.
+- **Five-digit prices** -- Expanded the price display to support five digits.
+- **Item prices** -- Adjusted reusable TM prices in Modern Mode and vitamin prices.
 
 I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
 

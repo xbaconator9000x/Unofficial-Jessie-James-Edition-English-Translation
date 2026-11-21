@@ -39,6 +39,33 @@ for (const entry of english.changelog) {
     assert.ok(readme.includes(item.replace(/^--\s*/,"")), "README missing release note: " + item);
   }
 }
+const readmeQol = readme.split("### Quality of life")[1]?.split("## Original Spanish Screenshots")[0];
+const siteQol = html.split('<h3>Quality of life</h3>')[1]?.split('</section>')[0];
+assert.ok(readmeQol && siteQol, "Quality of life section missing in README or website");
+for (const item of [
+  "Major QOL additions in v1.02",
+  "Nature mints",
+  "Bottle caps and Golden bottle caps",
+  "EV berries",
+  "IV and EV readers",
+  "Rocket HQ",
+  "Five-digit prices",
+  "reusable TM prices",
+  "vitamin prices",
+  "Oak's battle"
+]) {
+  assert.ok(readmeQol.includes(item), "README QOL section missing " + item);
+  assert.ok(siteQol.includes(item), "Website QOL section missing " + item);
+}
+const latestQol = english.changelog.find(x=>x.version==="1.02")?.changes.filter(x=>x.startsWith("-- ")) ?? [];
+for (const feature of latestQol) {
+  const name = feature.slice(3).replace(/^Restored function to /,"").replace(/^Expanded price list to /,"");
+  const key = name.startsWith("IV and EV readers") ? "IV and EV readers" :
+    name.startsWith("Bottle caps") ? "Bottle caps and Golden bottle caps" :
+    name.startsWith("five-digits") ? "Five-digit prices" : name;
+  assert.ok(readmeQol.toLowerCase().includes(key.toLowerCase()), "README missing a released QOL feature: " + key);
+  assert.ok(siteQol.toLowerCase().includes(key.toLowerCase()), "Website missing a released QOL feature: " + key);
+}
 assert.ok(readme.includes("## Fan art and emulator box art"));
 assert.ok(content("site/media/README.md").includes("SnowMudK99"));
 assert.ok(content(".github/workflows/pages.yml").includes("README.md"), "Site deploy must run when README changes");

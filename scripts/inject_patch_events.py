@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Opt-in GoatCounter custom-event support on the GitHub Pages deployment artifact.
+"""Configure GoatCounter pageviews and patcher events on the Pages deployment.
 
-Cloudflare Web Analytics remains the primary pageview tracker; GoatCounter is
-configured as events-only. No download/file details are sent by this injector.
+GoatCounter provides daily email summaries; Cloudflare independently tracks
+website traffic. No ROM, save, file, or patch details are sent by this injector.
 """
-import json
 import os
 import re
 import sys
@@ -22,12 +21,10 @@ def inject(source: str, code: str) -> str:
     if source.count("</body>") != 1 or "gc.zgo.at/count.js" in source:
         raise ValueError("Expected one </body> and no existing GoatCounter script")
     endpoint = "https://" + code + ".goatcounter.com/count"
-    settings = json.dumps({"no_onload": True}, separators=(",", ":"))
     snippet = (
-        "  <!-- Anonymous patch event counts only; pageviews remain in Cloudflare -->\n"
+        "  <!-- Cookie-free website visits and anonymous patch events; no ROM content -->\n"
         f'  <script defer src="https://gc.zgo.at/count.js" '
-        f'data-goatcounter="{escape(endpoint, quote=True)}" '
-        f"data-goatcounter-settings='{settings}'></script>\n"
+        f'data-goatcounter="{escape(endpoint, quote=True)}"></script>\n'
     )
     return source.replace("</body>", snippet + "</body>")
 
@@ -39,7 +36,7 @@ def main() -> None:
         return
     source = filename.read_text(encoding="utf-8")
     filename.write_text(inject(source, code), encoding="utf-8")
-    print("GoatCounter events-only tracker included in deployment artifact.")
+    print("GoatCounter pageviews and patcher event tracker included in deployment artifact.")
 
 if __name__ == "__main__":
     main()

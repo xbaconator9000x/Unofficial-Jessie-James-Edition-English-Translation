@@ -85,9 +85,9 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 [Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
 
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (CRC32 `C043455C`) or English v1.01 (CRC32 `A3E3CC2F`). The browser patcher verifies the selected ROM, applies its matching BPS patch locally and downloads English v1.02. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`) or the earlier English v1.02 (`CADC8480`). The browser patcher verifies the selected ROM, applies the verified BPS update path locally and downloads the latest English v1.02. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.02 output CRC32: `CADC8480`. Direct BPS updates are provided for both English v1.0 and v1.01. The original Spanish ROM uses the complete v1.02 patch. Keep backups of your ROM and save. No pre-patched ROMs.
+Expected latest English v1.02 output CRC32: `D2866130`. The patcher handles earlier releases automatically, including the previous v1.02 build. The original Spanish ROM uses the complete latest v1.02 patch. Keep backups of your ROM and save. No pre-patched ROMs.
 
 ## Prefer to play español?
 
@@ -97,7 +97,7 @@ Si prefieres jugar a la versión original en español, he preparado otro parche 
 
 [Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 
-Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`) o la versión española QoL v1.0 (`7C042814`). El resultado v1.02 permanece en español (CRC32 `0486144D`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
+Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`) o la primera versión QoL v1.02 (`0486144D`). El resultado QoL v1.02 más reciente permanece en español (CRC32 `58F089B9`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
 
 ## Changelog
 
@@ -105,6 +105,20 @@ Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`) o la versión 
 
 - Translated additional hidden Spanish dialogue
 - Fixed pick-up table bug
+- Repaired text wrapping issues
+- Updated move description text wrapping
+- Restored native English localisation to items
+- Translated trainer names and classes to English localisation standards
+- Added Oak battle to boss pool for improved combat AI in HARD mode.
+- Location and reference localisation fixes
+- Prices tweaked for Modern mode reuseable TMs
+- Prices tweaked for vitamins
+- **MAJOR QOL additions:**
+  - Nature mints
+  - Bottle caps and Golden bottle caps
+  - Restored function to EV berries
+  - IV and EV readers (Rocket HQ Scientists)
+  - Expanded price list to five-digits
 
 ### English v1.01 -- 20 November 2026
 

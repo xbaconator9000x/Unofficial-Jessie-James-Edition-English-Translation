@@ -4,6 +4,8 @@
 Uses no game ROMs. Only patches with SourceRead/TargetRead instructions are
 accepted; unknown BPS actions fail rather than generating an invalid file.
 """
+import base64
+import lzma
 import hashlib
 import json
 import struct
@@ -95,26 +97,52 @@ def compose(base, update):
     out += struct.pack("<I", zlib.crc32(out))
     return out
 
+def check_edge(data, edge):
+    assert len(data) == edge["bytes"], edge["path"]
+    assert hashlib.sha256(data).hexdigest() == edge["sha256"], edge["path"]
+    assert f"{zlib.crc32(data[:-4]):08X}" == edge["crc"], edge["path"]
+    sc, tc, _ = struct.unpack_from("<III", data, len(data) - 12)
+    assert f"{sc:08X}" == edge["from"].split(":")[1], edge["path"]
+    assert f"{tc:08X}" == edge["to"].split(":")[1], edge["path"]
+
+
 def main():
     builds = (
-        ("english", "releases.json",
+        ("English", "releases.json",
          "jessie-james-english-v1.01-a3e3cc2f.bps",
          "jessie-james-english-v1.01-a3e3cc2f-to-v1.02-cadc8480.bps",
-         "jessie-james-english-v1.02-cadc8480.bps"),
-        ("spanish", "spanish-releases.json",
+         "jessie-james-english-v1.02-cadc8480.bps",
+         "english-v102-earlier-to-latest.xz.b64",
+         "jessie-james-english-v1.02-cadc8480-to-d2866130.bps",
+         "jessie-james-english-v1.02-d2866130.bps",
+         "35c3129e04f2986debac738f0fff4a2d12387cbaaf15604251f7734e3b013f67"),
+        ("Spanish", "spanish-releases.json",
          "jessie-james-spanish-qol-v1.0-7c042814.bps",
          "jessie-james-spanish-qol-v1.0-7c042814-to-v1.02-0486144d.bps",
-         "jessie-james-spanish-qol-v1.02-0486144d.bps"),
+         "jessie-james-spanish-qol-v1.02-0486144d.bps",
+         "spanish-v102-earlier-to-latest.xz.b64",
+         "jessie-james-spanish-qol-v1.02-0486144d-to-58f089b9.bps",
+         "jessie-james-spanish-qol-v1.02-58f089b9.bps",
+         "971cc28b61a3da7039c61d002bb2567f9c6c7f2c61475e7d001fbb81dc54bae0"),
     )
-    for edition, manifest_file, source, delta, output in builds:
-        result = compose(ROOT / source, ROOT / delta)
+    for edition, manifest_file, base_file, old_update_file, old_full_name, \
+        compressed_name, new_update_name, new_full_name, expected_xz_sha in builds:
         manifest = json.loads((ROOT / manifest_file).read_text())
-        edge = next(x for x in manifest["patches"] if x["path"] == "patches/" + output)
-        assert len(result) == edge["bytes"]
-        assert hashlib.sha256(result).hexdigest() == edge["sha256"]
-        assert f"{zlib.crc32(result[:-4]):08X}" == edge["crc"]
-        (ROOT / output).write_bytes(result)
-        print("Verified", edition, output)
+        edges = {e["path"].removeprefix("patches/"): e for e in manifest["patches"]}
+        old_full = compose(ROOT / base_file, ROOT / old_update_file)
+        check_edge(old_full, edges[old_full_name])
+        compressed = base64.b64decode("".join(
+            (ROOT / compressed_name).read_text(encoding="ascii").split()), validate=True)
+        assert hashlib.sha256(compressed).hexdigest() == expected_xz_sha
+        update_bytes = lzma.decompress(compressed, memlimit=64 * 1024 * 1024)
+        check_edge(update_bytes, edges[new_update_name])
+        (ROOT / new_update_name).write_bytes(update_bytes)
+        old_path = ROOT / old_full_name
+        old_path.write_bytes(old_full)
+        result = compose(old_path, ROOT / new_update_name)
+        check_edge(result, edges[new_full_name])
+        (ROOT / new_full_name).write_bytes(result)
+        print("VERIFIED:", edition, "latest full and incremental v1.02 patches")
 
 if __name__ == "__main__":
     main()

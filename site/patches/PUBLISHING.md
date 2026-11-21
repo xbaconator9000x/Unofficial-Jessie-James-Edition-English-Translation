@@ -6,10 +6,10 @@ The English translation and Spanish quality of life edition use independent rele
 
 | Edition | Version | Output ROM CRC32 | Full patch |
 | --- | --- | --- | --- |
-| English | 1.02 | CADC8480 | jessie-james-english-v1.02-cadc8480.bps |
-| Spanish QoL | 1.02 | 0486144D | jessie-james-spanish-qol-v1.02-0486144d.bps |
+| English | 1.02 | D2866130 | jessie-james-english-v1.02-d2866130.bps |
+| Spanish QoL | 1.02 | 58F089B9 | jessie-james-spanish-qol-v1.02-58f089b9.bps |
 
-The v1.02 full BPS files are assembled during Pages deployment from the previously published full patches and the small, source-locked v1.02 updates by `assemble_release.py`, without using or publishing a ROM. The outputs were verified offline against the owned original ROM to match both uploaded v1.02 target ROMs byte-for-byte. The manifests are authoritative for patch filenames, sizes, CRC32 and SHA-256 fingerprints. GitHub Pages publishes the latest verified full patches at the stable download URLs as well.
+The latest v1.02 full BPS files are assembled during Pages deployment from previously verified full patches and source-locked incremental updates by `assemble_release.py`, without using or publishing a ROM. The previous v1.02 ROMs remain recognised and update through the new verified BPS deltas. The larger v1.02 replacement deltas are checked-in as losslessly compressed, base64-encoded BPS streams to keep public source commits reviewable. The outputs were verified offline against the owned original ROM to match both uploaded v1.02 target ROMs byte-for-byte. The manifests are authoritative for patch filenames, sizes, CRC32 and SHA-256 fingerprints. GitHub Pages publishes the latest verified full patches at the stable download URLs as well.
 
 ## Update procedure
 

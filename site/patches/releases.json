@@ -4,9 +4,10 @@
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
     "16777216:A3E3CC2F": "English v1.01",
     "16777216:C043455C": "English v1.0",
-    "16777216:CADC8480": "English v1.02"
+    "16777216:CADC8480": "English v1.02 (earlier build)",
+    "16777216:D2866130": "English v1.02 (latest)"
   },
-  "target": "16777216:CADC8480",
+  "target": "16777216:D2866130",
   "patches": [
     {
       "path": "patches/jessie-james-english-v1.01-a3e3cc2f.bps",
@@ -52,6 +53,24 @@
       "from": "16777216:A3E3CC2F",
       "to": "16777216:CADC8480",
       "version": "1.02"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.02-d2866130.bps",
+      "crc": "6A112821",
+      "bytes": 1808812,
+      "sha256": "29e370d2edcb1e6e29128470a68ab97689bf95b0b78b632ff2cf63d6bb58c978",
+      "from": "16777216:805E24CA",
+      "to": "16777216:D2866130",
+      "version": "1.02"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.02-cadc8480-to-d2866130.bps",
+      "crc": "BC41108B",
+      "bytes": 60595,
+      "sha256": "cf6fae480143826cad06b3c698cdbf31d403b234b1a272408dc375bc376cd5dc",
+      "from": "16777216:CADC8480",
+      "to": "16777216:D2866130",
+      "version": "1.02"
     }
   ],
   "changelog": [
@@ -60,7 +79,21 @@
       "date": "21 November 2026",
       "changes": [
         "Translated additional hidden Spanish dialogue",
-        "Fixed pick-up table bug"
+        "Fixed pick-up table bug",
+        "Repaired text wrapping issues",
+        "Updated move description text wrapping",
+        "Restored native English localisation to items",
+        "Translated trainer names and classes to English localisation standards",
+        "Added Oak battle to boss pool for improved combat AI in HARD mode.",
+        "Location and reference localisation fixes",
+        "Prices tweaked for Modern mode reuseable TMs",
+        "Prices tweaked for vitamins",
+        "MAJOR QOL additions:",
+        "-- Nature mints",
+        "-- Bottle caps and Golden bottle caps",
+        "-- Restored function to EV berries",
+        "-- IV and EV readers (Rocket HQ Scientists)",
+        "-- Expanded price list to five-digits"
       ]
     },
     {
@@ -86,6 +119,7 @@
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
     "16777216:A3E3CC2F": "06d9c87234400f45f1fc3a356881f0ad8bd9b977bc5cbed450e5c7eedd01b632",
     "16777216:C043455C": "a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a",
-    "16777216:CADC8480": "36525c0d68c8ed07044284fc391bcd9f705e6dac323e67118ee27426e2384773"
+    "16777216:CADC8480": "36525c0d68c8ed07044284fc391bcd9f705e6dac323e67118ee27426e2384773",
+    "16777216:D2866130": "286eb8b201dfca10057620f8aba3232565e90a83c4462a7a2a9c4dd277ff43ed"
   }
 }

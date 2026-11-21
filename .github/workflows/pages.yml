@@ -178,7 +178,7 @@ jobs:
           python3 tests/patch-events-injection.test.py
       - name: Configure patcher conversion counts for deployed pages (optional)
         env:
-          GOATCOUNTER_SITE_CODE: ${{ vars.GOATCOUNTER_SITE_CODE }}
+          GOATCOUNTER_SITE_CODE: ${{ vars.GOATCOUNTER_SITE_CODE || 'xbaconator9000x' }}
         run: python3 scripts/inject_patch_events.py site/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

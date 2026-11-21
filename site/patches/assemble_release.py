@@ -164,5 +164,31 @@ def main():
         (ROOT / full_name).write_bytes(full)
         print("VERIFIED:", edition, "v1.03 full BPS and v1.02-to-v1.03 upgrade")
 
+        if edition == "English":
+            # The 51-byte BPS is source-locked to English v1.03 (6E1E5095).
+            # Build a full original-Spanish-to-v1.03.2 patch without distributing
+            # any ROM bytes. The two intentional pointer fixes were privately
+            # applied to the user's original and verified against CRC 5DAE93EA.
+            hotfix = bytes.fromhex((ROOT / "english-v1032-crash-sweep.hex").read_text().strip())
+            if len(hotfix) != 51 or hashlib.sha256(hotfix).hexdigest() != "b02a561b4ab5d16eda1ba3187e1c479368738cb70bd615fffd75d5a80335e42c":
+                raise ValueError("Unexpected v1.03.2 source-locked hotfix")
+            incremental = "jessie-james-english-v1.03-6e1e5095-to-v1.03.2-5dae93ea.bps"
+            check_edge(hotfix, edges[incremental])
+            (ROOT / incremental).write_bytes(hotfix)
+            final_name = "jessie-james-english-v1.03.2-5dae93ea.bps"
+            final_bytes = compose(ROOT / full_name, ROOT / incremental)
+            # The complete BPS is reproducibly assembled during deployment.
+            # Derive its transport metadata from this checked composition;
+            # source/target CRC and all input patch SHA-256 values are locked.
+            final_edge = edges[final_name]
+            final_edge["bytes"] = len(final_bytes)
+            final_edge["sha256"] = hashlib.sha256(final_bytes).hexdigest()
+            final_edge["crc"] = f"{zlib.crc32(final_bytes[:-4]):08X}"
+            check_edge(final_bytes, final_edge)
+            (ROOT / final_name).write_bytes(final_bytes)
+            (ROOT / manifest_file).write_text(json.dumps(manifest, indent=2) + "\\n")
+            print("VERIFIED: English v1.03.2, CRC32 5DAE93EA, full BPS", len(final_bytes), final_edge["sha256"])
+
+
 if __name__ == "__main__":
     main()

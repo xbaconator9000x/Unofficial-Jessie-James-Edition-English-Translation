@@ -134,7 +134,7 @@ def main():
         compressed = base64.b64decode("".join(
             (ROOT / compressed_name).read_text(encoding="ascii").split()), validate=True)
         assert hashlib.sha256(compressed).hexdigest() == expected_xz_sha
-        update_bytes = lzma.decompress(compressed, memlimit=64 * 1024 * 1024)
+        update_bytes = lzma.decompress(compressed, memlimit=256 * 1024 * 1024)
         check_edge(update_bytes, edges[new_update_name])
         (ROOT / new_update_name).write_bytes(update_bytes)
         old_path = ROOT / old_full_name

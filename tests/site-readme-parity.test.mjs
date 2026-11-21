@@ -21,8 +21,11 @@ for (const [path, expectedGitSha, type] of files) {
   assert.equal(createHash("sha1").update(gitInput).digest("hex"), expectedGitSha, path + " does not match the approved upload");
   if (type === "RIFF") assert.equal(bytes.toString("ascii",0,4),"RIFF");
   if (type === "JPEG") assert.equal(bytes.subarray(0,3).toString("hex"),"ffd8ff");
-  assert.ok(readme.includes(path), "README must link approved media " + path);
-  assert.ok(html.includes(path.replace(/^site\//,"")), "Website must link approved media " + path);
+  // The clean logo is supplied in the downloadable three-image ZIP, not displayed separately.
+  if (!path.endsWith("logo-clean-snowmudk99.webp")) {
+    assert.ok(readme.includes(path), "README must link approved media " + path);
+    assert.ok(html.includes(path.replace(/^site\//,"")), "Website must link approved media " + path);
+  }
 }
 assert.ok(html.includes('id="fanart"') && html.includes('href="#fanart"'));
 assert.ok(readme.includes("u/SnowMudK99") && html.includes("u/SnowMudK99"));

@@ -31,7 +31,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-o
 .masthead { padding: 27px 0 14px; text-align: center; }
 .fan-logo-link { display: block; width: min(100%, 370px); margin: 0 auto; }
 .rocket-hero { display: block; width: 100%; height: auto; object-fit: contain; }
-.artist-credit { margin: 3px 0 18px; font: 500 13px/1.35 var(--body-font); color: var(--muted); }
+
 .game-title {
   border: 3px solid var(--white);
   background: var(--panel);
@@ -188,7 +188,7 @@ strong { color: var(--white); font-weight: 700; }
   body { font-size: 17px; line-height: 1.55; }
   .masthead { padding-top: 26px; }
   .fan-logo-link { width: min(100%, 340px); }
-  .artist-credit { margin-bottom: 16px; }
+  
   .game-title { padding: 0 10px 17px; }
   .title-strip { margin-bottom: 15px; padding: 8px 7px; font-size: clamp(10px, 2.6vw, 12px); }
   .game-title h1 { font-size: clamp(14px, 3.45vw, 18px); line-height: 1.7; }

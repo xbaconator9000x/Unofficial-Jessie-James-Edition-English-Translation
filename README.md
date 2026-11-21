@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="Team Rocket R" width="110">
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#fanart">
+    <img src="site/media/jessie-james-logo-snowmudk99.webp" alt="Jessie & James fan logo with Rocket R, by SnowMudK99" width="320">
   </a>
 </p>
 
@@ -71,6 +71,22 @@ These are screenshots from MrNightology's original Spanish version, not the Engl
 
 </details>
 
+## Fan art and emulator box art
+
+<p align="center">
+  <a href="site/media/jessie-james-cover-snowmudk99.jpg">
+    <img src="site/media/jessie-james-cover-snowmudk99.jpg" alt="Unofficial Game Boy Advance-style cover for Pokémon Team Rocket: Jessie & James Edition" width="320">
+  </a>
+</p>
+
+**Fan box art and logo by SnowMudK99, used with permission.** These are unofficial community artwork for the fan translation, not official Nintendo packaging or artwork by the game's original developer.
+
+[Download full-resolution box art (JPG)](site/media/jessie-james-cover-snowmudk99.jpg) | [Logo with Rocket R](site/media/jessie-james-logo-snowmudk99.webp) | [Alternate clean logo](site/media/jessie-james-logo-clean-snowmudk99.webp)
+
+GBA ROMs do not have a universal embedded album-art field. Emulators and game-library frontends that support custom artwork can use this image as a separate cover file, generally by assigning it to the game or matching a filename. **The artwork does not change the ROM, BPS patches, gameplay or save files.**
+
+[Open the fan art and cover downloads on the website](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#fanart) or read the [frontend artwork notes](site/media/README.md).
+
 ## Testing and Bug Reports
 
 Testing is still ongoing. There's a lot of conditional dialogue and one-off events, so there may still be untranslated lines, odd wording, text errors or bugs that only show up under certain conditions.
@@ -140,4 +156,4 @@ Full credit for the original game, story, maps, artwork and gameplay goes to **M
 
 English localisation and patcher maintenance -- [@xbaconator9000x](https://github.com/xbaconator9000x).
 
-The Team Rocket R emblem is sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg). Screenshots are from [the original Spanish release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
+Fan header artwork, alternate logo and cover art -- **SnowMudK99**, used with permission. Small Team Rocket R icons and the website favicon are sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg). Original Spanish screenshots are from [MrNightology's release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).

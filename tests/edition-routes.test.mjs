@@ -35,5 +35,5 @@ for(const id of ["rom-file","patch-file","patch-run","patch-download","patch-sta
 assert.equal(read("spanish-patcher.mjs").includes('patches/spanish-releases.json'),true);
 const gallery=html.match(/<section class="window" id="english-screenshots">[\s\S]*?<\/section>/)[0];
 assert.deepEqual([...gallery.matchAll(/<img src="([^"]+)"/g)].map(x=>x[1]),["english-featured-gameplay.gif","english-dialogue.gif","english-train-dialogue.gif","english-rocket-base.gif","english-team-rocket-motto.gif","english-battle-mode.gif","english-hard-mode.gif","english-exp-all.png","english-save-mode.png","english-battle-qol.gif","english-battle-qol-2.gif","pokerail-english-map.jpg"]);
-assert.equal([...nav.matchAll(/href="#([^"]+)"/g)].length,8);
+assert.equal([...nav.matchAll(/href="#([^"]+)"/g)].length,9);
 console.log("Independent edition routes, navigation order and separate Spanish controls passed");

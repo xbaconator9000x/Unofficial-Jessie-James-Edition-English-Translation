@@ -10,7 +10,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pokémon Team Rocket: Jessie &amp; James Edition -- Unofficial English Translation">
+  <meta property="og:description" content="English localisation, ROM patcher and fan cover art for Jessie &amp; James Edition. Fan cover artwork by SnowMudK99, used with permission.">
+  <meta property="og:image" content="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/site/media/jessie-james-cover-snowmudk99.jpg">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1536">
+  <meta property="og:image:alt" content="Unofficial fan cover art by SnowMudK99">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css?v=11">
   <script src="player.js?v=4" defer></script>
   <script type="module" src="patcher.mjs"></script>
   <script type="module" src="spanish-patcher.mjs"></script>
@@ -19,9 +27,10 @@
   <a class="skip" href="#content">Skip to content</a>
   <div class="page">
     <header class="masthead">
-      <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg" aria-label="Team Rocket R logo, sourced from Wikimedia Commons">
-        <img class="rocket-r" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" alt="Team Rocket R">
+      <a class="fan-logo-link" href="#fanart" aria-label="View the fan artwork by SnowMudK99">
+        <img class="rocket-hero" src="media/jessie-james-logo-snowmudk99.webp" width="320" height="161" alt="Pokémon Team Rocket: Jessie & James fan logo with a red Rocket R, artwork by SnowMudK99">
       </a>
+      <p class="artist-credit">Fan logo by SnowMudK99, used with permission</p>
       <div class="game-title">
         <div class="title-strip">POKÉMON TEAM ROCKET</div>
         <h1>Jessie &amp; James<br><span>Edition</span></h1>
@@ -39,6 +48,7 @@
       <a href="#translation">Translation</a>
       <a href="#screenshots">Spanish Screenshots</a>
       <a href="#english-screenshots">English Screenshots</a>
+      <a href="#fanart">Fan art</a>
       <a href="#report">Bug reports</a>
       <a href="#releases">Patch ROM</a>
       <a href="#spanish">Español QoL</a>
@@ -168,6 +178,23 @@
         </div>
       </section>
 
+      <section class="window" id="fanart">
+        <h2>Fan art and emulator cover</h2>
+        <div class="window-body">
+          <p>Artwork created by <strong>SnowMudK99</strong> and shared with permission for this unofficial fan translation. Thanks for making the game a cover of its own!</p>
+          <figure class="fan-cover">
+            <a href="media/jessie-james-cover-snowmudk99.jpg" download="Jessie-James-Fan-Box-Art-SnowMudK99.jpg" aria-label="Download the full-resolution fan box art by SnowMudK99">
+              <img src="media/jessie-james-cover-snowmudk99.jpg" width="1536" height="1536" loading="lazy" alt="Unofficial Game Boy Advance box art for Pokémon Team Rocket: Jessie & James Edition, featuring Jessie, James and Meowth silhouettes around a red Rocket R">
+            </a>
+            <figcaption>Unofficial GBA-style box art by SnowMudK99</figcaption>
+          </figure>
+          <p class="cover-actions"><a class="menu-button" href="media/jessie-james-cover-snowmudk99.jpg" download="Jessie-James-Fan-Box-Art-SnowMudK99.jpg">Download box art (JPG)</a></p>
+          <p class="small">For emulator and game-library frontends that allow custom covers, such as ES-DE and some RetroArch setups. Save the image separately and assign it in your frontend. GBA ROMs have no universal embedded cover-art field; adding this artwork does not modify the ROM, the patch or your save.</p>
+          <p class="small">Fan logos: <a href="media/jessie-james-logo-snowmudk99.webp" download="Jessie-James-Fan-Logo-R-SnowMudK99.webp">with Rocket R</a> / <a href="media/jessie-james-logo-clean-snowmudk99.webp" download="Jessie-James-Fan-Logo-Clean-SnowMudK99.webp">without the R</a>.</p>
+          <p class="small">For artwork usage and frontend tips, see the <a href="media/README.md">media notes</a>. Artwork shared here with permission; no separate general reuse licence is implied.</p>
+        </div>
+      </section>
+
       <section class="window" id="report">
         <h2>Testing and bug reports</h2>
         <div class="window-body">
@@ -231,7 +258,7 @@
       <p>Full credit for the original game, story, maps, artwork and gameplay goes to <strong>MrNightology and the original project's contributors</strong>. The game was translated without author consultation.</p>
       <p>English localisation and patcher maintenance -- <a href="https://github.com/xbaconator9000x" target="_blank" rel="noopener noreferrer">@xbaconator9000x</a>.</p>
       <p class="small">Unofficial fan project. Not endorsed by the original developer. Please support the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original Spanish release</a>.</p>
-      <p class="small">R emblem from <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Images from MrNightology's original game page.</p>
+      <p class="small">Fan header, alternate logo and cover art by <strong>SnowMudK99</strong>, used with permission. Small Rocket R icons and favicon from <a href="https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Original Spanish screenshots from MrNightology's game page.</p>
       <p class="end-mark">TEAM ROCKET <span>R</span></p>
     </footer>
   </div>

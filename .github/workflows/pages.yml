@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'README.md'
       - 'site/**'
       - '.github/workflows/pages.yml'
       - 'tests/**'
@@ -71,6 +72,7 @@ jobs:
           node --check site/patcher.mjs
           node --check site/spanish-patcher.mjs
           node tests/edition-routes.test.mjs
+          node tests/site-readme-parity.test.mjs
           node tests/bps.test.mjs
           python3 - <<'PY'
           import hashlib, json, struct, zlib

@@ -101,6 +101,11 @@ Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`). La ROM parche
 
 ## Changelog
 
+### English v1.02 -- 21 November 2026
+
+- Translated additional hidden Spanish dialogue
+- Fixed pick-up table bug
+
 ### English v1.01 -- 20 November 2026
 
 - Fixed graphical issue during blast-off sequence

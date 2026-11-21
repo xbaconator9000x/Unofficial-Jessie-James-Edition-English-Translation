@@ -7,10 +7,13 @@ function inspectBps(p){
   if(p.length>64*1024*1024)throw Error("Patch is too large.");
   const end=p.length-12, dv=new DataView(p.buffer,p.byteOffset,p.byteLength);
   const sourceCrc=dv.getUint32(end,true),targetCrc=dv.getUint32(end+4,true),patchCrc=dv.getUint32(end+8,true);
-  if(crc32(p.subarray(0,p.length-4))!==patchCrc)throw Error("Patch checksum mismatch. Download it again.");
+  // Legacy releases stored a zero BPS trailer, despite publishing the calculated CRC in the SHA-256 pinned manifest.
+  // Keep that exact legacy format readable; validateEdge still checks the calculated CRC against the manifest.
+  const calculatedPatchCrc=crc32(p.subarray(0,p.length-4));
+  if(patchCrc!==calculatedPatchCrc&&patchCrc!==0)throw Error("Patch checksum mismatch. Download it again.");
   let pos=4;function num(){let value=0,shift=1;for(let i=0;i<8;i++){if(pos>=end)throw Error("Truncated patch.");const b=p[pos++];value+=(b&127)*shift;if(!Number.isSafeInteger(value))throw Error("Invalid patch number.");if(b&128)return value;shift*=128;value+=shift;}throw Error("Invalid patch number.");}
   const sourceSize=num(),targetSize=num(),meta=num();if(sourceSize<1||targetSize<1||sourceSize>64*1024*1024||targetSize>64*1024*1024||meta>end-pos)throw Error("Invalid patch size or metadata.");pos+=meta;
-  return {sourceSize,targetSize,sourceCrc,targetCrc,patchCrc,end,num,get pos(){return pos},read(n){if(n>end-pos)throw Error("Truncated patch data.");const bytes=p.subarray(pos,pos+n);pos+=n;return bytes;}};
+  return {sourceSize,targetSize,sourceCrc,targetCrc,patchCrc:calculatedPatchCrc,end,num,get pos(){return pos},read(n){if(n>end-pos)throw Error("Truncated patch data.");const bytes=p.subarray(pos,pos+n);pos+=n;return bytes;}};
 }
 
 function applyBps(source,patch){

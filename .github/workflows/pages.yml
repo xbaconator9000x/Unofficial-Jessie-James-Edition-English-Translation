@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Assemble verified v1.02 full BPS patches without ROM data
+        run: python3 site/patches/assemble_release.py
       - name: Check static site
         run: |
           python3 - <<'PY'
@@ -99,7 +101,9 @@ jobs:
                   sc, tc, pc = struct.unpack('<III', b[-12:])
                   assert f'{sc:08X}' == edge['from'].split(':')[1]
                   assert f'{tc:08X}' == edge['to'].split(':')[1]
-                  assert f'{pc:08X}' == edge['crc'] and zlib.crc32(b[:-4]) == pc
+                  calculated = zlib.crc32(b[:-4])
+                  assert f'{calculated:08X}' == edge['crc']
+                  assert pc in (0, calculated), 'BPS stored checksum is neither current nor legacy zero'
                   print('VERIFIED:', edge['path'])
           # Verify the published English gallery assets.
           asset = (site/'english-featured-gameplay.gif').read_bytes()

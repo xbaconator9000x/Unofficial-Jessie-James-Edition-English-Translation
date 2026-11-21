@@ -1,10 +1,11 @@
 {
-  "latest": "1.0",
+  "latest": "1.02",
   "versions": {
     "16777216:805E24CA": "Versión original en español FINAL v1.1",
-    "16777216:7C042814": "Versión en español con mejoras QoL v1.0"
+    "16777216:7C042814": "Versión en español con mejoras QoL v1.0",
+    "16777216:0486144D": "Versión en español con mejoras QoL v1.02"
   },
-  "target": "16777216:7C042814",
+  "target": "16777216:0486144D",
   "patches": [
     {
       "path": "patches/jessie-james-spanish-qol-v1.0-7c042814.bps",
@@ -14,10 +15,29 @@
       "from": "16777216:805E24CA",
       "to": "16777216:7C042814",
       "version": "1.0"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-v1.02-0486144d.bps",
+      "crc": "01204E31",
+      "bytes": 427186,
+      "sha256": "66d2b6803256f076a582bd58268a4c9b51ce45f5d477319a90bec3039a05e7d7",
+      "from": "16777216:805E24CA",
+      "to": "16777216:0486144D",
+      "version": "1.02"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-v1.0-7c042814-to-v1.02-0486144d.bps",
+      "crc": "12623008",
+      "bytes": 148,
+      "sha256": "0a4b8c361f4ff98ec3940ccb5bf0bb9eb150a1261401049c1a62dd5bc4e9ab6e",
+      "from": "16777216:7C042814",
+      "to": "16777216:0486144D",
+      "version": "1.02"
     }
   ],
   "romSha256": {
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
-    "16777216:7C042814": "7a9587b11af0385a589b9b7ad309edea1f3dac58705da2a3cd8ae84164e41a18"
+    "16777216:7C042814": "7a9587b11af0385a589b9b7ad309edea1f3dac58705da2a3cd8ae84164e41a18",
+    "16777216:0486144D": "8239aa77d929c9cdd8bdba1fd935b38ad2b9f0745a9e64b9f9f54acd003b4120"
   }
 }

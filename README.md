@@ -81,13 +81,13 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Releases
 
-**English v1.01** -- 20 November 2026.
+**English v1.02** -- 21 November 2026.
 
 [Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
 
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`) or the released English v1.0 ROM (CRC32 `C043455C`). The patcher checks compatibility, applies the official BPS patch locally, verifies the result and downloads the patched ROM. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (CRC32 `C043455C`) or English v1.01 (CRC32 `A3E3CC2F`). The browser patcher verifies the selected ROM, applies its matching BPS patch locally and downloads English v1.02. Nothing is uploaded. A diagnostic report is available if something goes wrong.
 
-Expected English v1.01 output CRC32: `A3E3CC2F`. The patcher automatically selects the full patch for the original Spanish ROM or the incremental update for the released English v1.0 ROM. Keep backups of your ROM and save. No pre-patched ROMs.
+Expected English v1.02 output CRC32: `CADC8480`. Direct BPS updates are provided for both English v1.0 and v1.01. The original Spanish ROM uses the complete v1.02 patch. Keep backups of your ROM and save. No pre-patched ROMs.
 
 ## Prefer to play español?
 
@@ -97,7 +97,7 @@ Si prefieres jugar a la versión original en español, he preparado otro parche 
 
 [Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 
-Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`). La ROM parcheada permanece en español (CRC32 `7C042814`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
+Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`) o la versión española QoL v1.0 (`7C042814`). El resultado v1.02 permanece en español (CRC32 `0486144D`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
 
 ## Changelog
 

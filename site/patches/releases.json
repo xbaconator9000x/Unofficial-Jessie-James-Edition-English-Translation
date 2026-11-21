@@ -1,11 +1,12 @@
 {
-  "latest": "1.01",
+  "latest": "1.02",
   "versions": {
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
     "16777216:A3E3CC2F": "English v1.01",
-    "16777216:C043455C": "English v1.0"
+    "16777216:C043455C": "English v1.0",
+    "16777216:CADC8480": "English v1.02"
   },
-  "target": "16777216:A3E3CC2F",
+  "target": "16777216:CADC8480",
   "patches": [
     {
       "path": "patches/jessie-james-english-v1.01-a3e3cc2f.bps",
@@ -24,6 +25,33 @@
       "from": "16777216:C043455C",
       "to": "16777216:A3E3CC2F",
       "version": "1.01"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.02-cadc8480.bps",
+      "crc": "7412FF1A",
+      "bytes": 1751942,
+      "sha256": "898855fb579b1b9292e6051d84d11c904d78781ad9e0b80abfc7e4291af9dfcf",
+      "from": "16777216:805E24CA",
+      "to": "16777216:CADC8480",
+      "version": "1.02"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.0-c043455c-to-v1.02-cadc8480.bps",
+      "crc": "DE407907",
+      "bytes": 498,
+      "sha256": "7d2b66b35355e671f5bb8de53d01b58601f6a8158de58725984d630d975451e1",
+      "from": "16777216:C043455C",
+      "to": "16777216:CADC8480",
+      "version": "1.02"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.01-a3e3cc2f-to-v1.02-cadc8480.bps",
+      "crc": "B7602484",
+      "bytes": 170,
+      "sha256": "ce89be1f79685996ad31f79ef34dd538836a634ce654e69897a457e939ecaa8b",
+      "from": "16777216:A3E3CC2F",
+      "to": "16777216:CADC8480",
+      "version": "1.02"
     }
   ],
   "changelog": [
@@ -57,6 +85,7 @@
   "romSha256": {
     "16777216:805E24CA": "7fc313cb5d054005e5aefff4bc5c3a1121357ca02b5b205280e2a6e48f3a0a91",
     "16777216:A3E3CC2F": "06d9c87234400f45f1fc3a356881f0ad8bd9b977bc5cbed450e5c7eedd01b632",
-    "16777216:C043455C": "a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a"
+    "16777216:C043455C": "a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a",
+    "16777216:CADC8480": "36525c0d68c8ed07044284fc391bcd9f705e6dac323e67118ee27426e2384773"
   }
 }

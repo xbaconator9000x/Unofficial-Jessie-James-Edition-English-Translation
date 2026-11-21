@@ -14,10 +14,16 @@ for(const m of [en,es]) {
 }
 for(const key of Object.keys(en.versions).filter(x=>x!==original)) assert.equal(findRoute(es.patches,key,es.target),null);
 for(const key of Object.keys(es.versions).filter(x=>x!==original)) assert.equal(findRoute(en.patches,key,en.target),null);
+assert.equal(en.latest,"1.02");
+assert.equal(es.latest,"1.02");
+assert.equal(en.target,"16777216:CADC8480");
+assert.equal(es.target,"16777216:0486144D");
+assert.equal(findRoute(en.patches,"16777216:A3E3CC2F",en.target).length,1);
+assert.equal(findRoute(es.patches,"16777216:7C042814",es.target).length,1);
 const publicV10="16777216:C043455C";
 assert.equal(en.versions[publicV10],"English v1.0");
 const upgrade=findRoute(en.patches,publicV10,en.target);
-assert.ok(upgrade?.length,"Released English v1.0 must have a verified upgrade path");
+assert.equal(upgrade?.length,1,"Released English v1.0 must update directly to v1.02");
 assert.equal(upgrade[0].from,publicV10);
 assert.equal(upgrade[upgrade.length-1].to,en.target);
 assert.equal(findRoute(es.patches,publicV10,es.target),null);

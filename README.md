@@ -106,17 +106,12 @@ Includes:
 
 ## Website traffic analytics (maintainer)
 
-This repository's GitHub **Insights → Traffic** measures *GitHub repository* visits, **not** visits to the launcher at GitHub Pages. The launcher supports optional [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/) so its owner can see website pageviews, approximate unique visitors, referrers and traffic trends without cookies or moving the site away from GitHub Pages.
+The Jessie & James GitHub Pages launcher has privacy-friendly, cookie-free [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/) enabled using the project's public Cloudflare site token. No custom domain, DNS change, paid plan or additional GitHub setup is required.
 
-To activate it:
-
-1. Create/sign in to a free Cloudflare account and open **Web Analytics → Add a site**. Enter the hostname `xbaconator9000x.github.io` (not the full repository path). Cloudflare doesn't need your domain's DNS or proxy moved.
-2. In Cloudflare's **Manage site** page, copy the 32-character hexadecimal **site token** found inside its JavaScript snippet (the `"token"` value). This is a public site identifier, **not** a Cloudflare API key.
-3. On GitHub, open this repository's **Settings → Secrets and variables → Actions → Variables → New repository variable**. Name it `CLOUDFLARE_WEB_ANALYTICS_TOKEN` and paste the site token.
-4. Run **Actions → Publish Team Rocket landing page → Run workflow** (or publish a subsequent site change). The deploy workflow checks the token and injects the official Cloudflare beacon *into the published page only*, leaving the source HTML unchanged.
-5. Open the launcher, then open the **Cloudflare Web Analytics dashboard** to see visits, pages and referrers. Allow for reporting delay; test pageviews may not show instantly.
-
-The tracker is **off** when the variable isn't set. No ROM contents, BPS files, save data, upload contents or patcher activity are sent to this analytics service; this tracks website visits, **not** successful downloads or patch usage. No historic website visits can be recovered retroactively, and views of Reddit or the GitHub repository are separate numbers. Cloudflare's JavaScript-based counts can miss blocked scripts and aren't a definitive unique-person tally.
+- After deployment, visit the [launcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/), then open the Cloudflare account's **Web Analytics** dashboard and select `xbaconator9000x.github.io`.
+- The tracker measures website page views, approximate visits and referral sources. Metrics can be delayed, browser ad blockers may suppress events, and historical visits from before activation cannot be reconstructed.
+- It does **not** track ROM contents, save files, patch file contents, completed patch downloads or identities. GitHub repository traffic and Reddit views are separate from launcher visits.
+- The site identifier is public (as Cloudflare's embed snippet requires), not a credential. The deploy workflow injects the beacon into the published HTML only. To change accounts, set the Actions variable `CLOUDFLARE_WEB_ANALYTICS_TOKEN` to another 32-character site token; the variable takes priority over the default.
 
 ## Testing and Bug Reports
 

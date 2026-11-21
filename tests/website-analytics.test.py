@@ -42,16 +42,17 @@ class WebsiteAnalyticsTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             module.inject(module.inject(HTML, TOKEN), TOKEN)
 
-    def test_cli_disabled_is_noop(self):
+    def test_cli_uses_public_default_site_token(self):
         with tempfile.TemporaryDirectory() as d:
             f = Path(d) / "index.html"
             f.write_text(HTML, encoding="utf-8")
             env = os.environ.copy()
             env.pop(module.TOKEN_VARIABLE, None)
             subprocess.run([sys.executable, str(PATH), str(f)], env=env, check=True, capture_output=True)
-            self.assertEqual(f.read_text(encoding="utf-8"), HTML)
+            self.assertIn(module.DEFAULT_SITE_TOKEN, f.read_text(encoding="utf-8"))
+            self.assertIn(module.BEACON_URL, f.read_text(encoding="utf-8"))
 
-    def test_cli_inserts_valid_beacon(self):
+    def test_cli_accepts_token_override(self):
         with tempfile.TemporaryDirectory() as d:
             f = Path(d) / "index.html"
             f.write_text(HTML, encoding="utf-8")

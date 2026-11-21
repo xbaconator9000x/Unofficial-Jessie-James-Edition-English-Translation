@@ -124,14 +124,12 @@ GitHub Pages is a static website, and **Cloudflare Web Analytics does not suppor
 
 These events are deliberately named **download started**, rather than download completed: browser JavaScript cannot verify whether the user kept the downloaded file or loaded it into an emulator. Only these four fixed event names and human-readable titles are transmitted. **No ROM bytes, names, file paths, save files, checksums, input revisions, patches or user-identifying fields are sent.** Tracking errors never block patching.
 
-**Activate counts using GoatCounter** (hosted free for reasonable usage):
+**GoatCounter conversion tracking is now enabled:** The owner's site `https://xbaconator9000x.goatcounter.com` is configured in the GitHub Pages deploy workflow. No account credential or extra variable is required. The deployment injects GoatCounter's `count.js` beacon with `no_onload=true`, so it records **only the four custom patcher events**, rather than duplicating Cloudflare's page-view tracking.
 
-1. Sign up at <https://www.goatcounter.com/signup> and create a site for the Jessie & James launcher. Choose any available subdomain code, for example `jessie-james-patches`, which would produce `https://jessie-james-patches.goatcounter.com`.
-2. Open this repository's **Settings → Secrets and variables → Actions → Variables** and add `GOATCOUNTER_SITE_CODE` with the **subdomain code only** (not the whole URL).
-3. Re-run **Actions → Publish Team Rocket landing page → Run workflow**. The deploy step injects GoatCounter's `count.js` beacon configured with `no_onload=true`, so GoatCounter records **custom patcher events only**, not redundant website pageviews.
-4. Use your GoatCounter dashboard's **Events** view to inspect the four counts. Cloudflare continues measuring overall pageviews and referrers independently.
+Open the [GoatCounter dashboard](https://xbaconator9000x.goatcounter.com/) to see the events; if prompted, verify the account email first. Cloudflare continues measuring overall launcher visits and referrers independently.
 
-Until the variable is supplied, the event hooks remain harmless no-ops and the live site does not load GoatCounter. No past patching counts can be recovered.
+The configured site code is a public hostname, not a password or API credential. If a different GoatCounter site is needed later, add or update the optional GitHub Actions variable `GOATCOUNTER_SITE_CODE` with its subdomain label; it overrides the default `xbaconator9000x`. No past patching counts can be recovered.
+
 
 ## Testing and Bug Reports
 

@@ -6,10 +6,10 @@ The English translation and Spanish quality of life edition use independent rele
 
 | Edition | Version | Output ROM CRC32 | Full patch |
 | --- | --- | --- | --- |
-| English | 1.02 | D2866130 | jessie-james-english-v1.02-d2866130.bps |
-| Spanish QoL | 1.02 | 58F089B9 | jessie-james-spanish-qol-v1.02-58f089b9.bps |
+| English | 1.03 | 6E1E5095 | jessie-james-english-v1.03-6e1e5095.bps |
+| Spanish QoL | 1.03 | 222A0072 | jessie-james-spanish-qol-v1.03-222a0072.bps |
 
-The latest v1.02 full BPS files are assembled during Pages deployment from previously verified full patches and source-locked incremental updates by `assemble_release.py`, without using or publishing a ROM. The previous v1.02 ROMs remain recognised and update through the new verified BPS deltas. The larger v1.02 replacement deltas are checked-in as losslessly compressed, base64-encoded BPS streams to keep public source commits reviewable. The outputs were verified offline against the owned original ROM to match both uploaded v1.02 target ROMs byte-for-byte. The manifests are authoritative for patch filenames, sizes, CRC32 and SHA-256 fingerprints. GitHub Pages publishes the latest verified full patches at the stable download URLs as well.
+The v1.03 full BPS files are assembled during Pages deployment from previously verified v1.02 full patches and source-locked incremental updates by `assemble_release.py`, without using or publishing a ROM. All prior v1.02 ROM builds remain recognised for automatic upgrading. The new v1.03 deltas are checked in as compressed BPS streams, and the resulting ROM images were verified offline against the original ROM and the uploaded RC127/ES95 patch outputs. The manifests are authoritative for patch filenames, sizes, CRC32 and SHA-256 fingerprints. GitHub Pages publishes the latest verified full patches at the stable download URLs as well.
 
 ## Update procedure
 

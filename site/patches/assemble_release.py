@@ -125,6 +125,16 @@ def main():
          "jessie-james-spanish-qol-v1.02-58f089b9.bps",
          "971cc28b61a3da7039c61d002bb2567f9c6c7f2c61475e7d001fbb81dc54bae0"),
     )
+    v103 = {
+        "English": ("english-v103-v102-to-v103.xz.b64",
+            "jessie-james-english-v1.02-d2866130-to-v1.03-6e1e5095.bps",
+            "jessie-james-english-v1.03-6e1e5095.bps",
+            "d392189296b484987a4e41d170579014f7af08a8dcd1aac57f9c0ffc34b47567"),
+        "Spanish": ("spanish-v103-v102-to-v103.xz.b64",
+            "jessie-james-spanish-qol-v1.02-58f089b9-to-v1.03-222a0072.bps",
+            "jessie-james-spanish-qol-v1.03-222a0072.bps",
+            "b5b2bed3270712239ae5d54ad8b7e429c83675304061ad3bc353a9d69f537098"),
+    }
     for edition, manifest_file, base_file, old_update_file, old_full_name, \
         compressed_name, new_update_name, new_full_name, expected_xz_sha in builds:
         manifest = json.loads((ROOT / manifest_file).read_text())
@@ -143,6 +153,16 @@ def main():
         check_edge(result, edges[new_full_name])
         (ROOT / new_full_name).write_bytes(result)
         print("VERIFIED:", edition, "latest full and incremental v1.02 patches")
+        packed_name, delta_name, full_name, packed_sha = v103[edition]
+        packed = base64.b64decode("".join((ROOT / packed_name).read_text(encoding="ascii").split()), validate=True)
+        assert hashlib.sha256(packed).hexdigest() == packed_sha
+        delta = lzma.decompress(packed, memlimit=256 * 1024 * 1024)
+        check_edge(delta, edges[delta_name])
+        (ROOT / delta_name).write_bytes(delta)
+        full = compose(ROOT / new_full_name, ROOT / delta_name)
+        check_edge(full, edges[full_name])
+        (ROOT / full_name).write_bytes(full)
+        print("VERIFIED:", edition, "v1.03 full BPS and v1.02-to-v1.03 upgrade")
 
 if __name__ == "__main__":
     main()

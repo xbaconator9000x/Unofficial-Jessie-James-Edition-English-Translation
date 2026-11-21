@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Assemble verified v1.02 full BPS patches without ROM data
+      - name: Assemble verified v1.03 full BPS patches without ROM data
         run: python3 site/patches/assemble_release.py
       - name: Verify v1.03 release candidate against existing BPS patch chain
         run: python3 tests/release-v103-candidate.py

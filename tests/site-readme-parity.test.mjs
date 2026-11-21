@@ -59,6 +59,10 @@ for (const item of [
   assert.ok(readmeQol.includes(item), "README QOL section missing " + item);
   assert.ok(siteQol.includes(item), "Website QOL section missing " + item);
 }
+for (const feature of ["New in v1.03","Expanded bag item storage","Reusable Escape Rope","EV training Power items","Power Anklet","Band, Belt, Bracer, Lens and Weight","EV/IV reader fix"]) {
+  assert.ok(readmeQol.includes(feature), "README missing v1.03 feature " + feature);
+  assert.ok(siteQol.includes(feature), "Website missing v1.03 feature " + feature);
+}
 const latestQol = english.changelog.find(x=>x.version==="1.02")?.changes.filter(x=>x.startsWith("-- ")) ?? [];
 for (const feature of latestQol) {
   const name = feature.slice(3).replace(/^Restored function to /,"").replace(/^Expanded price list to /,"");

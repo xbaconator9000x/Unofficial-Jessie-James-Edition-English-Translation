@@ -1,13 +1,14 @@
 {
-  "latest": "1.02",
+  "latest": "1.03",
   "versions": {
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
     "16777216:A3E3CC2F": "English v1.01",
     "16777216:C043455C": "English v1.0",
     "16777216:CADC8480": "English v1.02 (earlier build)",
-    "16777216:D2866130": "English v1.02 (latest)"
+    "16777216:D2866130": "English v1.02 (final release)",
+    "16777216:6E1E5095": "English v1.03"
   },
-  "target": "16777216:D2866130",
+  "target": "16777216:6E1E5095",
   "patches": [
     {
       "path": "patches/jessie-james-english-v1.01-a3e3cc2f.bps",
@@ -71,9 +72,37 @@
       "from": "16777216:CADC8480",
       "to": "16777216:D2866130",
       "version": "1.02"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.03-6e1e5095.bps",
+      "crc": "E4360525",
+      "bytes": 1813047,
+      "sha256": "a43d011c0157ec52d54f1196274116dfa0f3e07373a05e5c33897c2c87170a0f",
+      "from": "16777216:805E24CA",
+      "to": "16777216:6E1E5095",
+      "version": "1.03"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.02-d2866130-to-v1.03-6e1e5095.bps",
+      "crc": "BE1FC6CD",
+      "bytes": 9159,
+      "sha256": "cc00bda16123da85cac8a19a2df52037d767a0eb91839f9e5efbee5f9958f089",
+      "from": "16777216:D2866130",
+      "to": "16777216:6E1E5095",
+      "version": "1.03"
     }
   ],
   "changelog": [
+    {
+      "version": "1.03",
+      "date": "22 November 2026",
+      "changes": [
+        "Expanded bag item storage",
+        "Escape rope is now a reuseable key item",
+        "Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)",
+        "Fixed EV/IV reader glitch"
+      ]
+    },
     {
       "version": "1.02",
       "date": "21 November 2026",
@@ -120,6 +149,7 @@
     "16777216:A3E3CC2F": "06d9c87234400f45f1fc3a356881f0ad8bd9b977bc5cbed450e5c7eedd01b632",
     "16777216:C043455C": "a69cd2306ae494d4db0e16772d007438d425dd43cd5287757a5e04035551da4a",
     "16777216:CADC8480": "36525c0d68c8ed07044284fc391bcd9f705e6dac323e67118ee27426e2384773",
-    "16777216:D2866130": "286eb8b201dfca10057620f8aba3232565e90a83c4462a7a2a9c4dd277ff43ed"
+    "16777216:D2866130": "286eb8b201dfca10057620f8aba3232565e90a83c4462a7a2a9c4dd277ff43ed",
+    "16777216:6E1E5095": "46db7e5d85684a74de5640379e906fa8668f2f1f447879503ff201e6d316165d"
   }
 }

@@ -146,7 +146,7 @@ Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión e
 
 - Initial public English translation release.
 - English dialogue, menus and text formatting.
-- Classic and Modern battle options and the quality of life additions listed above.
+- Classic and Modern battle options, nature colours, move details and effectiveness indicators, and title music.
 
 [Release history and patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#changelog).
 

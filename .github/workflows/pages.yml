@@ -165,6 +165,12 @@ jobs:
               copyfile(site / current_es['path'], canonical_es)
           assert hashlib.sha256(canonical_es.read_bytes()).hexdigest() == current_es['sha256']
           PY
+      - name: Test optional privacy-friendly website analytics
+        run: python3 tests/website-analytics.test.py
+      - name: Configure website traffic analytics for deployed pages (opt-in)
+        env:
+          CLOUDFLARE_WEB_ANALYTICS_TOKEN: ${{ vars.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
+        run: python3 scripts/inject_web_analytics.py site/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

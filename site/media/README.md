@@ -18,7 +18,7 @@ For an ES-DE/EmulationStation `gamelist.xml` entry, adapt the path and game file
 
 ```xml
 <game>
-  <path>./Jessie-James-English-v1.02.gba</path>
+  <path>./Jessie-James-English-v1.03.2.gba</path>
   <name>Pokémon Team Rocket: Jessie &amp; James Edition</name>
   <image>./media/jessie-james-cover-snowmudk99.jpg</image>
 </game>

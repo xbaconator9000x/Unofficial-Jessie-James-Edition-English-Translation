@@ -22,6 +22,26 @@
 
 ---
 
+## Releases
+
+**English v1.03.2** -- 22 November 2026.
+
+[Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
+
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`), either English v1.02 build (`CADC8480` or `D2866130`), English v1.03 (`6E1E5095`) or the intermediate Aqua hotfix (`519E0696`). The browser patcher verifies the selected ROM, applies the verified BPS update path locally and downloads English v1.03.2. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+
+Expected English v1.03.2 output CRC32: `5DAE93EA`. The patcher handles earlier releases automatically, including both v1.02 builds and the v1.03 Aqua ship hotfix. The original Spanish ROM uses the complete v1.03.2 patch. Keep backups of your ROM and save. No pre-patched ROMs.
+
+## Prefer to play español?
+
+Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.
+
+**Modo difícil opcional** -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.
+
+[Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
+
+Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`) o cualquiera de las versiones QoL v1.02 (`0486144D` o `58F089B9`). El resultado QoL v1.03 permanece en español (CRC32 `222A0072`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
+
 ## What is Jessie & James Edition?
 
 *Pokémon Team Rocket: Jessie & James Edition* is an original FireRed-based game by MrNightology, first released in Spanish. You play as James alongside Jessie and Meowth.
@@ -38,7 +58,7 @@ This is my unofficial English translation of the completed v1.1 game. I'm not af
 
 I extracted the Spanish text and replaced matching FireRed lines with their official English versions. For the rest, I used Google Translate as a starting point, then went through the dialogue with the anime as a reference for the characters' voices. I also fixed text wrapping and page breaks where needed.
 
-Finally, I added some additional quality of life features that were not included in the original rom, to help make the game a bit more accessible to modern audiences.
+I also added optional gameplay features and quality-of-life changes, while keeping the original story intact.
 
 ### Quality of life
 
@@ -67,7 +87,7 @@ Finally, I added some additional quality of life features that were not included
 - **EV/IV reader fix** -- Fixed a glitch in the reader.
 - Repaired movement pointer/dialogue overlap which would cause CTD.
 
-I have yet to complete an end-to-end run of the game, and so I have not confirmed and tested every possible bug or exploit. I cannot guarantee that the translation is 100% perfect. As such, I would appreciate if you could report any bugs or translation mistakes you do find in the [bug reporting section of this page](#testing-and-bug-reports). Providing screenshots or a .sav file would also be incredibly helpful!
+I haven't finished a full playthrough yet, so there may still be bugs or translation mistakes I've missed. If you find anything, please use the [bug report form](#testing-and-bug-reports). Screenshots and a `.sav` file are especially helpful.
 
 ## Original Spanish Screenshots
 
@@ -105,32 +125,9 @@ Includes:
 - Logo with Rocket R (WEBP)
 - Logo without Rocket R (WEBP)
 
-## Website traffic analytics (maintainer)
+## Privacy and site statistics
 
-The Jessie & James GitHub Pages launcher has privacy-friendly, cookie-free [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/) enabled using the project's public Cloudflare site token. No custom domain, DNS change, paid plan or additional GitHub setup is required.
-
-- After deployment, visit the [launcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/), then open the Cloudflare account's **Web Analytics** dashboard and select `xbaconator9000x.github.io`.
-- The tracker measures website page views, approximate visits and referral sources. Metrics can be delayed, browser ad blockers may suppress events, and historical visits from before activation cannot be reconstructed.
-- It does **not** track ROM contents, save files, patch file contents, completed patch downloads or identities. GitHub repository traffic and Reddit views are separate from launcher visits.
-- The site identifier is public (as Cloudflare's embed snippet requires), not a credential. The deploy workflow injects the beacon into the published HTML only. To change accounts, set the Actions variable `CLOUDFLARE_WEB_ANALYTICS_TOKEN` to another 32-character site token; the variable takes priority over the default.
-
-## Patcher conversions (optional event counts)
-
-GitHub Pages is a static website, and **Cloudflare Web Analytics does not support custom events**. To measure verified patcher outcomes separately from Cloudflare's site-visit metrics, the English and Spanish browser patchers now have privacy-limited event hooks for:
-
-- `english-rom-download-started`: English ROM was patched and verified against the target checksums, and browser save was initiated.
-- `spanish-rom-download-started`: Spanish QoL ROM was patched and verified, and browser save was initiated.
-- `english-bps-download-started`: Verified English BPS download was initiated.
-- `spanish-bps-download-started`: Verified Spanish QoL BPS download was initiated.
-
-These events are deliberately named **download started**, rather than download completed: browser JavaScript cannot verify whether the user kept the downloaded file or loaded it into an emulator. Only these four fixed event names and human-readable titles are transmitted. **No ROM bytes, names, file paths, save files, checksums, input revisions, patches or user-identifying fields are sent.** Tracking errors never block patching.
-
-**Combined daily website and patcher reporting:** The owner's site at `https://xbaconator9000x.goatcounter.com` is configured in the GitHub Pages deploy workflow. Its script now records ordinary launcher pageviews **and** the four fixed patcher events, so a single GoatCounter daily email can include both types of activity. Cloudflare Web Analytics also independently measures website traffic and referrers; the two products may show different counts because of their counting rules and browser blockers. No API credentials or extra GitHub variable are required.
-
-**To enable daily emails:** First verify the email address registered with GoatCounter. Log in to the [GoatCounter dashboard](https://xbaconator9000x.goatcounter.com/), click **your email address in the top navigation** (not **Settings**, which is for site settings), and open **User preferences**. Under **Email reports**, select **Daily** and save. The daily reports are sent by GoatCounter; the launcher itself does not send email. Cloudflare's built-in Web Analytics email summary is weekly only; optionally enable that in the [Cloudflare Notifications dashboard](https://dash.cloudflare.com/?to=/:account/notifications).
-
-The configured GoatCounter site code is a public hostname, not a password or API credential. To use a different GoatCounter site later, set the optional GitHub Actions variable `GOATCOUNTER_SITE_CODE` to its subdomain label; it overrides the default `xbaconator9000x`. Visit and patcher statistics begin when tracking is enabled; historical counts cannot be recovered. The patcher events reflect verified output and **download initiation**, not guaranteed file completion or successful gameplay.
-
+The website records anonymous visits and counts when a verified patch or ROM download is **started**. Those counts aren't confirmed downloads or unique players. No ROMs, patches or save files are uploaded through the patcher. Details about the counters and their configuration are in [website maintenance](docs/WEBSITE_ANALYTICS.md).
 
 ## Testing and Bug Reports
 
@@ -140,26 +137,6 @@ If you find something, [submit a private bug report](https://tally.so/r/M1N2oE).
 
 No sign-in or personal details needed. Reports and attachments aren't public. Please don't upload ROMs or patches.
 
-## Releases
-
-**English v1.03.2** -- 22 November 2026.
-
-[Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
-
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`), either English v1.02 build (`CADC8480` or `D2866130`), English v1.03 (`6E1E5095`) or the intermediate Aqua hotfix (`519E0696`). The browser patcher verifies the selected ROM, applies the verified BPS update path locally and downloads English v1.03.2. Nothing is uploaded. A diagnostic report is available if something goes wrong.
-
-Expected English v1.03.2 output CRC32: `5DAE93EA`. The patcher handles earlier releases automatically, including both v1.02 builds and the v1.03 Aqua ship hotfix. The original Spanish ROM uses the complete v1.03.2 patch. Keep backups of your ROM and save. No pre-patched ROMs.
-
-## Prefer to play español?
-
-Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.
-
-**Modo difícil opcional** -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.
-
-[Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
-
-Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`) o cualquiera de las versiones QoL v1.02 (`0486144D` o `58F089B9`). El resultado QoL v1.03 permanece en español (CRC32 `222A0072`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
-
 ## Changelog
 
 ### English v1.03 -- 22 November 2026
@@ -168,7 +145,7 @@ Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión e
 - Escape rope is now a reuseable key item
 - Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)
 - Fixed EV/IV reader glitch
-- Repaired movement pointer/dialogue overmap which would cause CTD.
+- Repaired movement pointer/dialogue overlap which would cause CTD.
 
 ### English v1.02 -- 21 November 2026
 

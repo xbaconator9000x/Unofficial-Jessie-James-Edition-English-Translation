@@ -38,6 +38,8 @@ Si prefieres jugar a la versión original en español, he preparado otro parche 
 
 **Modo difícil opcional** -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.
 
+**Otras mejoras incluidas** -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila, Cuerda Huida reutilizable y precios de hasta cinco cifras.
+
 [Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 
 Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`) o cualquiera de las versiones QoL v1.02 (`0486144D` o `58F089B9`). El resultado QoL v1.03 permanece en español (CRC32 `222A0072`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.

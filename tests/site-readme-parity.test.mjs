@@ -42,6 +42,14 @@ for (const entry of english.changelog) {
     assert.ok(readme.includes(item.replace(/^--\s*/,"")), "README missing release note: " + item);
   }
 }
+const spanishReadme = readme.split("## Prefer to play español?")[1]?.split("## What is Jessie & James Edition?")[0];
+const spanishSite = html.split('<section class="window" id="spanish">')[1]?.split("</section>")[0];
+assert.ok(spanishReadme && spanishSite, "Missing Spanish patch section");
+for (const feature of ["Modo difícil opcional", "Modos de combate Clásico y Moderno", "EXP. ALL opcional", "Mentas de Naturaleza", "Chapas Plateadas y Doradas", "los seis objetos Power", "lectores de EV e IV", "mayor capacidad de la Mochila", "Cuerda Huida reutilizable", "precios de hasta cinco cifras"]) {
+  assert.ok(spanishReadme.includes(feature), "README Spanish feature missing: " + feature);
+  assert.ok(spanishSite.includes(feature), "Website Spanish feature missing: " + feature);
+}
+
 const readmeQol = readme.split("### Quality of life")[1]?.split("### Other additions")[0];
 const siteQol = html.split("<h3>Quality of life</h3>")[1]?.split("<h3>Other additions</h3>")[0];
 assert.ok(readmeQol && siteQol, "Missing consolidated QoL section");

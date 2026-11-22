@@ -22,13 +22,17 @@
 
 ---
 
+> **Downloads have been disabled for the time being, as per MrNightology's request**
+>
+> Both English and Spanish patch downloads are temporarily suspended. The website remains available for information, screenshots and credits.
+
 ## Releases
 
 **English v1.03.2** -- 22 November 2026.
 
-[Open the browser ROM patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases).
+[View release information](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases) (downloads suspended).
 
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`), either English v1.02 build (`CADC8480` or `D2866130`), English v1.03 (`6E1E5095`) or the intermediate Aqua hotfix (`519E0696`). The browser patcher verifies the selected ROM, applies the verified BPS update path locally and downloads English v1.03.2. Nothing is uploaded. A diagnostic report is available if something goes wrong.
+Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`), either English v1.02 build (`CADC8480` or `D2866130`), English v1.03 (`6E1E5095`) or the intermediate Aqua hotfix (`519E0696`). The browser patcher is temporarily disabled. The release details and compatibility information are retained for reference.
 
 Expected English v1.03.2 output CRC32: `5DAE93EA`. The patcher handles earlier releases automatically, including both v1.02 builds and the v1.03 Aqua ship hotfix. The original Spanish ROM uses the complete v1.03.2 patch. Keep backups of your ROM and save. No pre-patched ROMs.
 
@@ -40,7 +44,7 @@ Si prefieres jugar a la versión original en español, he preparado otro parche 
 
 **Otras mejoras incluidas** -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila, Cuerda Huida reutilizable y precios de hasta cinco cifras.
 
-[Aplicar el parche de mejoras a la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
+[Ver las mejoras de la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish) (descargas suspendidas).
 
 Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`) o cualquiera de las versiones QoL v1.02 (`0486144D` o `58F089B9`). El resultado QoL v1.03 permanece en español (CRC32 `222A0072`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
 

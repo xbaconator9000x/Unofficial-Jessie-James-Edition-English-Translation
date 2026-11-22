@@ -180,25 +180,6 @@ jobs:
         env:
           GOATCOUNTER_SITE_CODE: ${{ vars.GOATCOUNTER_SITE_CODE || 'xbaconator9000x' }}
         run: python3 scripts/inject_patch_events.py site/index.html
-      - name: Remove downloadable patches from public website artifact
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          site = Path("site")
-          html = (site / "index.html").read_text(encoding="utf-8")
-          if 'data-downloads-suspended="true"' not in html:
-              raise SystemExit("Expected suspension flag; refusing to publish downloadable patches.")
-          removed = []
-          for path in (site / "patches").iterdir():
-              if path.suffix in (".bps", ".hex") or path.name.endswith(".xz.b64"):
-                  path.unlink()
-                  removed.append(path.name)
-          assert removed, "Expected downloadable BPS files to be removed"
-          assert not list(site.rglob("*.bps"))
-          assert not list(site.rglob("*.xz.b64"))
-          assert not list(site.rglob("*.hex"))
-          print(f"Suspended {len(removed)} patch files from GitHub Pages")
-          PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

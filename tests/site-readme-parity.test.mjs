@@ -29,17 +29,6 @@ for (const [path, expectedGitSha, type] of files) {
 }
 assert.ok(html.includes('id="fanart"') && html.includes('href="#fanart"'));
 assert.ok(readme.includes("u/SnowMudK99") && html.includes("u/SnowMudK99"));
-const suspension = "Downloads have been disabled for the time being, as per MrNightology's request";
-assert.ok(readme.includes(suspension) && html.includes(suspension), "Suspension notice must appear in README and website");
-assert.ok(html.includes('data-downloads-suspended="true"'), "Download suspension must be enabled on the public website");
-assert.ok(css.includes('body[data-downloads-suspended="true"] .patcher-controls { display: none; }'), "Suspended download controls must remain hidden");
-for (const patcher of ["site/patcher.mjs", "site/spanish-patcher.mjs"]) {
-  const script = content(patcher);
-  assert.ok(script.includes("downloadsSuspended") && script.includes("dataset.downloadsSuspended"), patcher + " must block downloads");
-}
-const workflow = content(".github/workflows/pages.yml");
-assert.ok(workflow.includes("Remove downloadable patches from public website artifact") && workflow.includes('site.rglob("*.bps")'), "Public artifact must exclude downloadable patches");
-
 assert.ok(html.includes("og:image") && html.includes("media/jessie-james-cover-snowmudk99.jpg"));
 assert.ok(css.includes(".fan-cover") && css.includes(".rocket-hero"));
 assert.ok(!html.includes('class="rocket-r"'), "Old standalone masthead should be replaced");

@@ -23,10 +23,9 @@
   <script type="module" src="patcher.mjs"></script>
   <script type="module" src="spanish-patcher.mjs"></script>
 </head>
-<body data-downloads-suspended="true">
+<body>
   <a class="skip" href="#content">Skip to content</a>
   <div class="page">
-    <div class="suspension-notice" role="status"><strong>Downloads have been disabled for the time being, as per MrNightology's request</strong></div>
     <header class="masthead">
       <a class="fan-logo-link" href="#art-credit" aria-label="Jump to fan artwork credit">
         <img class="rocket-hero" src="media/jessie-james-logo-snowmudk99.webp" width="320" height="161" alt="Pokémon Team Rocket: Jessie & James fan logo with a red Rocket R, artwork by SnowMudK99">
@@ -215,13 +214,12 @@
       </section>
 
       <section class="window" id="releases">
-        <h2>English downloads suspended</h2>
+        <h2>Patch your ROM</h2>
         <div class="window-body">
           <p><strong>Latest English patch: v<span id="latest-version">1.03.2</span></strong></p>
-          <p class="small" id="hosted-patch-status" role="status">English patch downloads are temporarily disabled.</p>
-          <p>English patch downloads and in-browser patching are suspended for the time being. The release information remains available for reference.</p>
+          <p class="small" id="hosted-patch-status" role="status">Checking hosted patch availability…</p>
+          <p>Choose the original Spanish FINAL v1.1 ROM or an earlier English release, including v1.03 and the Aqua ship hotfix. The patcher verifies your ROM and updates it to v1.03.2. A clean FireRed ROM won't work.</p>
           <p class="small">Your ROM stays on your device. Nothing is uploaded to a server. Keep a backup of your original ROM and save before updating.</p>
-          <div class="patcher-controls">
           <label for="rom-file"><strong>1. Choose ROM (.gba)</strong></label>
           <input class="patch-input" id="rom-file" type="file" accept=".gba,application/octet-stream">
           <p id="rom-info" class="small">Choose a ROM to check compatibility.</p>
@@ -232,7 +230,6 @@
           <p><button class="menu-button" id="copy-report" type="button">Download diagnostic report</button></p>
           <p class="small">If patching fails, send the diagnostic report with your <a href="https://tally.so/r/M1N2oE">private bug report</a>. Do not send ROM files. No pre-patched ROMs are distributed.</p>
           <noscript>Enable JavaScript to use the local ROM patcher.</noscript>
-          </div>
         </div>
       </section>
 
@@ -243,10 +240,9 @@
           <p><strong>Modo difícil opcional</strong> -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.</p>
           <p><strong>Otras mejoras incluidas</strong> -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila, Cuerda Huida reutilizable y precios de hasta cinco cifras.</p>
           <p><strong>Parche de mejoras para la versión en español: v<span id="es-latest-version">1.03</span></strong></p>
-          <p class="small" id="es-hosted-patch-status" role="status">Las descargas de parches están suspendidas temporalmente.</p>
-          <p>Las descargas y la aplicación de parches en esta web están suspendidas temporalmente. La información sobre las mejoras sigue disponible.</p>
+          <p class="small" id="es-hosted-patch-status" role="status">Comprobando la disponibilidad del parche…</p>
+          <p>Selecciona la ROM original <em>Jessie &amp; James Edition FINAL v1.1</em> en español, la versión española QoL v1.0 o cualquier versión QoL v1.02. El parcheador actualizará a v1.03. No utilices FireRed sin modificar ni la versión inglesa.</p>
           <p class="small">La ROM no sale de tu dispositivo. Guarda una copia de la ROM original y de tu partida antes de aplicar el parche.</p>
-          <div class="patcher-controls">
           <label for="es-rom-file"><strong>1. Selecciona tu ROM (.gba)</strong></label>
           <input class="patch-input" id="es-rom-file" type="file" accept=".gba,application/octet-stream">
           <p id="es-rom-info" class="small">Selecciona una ROM para comprobar su compatibilidad.</p>
@@ -257,7 +253,6 @@
           <p><button class="menu-button" id="es-copy-report" type="button">Descargar informe de diagnóstico</button></p>
           <p class="small">Si encuentras algún problema, puedes adjuntar el informe al <a href="https://tally.so/r/M1N2oE">formulario privado de errores</a>. No envíes archivos ROM. No distribuyo ROMs ya parcheadas.</p>
           <noscript>Activa JavaScript para utilizar el parcheador local.</noscript>
-          </div>
         </div>
       </section>
 

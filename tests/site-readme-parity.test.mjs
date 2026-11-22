@@ -42,36 +42,40 @@ for (const entry of english.changelog) {
     assert.ok(readme.includes(item.replace(/^--\s*/,"")), "README missing release note: " + item);
   }
 }
-const readmeQol = readme.split("### Quality of life")[1]?.split("## Original Spanish Screenshots")[0];
-const siteQol = html.split('<h3>Quality of life</h3>')[1]?.split('</section>')[0];
-assert.ok(readmeQol && siteQol, "Quality of life section missing in README or website");
-for (const item of [
-  "Major QOL additions in v1.02",
-  "Nature mints",
-  "Bottle caps and Golden bottle caps",
-  "EV berries",
-  "IV and EV readers",
-  "Rocket HQ",
-  "Five-digit prices",
-  "reusable TM prices",
-  "vitamin prices"
-]) {
-  assert.ok(readmeQol.includes(item), "README QOL section missing " + item);
-  assert.ok(siteQol.includes(item), "Website QOL section missing " + item);
+const readmeQol = readme.split("### Quality of life")[1]?.split("### Other additions")[0];
+const siteQol = html.split("<h3>Quality of life</h3>")[1]?.split("<h3>Other additions</h3>")[0];
+assert.ok(readmeQol && siteQol, "Missing consolidated QoL section");
+const qolFeatures = [
+  "Classic / Modern battles",
+  "Optional Hard Mode",
+  "EXP. ALL",
+  "Nature colours",
+  "Move details",
+  "Effectiveness indicators",
+  "Nature Mints and Bottle Caps",
+  "EV training items",
+  "EV and IV readers",
+  "Expanded Bag storage",
+  "Reusable Escape Rope",
+  "Five-digit prices"
+];
+for (const feature of qolFeatures) {
+  assert.ok(readmeQol.includes("**" + feature + "**"), "README missing QoL feature: " + feature);
+  assert.ok(siteQol.includes("<strong>" + feature + "</strong>"), "Website missing QoL feature: " + feature);
 }
-for (const feature of ["New in v1.03","Expanded bag item storage","Reusable Escape Rope","EV training Power items","Power Anklet","Band, Belt, Bracer, Lens and Weight","EV/IV reader fix"]) {
-  assert.ok(readmeQol.includes(feature), "README missing v1.03 feature " + feature);
-  assert.ok(siteQol.includes(feature), "Website missing v1.03 feature " + feature);
+for (const [label,section] of [["README",readmeQol],["website",siteQol]]) {
+  for (const patchNote of [
+    "Crash fix", "movement pointer", "EV/IV reader fix",
+    "Fixed a glitch", "Major QOL additions in v1.02",
+    "New in v1.03", "Item prices", "vitamin prices", "Title music"
+  ]) {
+    assert.ok(!section.includes(patchNote), label + " QoL section should not include patch notes or unrelated additions: " + patchNote);
+  }
 }
-const latestQol = english.changelog.find(x=>x.version==="1.02")?.changes.filter(x=>x.startsWith("-- ")) ?? [];
-for (const feature of latestQol) {
-  const name = feature.slice(3).replace(/^Restored function to /,"").replace(/^Expanded price list to /,"");
-  const key = name.startsWith("IV and EV readers") ? "IV and EV readers" :
-    name.startsWith("Bottle caps") ? "Bottle caps and Golden bottle caps" :
-    name.startsWith("five-digits") ? "Five-digit prices" : name;
-  assert.ok(readmeQol.toLowerCase().includes(key.toLowerCase()), "README missing a released QOL feature: " + key);
-  assert.ok(siteQol.toLowerCase().includes(key.toLowerCase()), "Website missing a released QOL feature: " + key);
-}
+const readmeExtra = readme.split("### Other additions")[1]?.split("## Original Spanish Screenshots")[0];
+const siteExtra = html.split("<h3>Other additions</h3>")[1]?.split("</section>")[0];
+assert.ok(readmeExtra?.includes("Team Rocket motto theme") && siteExtra?.includes("Team Rocket motto theme"), "Title music should remain outside QoL");
+assert.ok(readme.includes("### English v1.03 -- 22 November 2026") && readme.includes("Fixed EV/IV reader glitch") && readme.includes("Repaired movement pointer/dialogue overlap"), "Crash and EV/IV fixes must stay in release history");
 
 import {execFileSync} from "node:child_process";
 execFileSync("python3", ["site/media/build_art_pack.py"], {cwd:new URL("../",import.meta.url),stdio:"pipe"});

@@ -62,30 +62,24 @@ I also added optional gameplay features and quality-of-life changes, while keepi
 
 ### Quality of life
 
-- **Classic / Modern battles** -- Choose the original Gen 3 mechanics or the physical/special split and updated ability effects when starting a new game. I've also made TMs reusable in Modern Mode, though they remain single use in Classic Mode.
-- **Nature colours** -- Increased stats in red, decreased stats in blue.
-- **Move details** -- Press L when choosing a move to view its description, power, accuracy and category.
-- **Effectiveness indicators** -- See whether a move's type matchup is super effective, neutral, resisted or has no effect.
-- **Optional and toggleable EXP. ALL key item**
-- **Optional Hard Mode** -- I've written custom scripts to improve trainer AI, increased team depth and added more variety to movesets, without increasing levels or placing restrictions on the player.
-- **Title music** -- A looping version of the Team Rocket motto theme.
+These are the gameplay options and conveniences I've added to the English release:
 
-#### Major QOL additions in v1.02
+- **Classic / Modern battles** -- Choose the original Gen 3 battle mechanics or the physical/special split and updated ability effects. TMs remain single-use in Classic Mode and are reusable in Modern Mode.
+- **Optional Hard Mode** -- Smarter trainer AI, revised teams and more strategic battles without simply raising enemy levels.
+- **EXP. ALL** -- A Key Item that can be switched on or off.
+- **Nature colours** -- Increased stats appear in red and decreased stats in blue on Pokémon summary screens.
+- **Move details** -- Press L during move selection to see the description, power, accuracy and physical/special category.
+- **Effectiveness indicators** -- See how effective a move will be against your opponent.
+- **Nature Mints and Bottle Caps** -- Ways to adjust your Pokémon's nature and improve their IVs, including Gold Bottle Caps.
+- **EV training items** -- EV-reducing berries and all six Power items: Power Anklet, Band, Belt, Bracer, Lens and Weight.
+- **EV and IV readers** -- Available through the scientists at Rocket HQ.
+- **Expanded Bag storage** -- More room for items.
+- **Reusable Escape Rope** -- Now a Key Item.
+- **Five-digit prices** -- The shop display supports larger prices.
 
-- **Nature mints**
-- **Bottle caps and Golden bottle caps**
-- **EV berries** -- Restored their original function.
-- **IV and EV readers** -- Available through the scientists at Rocket HQ.
-- **Five-digit prices** -- Expanded the price display to support five digits.
-- **Item prices** -- Adjusted reusable TM prices in Modern Mode and vitamin prices.
+### Other additions
 
-#### New in v1.03
-
-- **Expanded bag item storage**
-- **Reusable Escape Rope** -- Now a key item.
-- **EV training Power items** -- Power Anklet, Band, Belt, Bracer, Lens and Weight.
-- **EV/IV reader fix** -- Fixed a glitch in the reader.
-- Repaired movement pointer/dialogue overlap which would cause CTD.
+I've also added a looping version of the Team Rocket motto theme to the title screen.
 
 I haven't finished a full playthrough yet, so there may still be bugs or translation mistakes I've missed. If you find anything, please use the [bug report form](#testing-and-bug-reports). Screenshots and a `.sav` file are especially helpful.
 

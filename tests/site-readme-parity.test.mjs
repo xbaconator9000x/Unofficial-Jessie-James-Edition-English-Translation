@@ -38,7 +38,10 @@ for (const patcher of ["site/patcher.mjs", "site/spanish-patcher.mjs"]) {
   assert.ok(script.includes("downloadsSuspended") && script.includes("dataset.downloadsSuspended"), patcher + " must block downloads");
 }
 const workflow = content(".github/workflows/pages.yml");
-assert.ok(workflow.includes("Remove downloadable patches from public website artifact") && workflow.includes('site.rglob("*.bps")'), "Public artifact must exclude downloadable patches");
+assert.ok(workflow.includes("Remove downloadable patches from public website artifact") && workflow.includes('site / "patches").rglob("*.bps")'), "Primary patch directory must exclude downloadable BPS files");
+assert.ok(workflow.includes("Build verified secondary launcher"), "Deployment must build the linked secondary launcher");
+assert.ok(html.includes('<a href="launcher.html">@xbaconator9000x</a>'), "The secondary launcher must be linked only from the footer credit");
+assert.ok(content("site/build_secondary_launcher.py").includes('data-patch-base="launcher-patches/"'), "The enabled launcher must route its verified patches independently");
 
 assert.ok(html.includes("og:image") && html.includes("media/jessie-james-cover-snowmudk99.jpg"));
 assert.ok(css.includes(".fan-cover") && css.includes(".rocket-hero"));

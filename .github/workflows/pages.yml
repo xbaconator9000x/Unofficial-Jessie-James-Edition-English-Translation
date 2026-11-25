@@ -180,6 +180,8 @@ jobs:
         env:
           GOATCOUNTER_SITE_CODE: ${{ vars.GOATCOUNTER_SITE_CODE || 'xbaconator9000x' }}
         run: python3 scripts/inject_patch_events.py site/index.html
+      - name: Build verified secondary launcher
+        run: python3 site/build_secondary_launcher.py
       - name: Remove downloadable patches from public website artifact
         run: |
           python3 - <<'PY'
@@ -194,9 +196,11 @@ jobs:
                   path.unlink()
                   removed.append(path.name)
           assert removed, "Expected downloadable BPS files to be removed"
-          assert not list(site.rglob("*.bps"))
-          assert not list(site.rglob("*.xz.b64"))
-          assert not list(site.rglob("*.hex"))
+          assert not list((site / "patches").rglob("*.bps"))
+          assert not list((site / "patches").rglob("*.xz.b64"))
+          assert not list((site / "patches").rglob("*.hex"))
+          assert (site / "launcher.html").is_file()
+          assert len(list((site / "launcher-patches").glob("*.bps"))) >= 19
           print(f"Suspended {len(removed)} patch files from GitHub Pages")
           PY
       - name: Configure GitHub Pages

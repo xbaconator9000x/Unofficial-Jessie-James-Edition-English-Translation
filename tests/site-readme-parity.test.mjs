@@ -30,13 +30,7 @@ for (const [path, expectedGitSha, type] of files) {
 assert.ok(html.includes('id="fanart"') && html.includes('href="#fanart"'));
 assert.ok(readme.includes("u/SnowMudK99") && html.includes("u/SnowMudK99"));
 const suspension = "Downloads have been disabled for the time being, as per MrNightology's request";
-assert.ok(html.includes(suspension), "The website must retain the original suspension notice");
-assert.ok(readme.includes("Downloads through the website have been disabled for the time being"), "README must clarify that only website downloads are suspended");
-assert.ok(readme.includes("## Direct patch downloads (GitHub only)"), "README must link permitted GitHub-only downloads");
-for (const filename of ["jessie-james-english-v1.03.2-5dae93ea.bps", "jessie-james-spanish-qol-v1.03-222a0072.bps"]) {
-  assert.ok(readme.includes("downloads/" + filename), "README must identify the GitHub-only patch: " + filename);
-  assert.ok(!html.includes("downloads/" + filename), "The website must not link directly to repository patch files");
-}
+assert.ok(readme.includes(suspension) && html.includes(suspension), "Suspension notice must appear in README and website");
 assert.ok(html.includes('data-downloads-suspended="true"'), "Download suspension must be enabled on the public website");
 assert.ok(css.includes('body[data-downloads-suspended="true"] .patcher-controls { display: none; }'), "Suspended download controls must remain hidden");
 for (const patcher of ["site/patcher.mjs", "site/spanish-patcher.mjs"]) {

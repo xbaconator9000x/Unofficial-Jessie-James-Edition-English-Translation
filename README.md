@@ -22,9 +22,18 @@
 
 ---
 
-> **Downloads have been disabled for the time being, as per MrNightology's request**
+> **Downloads through the website have been disabled for the time being, as per MrNightology's request.**
 >
-> Both English and Spanish patch downloads are temporarily suspended. The website remains available for information, screenshots and credits.
+> With the original creator's permission, the complete BPS patches are available directly from this GitHub repository. The website patcher remains suspended.
+
+## Direct patch downloads (GitHub only)
+
+These are complete BPS patches for the **original Spanish FINAL v1.1** release (16 MiB, CRC32 `805E24CA`). Neither requires an earlier English or Spanish QoL patch. They are not pre-patched ROMs.
+
+- [English translation v1.03.2 (BPS)](downloads/jessie-james-english-v1.03.2-5dae93ea.bps) -- output CRC32 `5DAE93EA`.
+- [Spanish quality-of-life v1.03 (BPS)](downloads/jessie-james-spanish-qol-v1.03-222a0072.bps) -- output CRC32 `222A0072`.
+
+These files are hosted in the repository only, not on the GitHub Pages website.
 
 ## Releases
 

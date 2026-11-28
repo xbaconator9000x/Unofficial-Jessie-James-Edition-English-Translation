@@ -22,19 +22,17 @@
 
 ---
 
-> **Downloads have been disabled for the time being, as per MrNightology's request**
->
-> Both English and Spanish patch downloads are temporarily suspended. The website remains available for information, screenshots and credits.
+> **Downloads have been reinstated.** The official English translation by [RasenVolt](https://x.com/RasenVolt) is now out, and all three v1.04 patches are available.
 
 ## Releases
 
-**English v1.03.2** -- 22 November 2026.
+**Unofficial English v1.04** -- 28 November 2026.
 
-[View release information](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases) (downloads suspended).
+[Patch your ROM](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases) or see the [v1.04 release notes and downloads](docs/RELEASE-v1.04.md). The patcher supports the original Spanish FINAL v1.1 ROM and earlier unofficial English builds. The output CRC32 for v1.04 is `43CAA1F3`. Keep backups of your ROM and save. No pre-patched ROMs.
 
-Choose your own matching original Spanish FINAL v1.1 ROM (16 MiB, CRC32 `805E24CA`), English v1.0 (`C043455C`), English v1.01 (`A3E3CC2F`), either English v1.02 build (`CADC8480` or `D2866130`), English v1.03 (`6E1E5095`) or the intermediate Aqua hotfix (`519E0696`). The browser patcher is temporarily disabled. The release details and compatibility information are retained for reference.
+**Official English QoL v1.04** -- RasenVolt's [official English translation](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19) is now supported by its own [QoL patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#official). Use the original official English v1.1 ROM (CRC32 `9ED6BE84`). Output CRC32: `EF0BB0A2`.
 
-Expected English v1.03.2 output CRC32: `5DAE93EA`. The patcher handles earlier releases automatically, including both v1.02 builds and the v1.03 Aqua ship hotfix. The original Spanish ROM uses the complete v1.03.2 patch. Keep backups of your ROM and save. No pre-patched ROMs.
+[Two English Versions?](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#two-english-versions)
 
 ## Prefer to play español?
 
@@ -42,11 +40,11 @@ Si prefieres jugar a la versión original en español, he preparado otro parche 
 
 **Modo difícil opcional** -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.
 
-**Otras mejoras incluidas** -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila, Cuerda Huida reutilizable y precios de hasta cinco cifras.
+**Otras mejoras incluidas** -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila y precios de hasta cinco cifras.
 
-[Ver las mejoras de la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish) (descargas suspendidas).
+[Ver las mejoras de la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 
-Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`) o cualquiera de las versiones QoL v1.02 (`0486144D` o `58F089B9`). El resultado QoL v1.03 permanece en español (CRC32 `222A0072`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
+Utiliza la ROM original FINAL v1.1 en español (CRC32 `805E24CA`), la versión española QoL v1.0 (`7C042814`), cualquiera de las versiones QoL v1.02 (`0486144D` o `58F089B9`) o la versión QoL v1.03 (`222A0072`). El resultado QoL v1.04 permanece en español (CRC32 `1C4A1771`). El parche es independiente de la traducción inglesa. No envíes ROMs ni archivos de guardado.
 
 ## What is Jessie & James Edition?
 
@@ -80,7 +78,6 @@ These are the gameplay options and conveniences I've added to the English releas
 - **EV training items** -- EV-reducing berries and all six Power items: Power Anklet, Band, Belt, Bracer, Lens and Weight.
 - **EV and IV readers** -- Available through the scientists at Rocket HQ.
 - **Expanded Bag storage** -- More room for items.
-- **Reusable Escape Rope** -- Now a Key Item.
 - **Five-digit prices** -- The shop display supports larger prices.
 
 ### Other additions
@@ -139,10 +136,13 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Changelog
 
+### QoL / Translation v1.04 -- 28 November 2026
+
+See the [full v1.04 changelog](docs/RELEASE-v1.04.md#changelog).
+
 ### English v1.03 -- 22 November 2026
 
 - Expanded bag item storage
-- Escape rope is now a reuseable key item
 - Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)
 - Fixed EV/IV reader glitch
 - Repaired movement pointer/dialogue overlap which would cause CTD.
@@ -172,7 +172,7 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 - Corrected byte allocation overlap for EXP. ALL and Hard mode
 - Corrected game-breaking freeze in Oak's lab.
 
-### English v1.0 -- 20 November 2026
+### English v1.0 -- 17 November 2026
 
 - Initial public English translation release.
 - English dialogue, menus and text formatting.
@@ -182,7 +182,9 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ## Credits
 
-Full credit for the original game, story, maps, artwork and gameplay goes to **MrNightology and the original project's contributors**. The game was translated without author consultation.
+Full credit for the original game, story, maps, artwork and gameplay goes to **MrNightology and the original project's contributors**. My unofficial translation was made without explicit permission from the original developer.
+
+Official English translation -- [RasenVolt](https://x.com/RasenVolt). [Official English release](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19).
 
 English localisation and patcher maintenance -- [@xbaconator9000x](https://github.com/xbaconator9000x).
 

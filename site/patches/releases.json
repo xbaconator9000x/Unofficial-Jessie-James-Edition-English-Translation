@@ -207,7 +207,6 @@
       "date": "22 November 2026",
       "changes": [
         "Expanded bag item storage",
-        "Escape rope is now a reuseable key item",
         "Added Power items for EV training (Power Anklet, Band, Belt, Bracer, Lens, and Weight)",
         "Fixed EV/IV reader glitch",
         "Repaired movement pointer/dialogue overlap which would cause CTD."
@@ -246,7 +245,7 @@
     },
     {
       "version": "1.0",
-      "date": "20 November 2026",
+      "date": "17 November 2026",
       "changes": [
         "Initial public English translation release.",
         "English dialogue, menus and text formatting.",

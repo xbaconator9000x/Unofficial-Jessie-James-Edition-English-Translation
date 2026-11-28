@@ -30,27 +30,37 @@ for (const [path, expectedGitSha, type] of files) {
 assert.ok(html.includes('id="fanart"') && html.includes('href="#fanart"'));
 assert.ok(readme.includes("u/SnowMudK99") && html.includes("u/SnowMudK99"));
 const suspension = "Downloads have been disabled for the time being, as per MrNightology's request";
-assert.ok(readme.includes(suspension) && html.includes(suspension), "Suspension notice must appear in README and website");
-assert.ok(html.includes('data-downloads-suspended="true"'), "Download suspension must be enabled on the public website");
-assert.ok(css.includes('body[data-downloads-suspended="true"] .patcher-controls { display: none; }'), "Suspended download controls must remain hidden");
+assert.ok(!readme.includes(suspension) && !html.includes(suspension), "Old suspension notice must be removed");
+assert.ok(html.includes('data-downloads-suspended="false"'), "Public download controls must be enabled");
+assert.ok(css.includes('body[data-downloads-suspended="true"] .patcher-controls { display: none; }'), "Suspension capability must remain available");
 for (const patcher of ["site/patcher.mjs", "site/spanish-patcher.mjs"]) {
   const script = content(patcher);
-  assert.ok(script.includes("downloadsSuspended") && script.includes("dataset.downloadsSuspended"), patcher + " must block downloads");
+  assert.ok(script.includes("downloadsSuspended") && script.includes("dataset.downloadsSuspended"), patcher + " must honour the suspension flag");
 }
 const workflow = content(".github/workflows/pages.yml");
-assert.ok(workflow.includes("Remove downloadable patches from public website artifact") && workflow.includes('site / "patches").rglob("*.bps")'), "Primary patch directory must exclude downloadable BPS files");
-assert.ok(workflow.includes("Build verified secondary launcher"), "Deployment must build the linked secondary launcher");
-assert.ok(html.includes('<a href="launcher.html">@xbaconator9000x</a>'), "The secondary launcher must be linked only from the footer credit");
-assert.ok(content("site/build_secondary_launcher.py").includes('data-patch-base="launcher-patches/"'), "The enabled launcher must route its verified patches independently");
+assert.ok(workflow.includes("Publish verified BPS files to both launchers"), "Deployment must retain the verified public patches");
+assert.ok(workflow.includes("Build verified secondary launcher"), "Deployment must support bookmarked secondary launcher links");
+assert.ok(html.includes('<a href="launcher.html">@xbaconator9000x</a>'), "The existing secondary launcher link must remain");
+assert.ok(content("site/build_secondary_launcher.py").includes('data-patch-base="launcher-patches/"'), "Legacy launcher must route its verified patches independently");
+const compare = html.match(/<section class="window" id="two-english-versions">[\s\S]*?<\/section>/)[0];
+assert.ok(compare.includes("<h2>Two English Versions?</h2>") && compare.includes("<h3>Which version is better?</h3>"));
+assert.ok(compare.includes('<a href="#releases">Unofficial English Translation</a>'));
+assert.ok(compare.includes('https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&amp;s=19'));
+assert.ok(compare.includes('https://x.com/RasenVolt') && compare.includes("17/11/2026") && compare.includes("27/11/2026"));
+assert.ok(compare.includes("<strong><u>the definitive release</u></strong>"));
+const releaseDocs = content("docs/RELEASE-v1.04.md");
+for (const [label, text] of [["README",readme],["website",html],["release notes",releaseDocs],["manifest",JSON.stringify(english.changelog)]]) {
+  assert.ok(!/escape rope|cuerda huida/i.test(text), label + ": unimplemented feature must not be advertised");
+}
 
 assert.ok(html.includes("og:image") && html.includes("media/jessie-james-cover-snowmudk99.jpg"));
 assert.ok(css.includes(".fan-cover") && css.includes(".rocket-hero"));
 assert.ok(!html.includes('class="rocket-r"'), "Old standalone masthead should be replaced");
-// The user requested the existing README remain unchanged; check historical parity only.
-const sharedVersion = "v1.03.2";
-assert.ok(readme.includes("**English " + sharedVersion + "**"), "README latest version differs from English manifest");
-assert.ok(readme.includes("5DAE93EA"), "README English CRC32 is out of date");
-assert.ok(readme.includes("222A0072"), "README Spanish CRC32 is out of date");
+const sharedVersion = "v" + english.latest;
+assert.ok(readme.includes("**Unofficial English " + sharedVersion + "**"), "README latest version differs from English manifest");
+assert.ok(readme.includes(english.target.split(":")[1]), "README English CRC32 is out of date");
+assert.ok(readme.includes(spanish.target.split(":")[1]), "README Spanish CRC32 is out of date");
+assert.ok(readme.includes("docs/RELEASE-v1.04.md#changelog"), "README must link the current changelog");
 for (const entry of english.changelog.filter(entry => entry.version !== "1.04")) {
   assert.ok(readme.includes("### English v" + entry.version + " -- " + entry.date), "README missing changelog version " + entry.version);
   for (const item of entry.changes) {
@@ -60,7 +70,7 @@ for (const entry of english.changelog.filter(entry => entry.version !== "1.04"))
 const spanishReadme = readme.split("## Prefer to play español?")[1]?.split("## What is Jessie & James Edition?")[0];
 const spanishSite = html.split('<section class="window" id="spanish">')[1]?.split("</section>")[0];
 assert.ok(spanishReadme && spanishSite, "Missing Spanish patch section");
-for (const feature of ["Modo difícil opcional", "Modos de combate Clásico y Moderno", "EXP. ALL opcional", "Mentas de Naturaleza", "Chapas Plateadas y Doradas", "los seis objetos Power", "lectores de EV e IV", "mayor capacidad de la Mochila", "Cuerda Huida reutilizable", "precios de hasta cinco cifras"]) {
+for (const feature of ["Modo difícil opcional", "Modos de combate Clásico y Moderno", "EXP. ALL opcional", "Mentas de Naturaleza", "Chapas Plateadas y Doradas", "los seis objetos Power", "lectores de EV e IV", "mayor capacidad de la Mochila", "precios de hasta cinco cifras"]) {
   assert.ok(spanishReadme.includes(feature), "README Spanish feature missing: " + feature);
   assert.ok(spanishSite.includes(feature), "Website Spanish feature missing: " + feature);
 }
@@ -79,7 +89,6 @@ const qolFeatures = [
   "EV training items",
   "EV and IV readers",
   "Expanded Bag storage",
-  "Reusable Escape Rope",
   "Five-digit prices"
 ];
 for (const feature of qolFeatures) {

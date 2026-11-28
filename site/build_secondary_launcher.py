@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Build a linked, enabled launcher from the suspended public landing page.
+"""Preserve the previous enabled launcher URL alongside the public launcher.
 
-The main page stays suspended. This alternative is linked only from the
-existing @xbaconator9000x credit and uses a separate set of verified BPS assets.
-No ROMs are included or copied. The README is untouched.
+Both pages expose the same editions. Keep the previous launcher-patches URLs
+working for visitors with older bookmarks. Only verified BPS files are copied.
 """
 from pathlib import Path
 from shutil import copyfile
@@ -14,33 +13,14 @@ import zlib
 
 SITE = Path(__file__).resolve().parent
 main = (SITE / "index.html").read_text(encoding="utf-8")
-assert 'data-downloads-suspended="true"' in main, "Primary website must remain suspended"
-assert '<a href="launcher.html">@xbaconator9000x</a>' in main, "The credit must be the only entrance"
-
-def replace_once(content, before, after):
-    if content.count(before) != 1:
-        raise ValueError("Launcher template mismatch: " + before[:100])
-    return content.replace(before, after)
-
-secondary = main
-updates = [
-    ('<body data-downloads-suspended="true">',
-     '<body data-downloads-suspended="false" data-patch-base="launcher-patches/">'),
-    ("    <div class=\"suspension-notice\" role=\"status\"><strong>Downloads have been disabled for the time being, as per MrNightology's request</strong></div>\n", ""),
-    ('<h2>Unofficial English downloads suspended</h2>', '<h2>Unofficial English translation</h2>'),
-    ('<p class="small" id="hosted-patch-status" role="status">English patch downloads are temporarily disabled.</p>',
-     '<p class="small" id="hosted-patch-status" role="status">Checking hosted patch availability…</p>'),
-    ('<p>Unofficial English patch downloads and in-browser patching are suspended for the time being. The release information remains available for reference.</p>',
-     "<p>Choose the original Spanish FINAL v1.1 ROM or an earlier English release, including v1.03.2 and the Aqua ship hotfix. The patcher verifies your ROM and updates it to v1.04. A clean FireRed ROM won't work.</p>"),
-    ('<p class="small" id="official-hosted-patch-status" role="status">Patch downloads are temporarily disabled.</p>',
-     '<p class="small" id="official-hosted-patch-status" role="status">Checking hosted patch availability…</p>'),
-    ('<p class="small" id="es-hosted-patch-status" role="status">Las descargas de parches están suspendidas temporalmente.</p>',
-     '<p class="small" id="es-hosted-patch-status" role="status">Comprobando la disponibilidad del parche…</p>'),
-    ('<p>Las descargas y la aplicación de parches en esta web están suspendidas temporalmente. La información sobre las mejoras sigue disponible.</p>',
-     '<p>Selecciona la ROM original <em>Jessie &amp; James Edition FINAL v1.1</em> en español, o una versión anterior del parche español QoL. El parcheador actualizará a v1.04. No utilices FireRed sin modificar ni la versión inglesa.</p>'),
-]
-for old, new in updates:
-    secondary = replace_once(secondary, old, new)
+assert 'data-downloads-suspended="false"' in main, "Public website must be enabled"
+assert '<a href="launcher.html">@xbaconator9000x</a>' in main, "Keep the old launcher link"
+assert main.count('<body data-downloads-suspended="false">') == 1
+secondary = main.replace(
+    '<body data-downloads-suspended="false">',
+    '<body data-downloads-suspended="false" data-patch-base="launcher-patches/">',
+    1,
+)
 
 assert 'data-downloads-suspended="true"' not in secondary
 assert 'class="suspension-notice"' not in secondary
@@ -50,7 +30,7 @@ assert all(f'id="{prefix}patch-run"' in secondary for prefix in ('', 'es-', 'off
 assert '<a href="launcher.html">@xbaconator9000x</a>' in secondary
 
 # The same HTML, CSS and JavaScript are used for both launchers.
-# Only status text and download state differ.
+# Only the patch base path differs.
 (SITE / "launcher.html").write_text(secondary, encoding="utf-8")
 
 mirror = SITE / "launcher-patches"
@@ -85,4 +65,4 @@ for module in ("patcher.mjs", "spanish-patcher.mjs"):
     assert "fetch(hostedPath(edge.path)" in script
     assert "fetch(hostedPath(full.path)" in script
 
-print(f"PASS: linked secondary launcher with {len(required)} SHA-verified BPS patches; primary unchanged")
+print(f"PASS: linked secondary launcher with {len(required)} SHA-verified BPS patches; both public and legacy launchers enabled")

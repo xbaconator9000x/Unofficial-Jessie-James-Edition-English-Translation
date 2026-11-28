@@ -25,7 +25,7 @@ The official English QoL patch retains RasenVolt's translation, original scripti
 - Additional line wrapping fixes for the unofficial English translation.
 - Spanish QoL: restored official Spanish localisation for English text artifacts (moves, abilities, Pokédex entries and battle messages), without changing MrNightology's own Spanish text.
 - Spanish QoL: repaired UI graphics to use official Spanish localisation, including HP/status labels, type icons, level labels and naming-screen buttons.
-- All previous QoL features carried forward, including the optional Classic/Modern battle modes, the physical/special split in Modern, reusable TMs in Modern, improved optional Hard Mode, EXP. ALL, nature stat colours, move details and effectiveness indicators, Nature Mints, Bottle Caps, EV training items, EV/IV readers, expanded bag, reusable Escape Rope and five-digit prices.
+- All previous QoL features carried forward, including the optional Classic/Modern battle modes, the physical/special split in Modern, reusable TMs in Modern, improved optional Hard Mode, EXP. ALL, nature stat colours, move details and effectiveness indicators, Nature Mints, Bottle Caps, EV training items, EV/IV readers, expanded bag and five-digit prices.
 
 ### Upgrading an existing patched ROM
 
@@ -53,7 +53,7 @@ The three complete patches and ten new incremental patches have been applied to 
 ## Credits
 
 - Original game -- **MrNightology** and the original project's contributors. [Official release information](https://www.pokecommunity.com/threads/pok%C3%A9mon-team-rocket-jessie-james-complete-v1-1.544565/).
-- Official English translation -- **RasenVolt**. [MrNightology's announcement](https://www.whackahack.com/foro/threads/23-11-2026-traduccion-ingles-pokemon-team-rocket-jessie-james-completo.42722/page-26).
+- Official English translation -- **[RasenVolt](https://x.com/RasenVolt)**. [Official English translation](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19).
 - Unofficial English localisation, QoL additions and patcher maintenance -- **xbaconator9000x**.
 
 Unofficial enhancement project, not endorsed by the original developer.

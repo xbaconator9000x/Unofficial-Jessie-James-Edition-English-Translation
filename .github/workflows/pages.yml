@@ -187,26 +187,40 @@ jobs:
         run: python3 scripts/inject_patch_events.py site/index.html
       - name: Build verified secondary launcher
         run: python3 site/build_secondary_launcher.py
-      - name: Remove downloadable patches from public website artifact
+      - name: Publish verified BPS files to both launchers
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import json, hashlib
           site = Path("site")
           html = (site / "index.html").read_text(encoding="utf-8")
-          if 'data-downloads-suspended="true"' not in html:
-              raise SystemExit("Expected suspension flag; refusing to publish downloadable patches.")
-          removed = []
+          assert 'data-downloads-suspended="false"' in html
+          assert 'class="suspension-notice"' not in html
+          manifests = [json.loads((site / "patches" / name).read_text()) for name in
+              ("releases.json", "spanish-releases.json", "official-releases.json")]
+          # Retain only verified manifest files and the existing verified aliases.
+          required = {Path(e["path"]).name: e["sha256"] for m in manifests for e in m["patches"]}
+          english, spanish, official = manifests
+          en = next(e for e in english["patches"] if e["from"] == "16777216:805E24CA" and e["to"] == english["target"])
+          es = next(e for e in spanish["patches"] if e["from"] == "16777216:805E24CA" and e["to"] == spanish["target"])
+          aliases = {
+              "jessie-james-english-v1.0.bps": en["sha256"],
+              "jessie-james-english-v" + english["latest"] + ".bps": en["sha256"],
+              "jessie-james-spanish-qol-v1.0.bps": es["sha256"],
+          }
+          published = {**required, **aliases}
           for path in (site / "patches").iterdir():
-              if path.suffix in (".bps", ".hex") or path.name.endswith(".xz.b64"):
+              if (path.suffix == ".bps" and path.name not in published) or path.suffix == ".hex" or path.name.endswith(".xz.b64"):
                   path.unlink()
-                  removed.append(path.name)
-          assert removed, "Expected downloadable BPS files to be removed"
-          assert not list((site / "patches").rglob("*.bps"))
-          assert not list((site / "patches").rglob("*.xz.b64"))
-          assert not list((site / "patches").rglob("*.hex"))
-          assert (site / "launcher.html").is_file()
-          assert len(list((site / "launcher-patches").glob("*.bps"))) >= 19
-          print(f"Suspended {len(removed)} patch files from GitHub Pages")
+          assert {p.name for p in (site / "patches").glob("*.bps")} == set(published)
+          for name, sha in published.items():
+              assert hashlib.sha256((site / "patches" / name).read_bytes()).hexdigest() == sha
+          assert {p.name for p in (site / "launcher-patches").glob("*.bps")} == set(required)
+          for name, sha in required.items():
+              assert hashlib.sha256((site / "launcher-patches" / name).read_bytes()).hexdigest() == sha
+          assert 'data-downloads-suspended="false"' in (site / "launcher.html").read_text()
+          assert not list(site.rglob("*.gba")) and not list(site.rglob("*.sav"))
+          print(f"Published {len(published)} verified public BPS files and {len(required)} legacy launcher BPS files")
           PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

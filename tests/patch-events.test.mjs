@@ -10,7 +10,7 @@ try {
   for (const key of Object.values(PATCH_EVENTS)) {
     assert.equal(trackPatcherEvent(key), true);
   }
-  assert.equal(calls.length, 4);
+  assert.equal(calls.length, 6);
   assert.deepEqual(calls.map(e => e.path), Object.values(PATCH_EVENTS));
   for (const call of calls) {
     assert.equal(call.event, true);
@@ -19,7 +19,7 @@ try {
   }
   assert.equal(trackPatcherEvent("fake-custom-event"), false, "reject unknown event names");
   assert.equal(trackPatcherEvent("rom-hash=private"), false, "reject dynamic identifiers");
-  assert.equal(calls.length, 4, "invalid events must not be transmitted");
+  assert.equal(calls.length, 6, "invalid events must not be transmitted");
   globalThis.goatcounter = {count: () => {throw new Error("tracker blocked");}};
   assert.equal(trackPatcherEvent(PATCH_EVENTS.englishRom), false, "tracker failures cannot break patcher");
   console.log("PASS: exact patch event names, privacy allowlist, no-backend and failure behavior");

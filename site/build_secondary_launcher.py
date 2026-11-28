@@ -27,15 +27,17 @@ updates = [
     ('<body data-downloads-suspended="true">',
      '<body data-downloads-suspended="false" data-patch-base="launcher-patches/">'),
     ("    <div class=\"suspension-notice\" role=\"status\"><strong>Downloads have been disabled for the time being, as per MrNightology's request</strong></div>\n", ""),
-    ('<h2>English downloads suspended</h2>', '<h2>Patch your ROM</h2>'),
+    ('<h2>Unofficial English downloads suspended</h2>', '<h2>Unofficial English translation</h2>'),
     ('<p class="small" id="hosted-patch-status" role="status">English patch downloads are temporarily disabled.</p>',
      '<p class="small" id="hosted-patch-status" role="status">Checking hosted patch availability…</p>'),
-    ('<p>English patch downloads and in-browser patching are suspended for the time being. The release information remains available for reference.</p>',
-     "<p>Choose the original Spanish FINAL v1.1 ROM or an earlier English release, including v1.03 and the Aqua ship hotfix. The patcher verifies your ROM and updates it to v1.03.2. A clean FireRed ROM won't work.</p>"),
+    ('<p>Unofficial English patch downloads and in-browser patching are suspended for the time being. The release information remains available for reference.</p>',
+     "<p>Choose the original Spanish FINAL v1.1 ROM or an earlier English release, including v1.03.2 and the Aqua ship hotfix. The patcher verifies your ROM and updates it to v1.04. A clean FireRed ROM won't work.</p>"),
+    ('<p class="small" id="official-hosted-patch-status" role="status">Patch downloads are temporarily disabled.</p>',
+     '<p class="small" id="official-hosted-patch-status" role="status">Checking hosted patch availability…</p>'),
     ('<p class="small" id="es-hosted-patch-status" role="status">Las descargas de parches están suspendidas temporalmente.</p>',
      '<p class="small" id="es-hosted-patch-status" role="status">Comprobando la disponibilidad del parche…</p>'),
     ('<p>Las descargas y la aplicación de parches en esta web están suspendidas temporalmente. La información sobre las mejoras sigue disponible.</p>',
-     '<p>Selecciona la ROM original <em>Jessie &amp; James Edition FINAL v1.1</em> en español, la versión española QoL v1.0 o cualquier versión QoL v1.02. El parcheador actualizará a v1.03. No utilices FireRed sin modificar ni la versión inglesa.</p>'),
+     '<p>Selecciona la ROM original <em>Jessie &amp; James Edition FINAL v1.1</em> en español, o una versión anterior del parche español QoL. El parcheador actualizará a v1.04. No utilices FireRed sin modificar ni la versión inglesa.</p>'),
 ]
 for old, new in updates:
     secondary = replace_once(secondary, old, new)
@@ -43,8 +45,8 @@ for old, new in updates:
 assert 'data-downloads-suspended="true"' not in secondary
 assert 'class="suspension-notice"' not in secondary
 assert 'data-patch-base="launcher-patches/"' in secondary
-assert secondary.count('class="patcher-controls"') == 2
-assert 'id="patch-run"' in secondary and 'id="es-patch-run"' in secondary
+assert secondary.count('class="patcher-controls"') == 3
+assert all(f'id="{prefix}patch-run"' in secondary for prefix in ('', 'es-', 'official-'))
 assert '<a href="launcher.html">@xbaconator9000x</a>' in secondary
 
 # The same HTML, CSS and JavaScript are used for both launchers.
@@ -54,7 +56,7 @@ assert '<a href="launcher.html">@xbaconator9000x</a>' in secondary
 mirror = SITE / "launcher-patches"
 mirror.mkdir(exist_ok=True)
 required = set()
-for manifest_name in ("releases.json", "spanish-releases.json"):
+for manifest_name in ("releases.json", "spanish-releases.json", "official-releases.json"):
     manifest = json.loads((SITE / "patches" / manifest_name).read_text(encoding="utf-8"))
     for edge in manifest["patches"]:
         source = SITE / edge["path"]

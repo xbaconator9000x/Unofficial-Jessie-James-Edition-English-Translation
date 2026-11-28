@@ -1,0 +1,23 @@
+{
+  "latest": "1.04",
+  "versions": {
+    "16777216:9ED6BE84": "Official English v1.1 by RasenVolt",
+    "16777216:EF0BB0A2": "Official English v1.1 with QoL v1.04"
+  },
+  "target": "16777216:EF0BB0A2",
+  "patches": [
+    {
+      "path": "patches/jessie-james-official-english-qol-v1.04-ef0bb0a2.bps",
+      "crc": "F2278F92",
+      "bytes": 746046,
+      "sha256": "95de71ef91aafb4dc775aefe5662e886ad416480ca5b88f184ea23d5239985fd",
+      "from": "16777216:9ED6BE84",
+      "to": "16777216:EF0BB0A2",
+      "version": "1.04"
+    }
+  ],
+  "romSha256": {
+    "16777216:9ED6BE84": "18c90d88e15541746005d8ed132af251bc885c2975806e6b20ca77b32303ea3c",
+    "16777216:EF0BB0A2": "5a2c1063e4403d079a0afba86f8baea6e0072561a86ed8ca42b927fb1f0bbccb"
+  }
+}

@@ -5,14 +5,18 @@ export const PATCH_EVENTS = Object.freeze({
   englishRom: "english-rom-download-started",
   spanishRom: "spanish-rom-download-started",
   englishBps: "english-bps-download-started",
-  spanishBps: "spanish-bps-download-started"
+  spanishBps: "spanish-bps-download-started",
+  officialRom: "official-english-qol-rom-download-started",
+  officialBps: "official-english-qol-bps-download-started"
 });
 
 const LABELS = Object.freeze({
   [PATCH_EVENTS.englishRom]: "English ROM verified and save initiated",
   [PATCH_EVENTS.spanishRom]: "Spanish QoL ROM verified and save initiated",
   [PATCH_EVENTS.englishBps]: "English BPS verified and download initiated",
-  [PATCH_EVENTS.spanishBps]: "Spanish QoL BPS verified and download initiated"
+  [PATCH_EVENTS.spanishBps]: "Spanish QoL BPS verified and download initiated",
+  [PATCH_EVENTS.officialRom]: "Official English QoL ROM verified and save initiated",
+  [PATCH_EVENTS.officialBps]: "Official English QoL BPS verified and download initiated"
 });
 
 /**

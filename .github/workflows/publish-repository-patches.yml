@@ -1,72 +1,22 @@
-name: Publish verified full BPS patches to GitHub repository
+name: Verify repository BPS downloads
 
 on:
   push:
     branches: [main]
     paths:
+      - 'downloads/**'
+      - 'site/patches/**'
+      - 'tests/release-v104.test.py'
       - '.github/workflows/publish-repository-patches.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: jessie-james-repository-patches
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  publish:
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out source and patch inputs
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - name: Reconstruct verified complete BPS patches (no ROMs)
-        run: python3 site/patches/assemble_release.py
-      - name: Verify assembled release candidates
-        run: python3 tests/release-v103-candidate.py
-      - name: Place verified full patches outside the public website
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p downloads
-          cp site/patches/jessie-james-english-v1.03.2-5dae93ea.bps downloads/
-          cp site/patches/jessie-james-spanish-qol-v1.03-222a0072.bps downloads/
-          python3 - <<'PY'
-          from pathlib import Path
-          import hashlib
-          import struct
-          import zlib
-
-          releases = {
-              "jessie-james-english-v1.03.2-5dae93ea.bps": (
-                  1813047, "5be7ece1c3108a32ef42d6ea99e748a780dbe764578510493206847f898840fc", 0x5DAE93EA
-              ),
-              "jessie-james-spanish-qol-v1.03-222a0072.bps": (
-                  440513, "45e2817440de12034ffb0a51d80bfe4d105aa7c2f43f65c921e2830595f334b9", 0x222A0072
-              ),
-          }
-          for filename, (length, digest, target) in releases.items():
-              p = Path("downloads") / filename
-              b = p.read_bytes()
-              assert len(b) == length and b[:4] == b"BPS1", filename
-              assert hashlib.sha256(b).hexdigest() == digest, filename
-              source_crc, target_crc, bps_crc = struct.unpack("<III", b[-12:])
-              assert source_crc == 0x805E24CA and target_crc == target, filename
-              assert bps_crc == zlib.crc32(b[:-4]), filename
-              print("VERIFIED", filename, digest)
-          PY
-      - name: Commit complete BPS files to repository (not GitHub Pages)
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f downloads/jessie-james-english-v1.03.2-5dae93ea.bps downloads/jessie-james-spanish-qol-v1.03-222a0072.bps
-          if git diff --cached --quiet; then
-            echo "Repository patch downloads already match verified releases."
-          else
-            git commit -m "Publish verified full English and Spanish QoL BPS downloads"
-            git push origin HEAD:main
-          fi
+      - uses: actions/checkout@v4
+      - name: Verify complete and incremental v1.04 BPS downloads
+        run: python3 tests/release-v104.test.py

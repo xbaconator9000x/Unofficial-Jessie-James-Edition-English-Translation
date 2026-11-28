@@ -1,13 +1,14 @@
 {
-  "latest": "1.03",
+  "latest": "1.04",
   "versions": {
     "16777216:805E24CA": "Versión original en español FINAL v1.1",
     "16777216:7C042814": "Versión en español con mejoras QoL v1.0",
     "16777216:0486144D": "Versión en español con mejoras QoL v1.02 (anterior)",
     "16777216:58F089B9": "Versión en español con mejoras QoL v1.02 (última)",
-    "16777216:222A0072": "Versión en español con mejoras QoL v1.03"
+    "16777216:222A0072": "Versión en español con mejoras QoL v1.03",
+    "16777216:1C4A1771": "Versión en español con mejoras QoL v1.04"
   },
-  "target": "16777216:222A0072",
+  "target": "16777216:1C4A1771",
   "patches": [
     {
       "path": "patches/jessie-james-spanish-qol-v1.0-7c042814.bps",
@@ -71,6 +72,51 @@
       "from": "16777216:58F089B9",
       "to": "16777216:222A0072",
       "version": "1.03"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-v1.04-1c4a1771.bps",
+      "crc": "F2A27CF7",
+      "bytes": 851017,
+      "sha256": "d4b43d74a74e9078ec67426ec407d13fa5811c8560e1357eaaf6ef2ba6b75f39",
+      "from": "16777216:805E24CA",
+      "to": "16777216:1C4A1771",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-7c042814-to-v1.04-1c4a1771.bps",
+      "crc": "674F4D11",
+      "bytes": 465651,
+      "sha256": "7651a65a3114e7c5c7b589860b89ea1ee2ef9bb2e272d3e97c75e1eb9dd324e2",
+      "from": "16777216:7C042814",
+      "to": "16777216:1C4A1771",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-0486144d-to-v1.04-1c4a1771.bps",
+      "crc": "5F41C1F2",
+      "bytes": 465547,
+      "sha256": "3564a5e3543d7d56c904de19d45db486b5925cee258693cb6e7463abd07f2bd0",
+      "from": "16777216:0486144D",
+      "to": "16777216:1C4A1771",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-58f089b9-to-v1.04-1c4a1771.bps",
+      "crc": "E746D11B",
+      "bytes": 461412,
+      "sha256": "e8df658e14a90183ccb05809d2924b06f6ded664fc2c133133e16d752ef37524",
+      "from": "16777216:58F089B9",
+      "to": "16777216:1C4A1771",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-spanish-qol-222a0072-to-v1.04-1c4a1771.bps",
+      "crc": "1BA335B4",
+      "bytes": 452288,
+      "sha256": "ed3746653472e5cab1c4fae0eb7a175c0b06511c16e8028b98a19c0a1484bb4c",
+      "from": "16777216:222A0072",
+      "to": "16777216:1C4A1771",
+      "version": "1.04"
     }
   ],
   "romSha256": {
@@ -78,6 +124,7 @@
     "16777216:7C042814": "7a9587b11af0385a589b9b7ad309edea1f3dac58705da2a3cd8ae84164e41a18",
     "16777216:0486144D": "8239aa77d929c9cdd8bdba1fd935b38ad2b9f0745a9e64b9f9f54acd003b4120",
     "16777216:58F089B9": "2f40acbdcbb14ee85076163369fe7cc2cc0298459a1abb0475c27ef07c5ddb3f",
-    "16777216:222A0072": "427624017e25879547db70dc276f87bea09685783cc0e92def44c29e7db66bbc"
+    "16777216:222A0072": "427624017e25879547db70dc276f87bea09685783cc0e92def44c29e7db66bbc",
+    "16777216:1C4A1771": "be900975c1d1224c10c7f5dd72f38170e37f7531b641fb36b0ec53494e7ec69c"
   }
 }

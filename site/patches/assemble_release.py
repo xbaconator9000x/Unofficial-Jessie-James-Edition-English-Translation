@@ -9,6 +9,7 @@ import lzma
 import hashlib
 import json
 import struct
+from shutil import copyfile
 import zlib
 from pathlib import Path
 
@@ -190,5 +191,22 @@ def main():
             print("VERIFIED: English v1.03.2, CRC32 5DAE93EA, full BPS", len(final_bytes), final_edge["sha256"])
 
 
+def stage_v104():
+    # Repository downloads are authoritative. Stage verified copies for the
+    # enabled secondary launcher; the primary deployment strips patch files.
+    for name in ("releases.json", "spanish-releases.json", "official-releases.json"):
+        manifest = json.loads((ROOT / name).read_text())
+        for edge in manifest["patches"]:
+            if edge["version"] != "1.04":
+                continue
+            filename = Path(edge["path"]).name
+            source = ROOT.parent.parent / "downloads" / filename
+            data = source.read_bytes()
+            check_edge(data, edge)
+            copyfile(source, ROOT / filename)
+            print("VERIFIED:", filename)
+
+
 if __name__ == "__main__":
     main()
+    stage_v104()

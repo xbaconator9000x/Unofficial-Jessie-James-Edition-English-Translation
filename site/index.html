@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080808">
-  <meta name="description" content="Pokémon Team Rocket: Jessie & James Edition v1.1, unofficial English translation of MrNightology's original Spanish game.">
-  <title>Team Rocket: Jessie & James Edition | English Translation</title>
+  <meta name="description" content="Pokémon Team Rocket: Jessie & James Edition v1.1, QoL patches for the original Spanish game, the official English translation and my unofficial English translation.">
+  <title>Team Rocket: Jessie & James Edition | QoL &amp; Translation</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Team_Rocket_Logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pokémon Team Rocket: Jessie &amp; James Edition -- Unofficial English Translation">
+  <meta property="og:title" content="Pokémon Team Rocket: Jessie &amp; James Edition -- QoL &amp; Translation">
   <meta property="og:description" content="English localisation, ROM patcher and fan cover art for Jessie &amp; James Edition. Fan cover artwork by SnowMudK99, used with permission.">
   <meta property="og:image" content="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/media/jessie-james-cover-snowmudk99.jpg">
   <meta property="og:image:width" content="1536">
@@ -34,7 +34,7 @@
       <div class="game-title">
         <div class="title-strip">POKÉMON TEAM ROCKET</div>
         <h1>Jessie &amp; James<br><span>Edition</span></h1>
-        <p>Unofficial English Translation</p>
+        <p>QoL &amp; English Localisation</p>
       </div>
       <p class="version"><span>Original Spanish game by MrNightology</span><span>v1.1</span></p>
     </header>
@@ -50,7 +50,8 @@
       <a href="#english-screenshots">English Screenshots</a>
       <a href="#fanart">Fan art</a>
       <a href="#report">Bug reports</a>
-      <a href="#releases">Patch ROM</a>
+      <a href="#official">Official English QoL</a>
+      <a href="#releases">Unofficial English</a>
       <a href="#spanish">Español QoL</a>
       <a href="#changelog">Changelogs</a>
     </nav>
@@ -75,12 +76,13 @@
       </section>
 
       <section class="window" id="translation">
-        <h2>Translation</h2>
+        <h2>Quality of life and translation</h2>
         <div class="window-body">
-          <p>This is my unofficial English translation of the completed v1.1 game. I'm not affiliated with the original developer.</p>
+          <p>The official English translation of Jessie &amp; James Edition by <a href="https://x.com/RasenVolt" target="_blank" rel="noopener noreferrer">RasenVolt</a> was released on 27 November 2026. With v1.04, I've adapted my QoL features and bug fixes for that translation as well as updating my unofficial English translation and the Spanish QoL patch.</p>
+          <p>The official English QoL patch retains the original translation and splash screen, with the Team Rocket theme music added. My unofficial localisation remains a separate option. I'm not affiliated with the original developer.</p>
           <p>I extracted the Spanish text and replaced matching FireRed lines with their official English versions. For the rest, I used Google Translate as a starting point, then went through the dialogue with the anime as a reference for the characters' voices. I also fixed text wrapping and page breaks where needed.</p>
           <h3>Quality of life</h3>
-          <p>These are the gameplay options and conveniences I've added to the English release:</p>
+          <p>These are the gameplay options and conveniences I've added across all three editions:</p>
           <ul class="plain-list">
             <li><strong>Classic / Modern battles</strong> -- Choose the original Gen 3 battle mechanics or the physical/special split and updated ability effects. TMs remain single-use in Classic Mode and are reusable in Modern Mode.</li>
             <li><strong>Optional Hard Mode</strong> -- Smarter trainer AI, revised teams and more strategic battles without simply raising enemy levels.</li>
@@ -214,18 +216,40 @@
         </div>
       </section>
 
-      <section class="window" id="releases">
-        <h2>English downloads suspended</h2>
+      <section class="window" id="official">
+        <h2>Official English QoL</h2>
         <div class="window-body">
-          <p><strong>Latest English patch: v<span id="latest-version">1.03.2</span></strong></p>
+          <p><strong>Latest official English QoL patch: v<span id="official-latest-version">1.04</span></strong></p>
+          <p class="small" id="official-hosted-patch-status" role="status">Patch downloads are temporarily disabled.</p>
+          <p>The official English v1.1 translation by RasenVolt is now supported. This patch adds my QoL features, trainer AI enhancements and applicable bug fixes while keeping the official dialogue, original translation scripting and splash screen. The Team Rocket theme music is included.</p>
+          <p class="small">Requires the official English v1.1 ROM (CRC32 9ED6BE84), not the Spanish or unofficial English ROM. Your ROM stays on your device. Nothing is uploaded to a server. Keep a backup of your original ROM and save before updating.</p>
+          <div class="patcher-controls">
+          <label for="official-rom-file"><strong>1. Choose ROM (.gba)</strong></label>
+          <input class="patch-input" id="official-rom-file" type="file" accept=".gba,application/octet-stream">
+          <p id="official-rom-info" class="small">Choose a ROM to check compatibility.</p>
+          <details><summary>Optional -- use a patch file you already downloaded</summary><label for="official-patch-file">Choose matching BPS patch</label><input class="patch-input" id="official-patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">For a single-step update only. Leave empty to use the hosted patch automatically.</p></details>
+          <p><button class="menu-button" id="official-patch-run" type="button" disabled>2. Patch &amp; download ROM</button> <button class="menu-button" id="official-patch-download" type="button" disabled>Download BPS patch</button></p>
+          <p id="official-patch-status" role="status" aria-live="polite"></p>
+          <pre id="official-patch-log" class="patch-log" aria-label="Patch diagnostic report" tabindex="0"></pre>
+          <p><button class="menu-button" id="official-copy-report" type="button">Download diagnostic report</button></p>
+          <p class="small">If patching fails, send the diagnostic report with your <a href="https://tally.so/r/M1N2oE">private bug report</a>. Do not send ROM files. No pre-patched ROMs are distributed.</p>
+          <noscript>Enable JavaScript to use the local ROM patcher.</noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="window" id="releases">
+        <h2>Unofficial English downloads suspended</h2>
+        <div class="window-body">
+          <p><strong>Latest unofficial English patch: v<span id="latest-version">1.04</span></strong></p>
           <p class="small" id="hosted-patch-status" role="status">English patch downloads are temporarily disabled.</p>
-          <p>English patch downloads and in-browser patching are suspended for the time being. The release information remains available for reference.</p>
+          <p>Unofficial English patch downloads and in-browser patching are suspended for the time being. The release information remains available for reference.</p>
           <p class="small">Your ROM stays on your device. Nothing is uploaded to a server. Keep a backup of your original ROM and save before updating.</p>
           <div class="patcher-controls">
           <label for="rom-file"><strong>1. Choose ROM (.gba)</strong></label>
           <input class="patch-input" id="rom-file" type="file" accept=".gba,application/octet-stream">
           <p id="rom-info" class="small">Choose a ROM to check compatibility.</p>
-          <details><summary>Optional -- use a patch file you already downloaded</summary><label for="patch-file">Choose official BPS patch</label><input class="patch-input" id="patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">For a single-step update only. Leave empty to use the hosted patch automatically.</p></details>
+          <details><summary>Optional -- use a patch file you already downloaded</summary><label for="patch-file">Choose matching BPS patch</label><input class="patch-input" id="patch-file" type="file" accept=".bps,application/octet-stream"><p class="small">For a single-step update only. Leave empty to use the hosted patch automatically.</p></details>
           <p><button class="menu-button" id="patch-run" type="button" disabled>2. Patch &amp; download ROM</button> <button class="menu-button" id="patch-download" type="button" disabled>Download BPS patch</button></p>
           <p id="patch-status" role="status" aria-live="polite"></p>
           <pre id="patch-log" class="patch-log" aria-label="Patch diagnostic report" tabindex="0"></pre>
@@ -242,7 +266,8 @@
           <p>Si prefieres jugar a la versión original en español, he preparado otro parche para que también puedas disfrutar de las mejoras de calidad de vida que he añadido a mi versión inglesa, sin tener que jugar en inglés. El objetivo es mantener el juego de MrNightology en español y añadir esas mejoras, no hacer una nueva traducción.</p>
           <p><strong>Modo difícil opcional</strong> -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.</p>
           <p><strong>Otras mejoras incluidas</strong> -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila, Cuerda Huida reutilizable y precios de hasta cinco cifras.</p>
-          <p><strong>Parche de mejoras para la versión en español: v<span id="es-latest-version">1.03</span></strong></p>
+          <p>Novedades de v1.04: correcciones de errores, mejoras de IA y clases de entrenadores, restauración de la localización oficial en español de textos de movimientos, habilidades, Pokédex y mensajes de combate, y correcciones de los gráficos de la interfaz. Los textos originales de MrNightology se mantienen.</p>
+          <p><strong>Parche de mejoras para la versión en español: v<span id="es-latest-version">1.04</span></strong></p>
           <p class="small" id="es-hosted-patch-status" role="status">Las descargas de parches están suspendidas temporalmente.</p>
           <p>Las descargas y la aplicación de parches en esta web están suspendidas temporalmente. La información sobre las mejoras sigue disponible.</p>
           <p class="small">La ROM no sale de tu dispositivo. Guarda una copia de la ROM original y de tu partida antes de aplicar el parche.</p>
@@ -263,13 +288,14 @@
 
       <section class="window" id="changelog">
         <h2>Changelog</h2>
-        <div class="window-body" id="changes"><p>English translation release history.</p></div>
+        <div class="window-body" id="changes"><p>QoL and unofficial English translation release history.</p></div>
       </section>
     </main>
 
     <footer class="footer" id="credits">
       <h2>Credits</h2>
       <p>Full credit for the original game, story, maps, artwork and gameplay goes to <strong>MrNightology and the original project's contributors</strong>. The game was translated without author consultation.</p>
+      <p>Official English translation -- <strong><a href="https://x.com/RasenVolt" target="_blank" rel="noopener noreferrer">RasenVolt</a></strong>. <a href="https://www.pokecommunity.com/threads/pok%C3%A9mon-team-rocket-jessie-james-complete-v1-1.544565/" target="_blank" rel="noopener noreferrer">Official release information</a>.</p>
       <p>English localisation and patcher maintenance -- <a href="launcher.html">@xbaconator9000x</a>.</p>
       <p id="art-credit">Box art and logos -- <strong>u/SnowMudK99</strong>, used with permission.</p>
       <p class="small">Unofficial fan project. Not endorsed by the original developer. Please support the <a href="https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/" target="_blank" rel="noopener noreferrer">original Spanish release</a>.</p>

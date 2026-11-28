@@ -6,6 +6,7 @@ on:
     paths:
       - 'README.md'
       - 'site/**'
+      - 'downloads/**'
       - '.github/workflows/pages.yml'
       - 'tests/**'
   workflow_dispatch:
@@ -29,10 +30,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Assemble verified v1.03 full BPS patches without ROM data
+      - name: Assemble verified historical patches and stage v1.04 BPS files without ROM data
         run: python3 site/patches/assemble_release.py
       - name: Verify v1.03 release candidate against existing BPS patch chain
         run: python3 tests/release-v103-candidate.py
+      - name: Verify v1.04 repository downloads
+        run: python3 tests/release-v104.test.py
       - name: Package approved fan artwork
         run: python3 site/media/build_art_pack.py
       - name: Check static site
@@ -85,7 +88,9 @@ jobs:
           english = json.loads((site/'patches/releases.json').read_text())
           spanish = json.loads((site/'patches/spanish-releases.json').read_text())
           assert set(english['versions']) & set(spanish['versions']) == {'16777216:805E24CA'}
-          for m in (english, spanish):
+          official = json.loads((site/'patches/official-releases.json').read_text())
+          assert not set(official['versions']) & (set(english['versions']) | set(spanish['versions']))
+          for m in (english, spanish, official):
               assert m['target'] in m['versions']
               for key in m['versions']:
                   assert key in m['romSha256'] and len(m['romSha256'][key]) == 64

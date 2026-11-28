@@ -1,5 +1,5 @@
 {
-  "latest": "1.03.2",
+  "latest": "1.04",
   "versions": {
     "16777216:805E24CA": "Original Spanish FINAL v1.1 (matching ROM)",
     "16777216:A3E3CC2F": "English v1.01",
@@ -8,9 +8,10 @@
     "16777216:D2866130": "English v1.02 (final release)",
     "16777216:6E1E5095": "English v1.03",
     "16777216:519E0696": "English v1.03 with Aqua ship hotfix",
-    "16777216:5DAE93EA": "English v1.03.2"
+    "16777216:5DAE93EA": "English v1.03.2",
+    "16777216:43CAA1F3": "Unofficial English v1.04"
   },
-  "target": "16777216:5DAE93EA",
+  "target": "16777216:43CAA1F3",
   "patches": [
     {
       "path": "patches/jessie-james-english-v1.01-a3e3cc2f.bps",
@@ -113,15 +114,94 @@
     },
     {
       "path": "patches/jessie-james-english-v1.03.2-5dae93ea.bps",
-      "crc": "GENERATED",
-      "bytes": 0,
-      "sha256": "GENERATED",
+      "crc": "23D36CE9",
+      "bytes": 1813047,
+      "sha256": "5be7ece1c3108a32ef42d6ea99e748a780dbe764578510493206847f898840fc",
       "from": "16777216:805E24CA",
       "to": "16777216:5DAE93EA",
       "version": "1.03.2"
+    },
+    {
+      "path": "patches/jessie-james-english-v1.04-43caa1f3.bps",
+      "crc": "A02D8DF8",
+      "bytes": 1830651,
+      "sha256": "05c12190dbe5b2d130e86ebbadeb5fc39b637002936cb069b41d1a7a901b060e",
+      "from": "16777216:805E24CA",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-english-c043455c-to-v1.04-43caa1f3.bps",
+      "crc": "298DEB1B",
+      "bytes": 133640,
+      "sha256": "b9213a8531cbb52ea39e8e12a093bf5f0c3960c0e55eba65e801db4296e3d5d6",
+      "from": "16777216:C043455C",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-english-a3e3cc2f-to-v1.04-43caa1f3.bps",
+      "crc": "4F993695",
+      "bytes": 133320,
+      "sha256": "25d51bea0bf74efe1f9833584ee2de9812fc53522e79bccefc0a6f21217d3dd6",
+      "from": "16777216:A3E3CC2F",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-english-cadc8480-to-v1.04-43caa1f3.bps",
+      "crc": "108E0A7B",
+      "bytes": 133199,
+      "sha256": "2a57f612cfaea0e693dfb8bc287e4da072a3e58e45fccd9ac33f787fc3a8f2c1",
+      "from": "16777216:CADC8480",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-english-d2866130-to-v1.04-43caa1f3.bps",
+      "crc": "80683B98",
+      "bytes": 78596,
+      "sha256": "8058e1d05d9cba2c9b57f378e0fb8925cd3447f60e9c4ef87e826deab14f0dcc",
+      "from": "16777216:D2866130",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-english-6e1e5095-to-v1.04-43caa1f3.bps",
+      "crc": "346A875C",
+      "bytes": 69603,
+      "sha256": "58f2535e6ef2ee2f6ea12ecea2589bb473593012006e4f4004aefec2c254ae88",
+      "from": "16777216:6E1E5095",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
+    },
+    {
+      "path": "patches/jessie-james-english-5dae93ea-to-v1.04-43caa1f3.bps",
+      "crc": "914FB07D",
+      "bytes": 69585,
+      "sha256": "1e00628e046a989b441397b9950450b12a2feda098c0f691760577280ca4b3e7",
+      "from": "16777216:5DAE93EA",
+      "to": "16777216:43CAA1F3",
+      "version": "1.04"
     }
   ],
   "changelog": [
+    {
+      "version": "1.04",
+      "date": "28 November 2026",
+      "changes": [
+        "Support for the official English translation by RasenVolt. All previous QoL features and applicable bug fixes are included; the official translation and original splash screen are retained, with the Team Rocket theme music.",
+        "Unofficial English translation:",
+        "-- Additional bug fixes",
+        "-- Additional line wrapping fixes",
+        "-- Trainer AI enhancements",
+        "-- Trainer class reclassifications",
+        "Spanish QoL:",
+        "-- Restored official Spanish localisation for previously English text, including moves, abilities, Pokédex entries and battle messages. MrNightology’s original Spanish text remains unchanged.",
+        "-- Repaired UI graphics to use official Spanish localisation.",
+        "Applicable bug fixes, trainer AI improvements and previous QoL features are included across all three editions."
+      ]
+    },
     {
       "version": "1.03",
       "date": "22 November 2026",
@@ -182,6 +262,7 @@
     "16777216:D2866130": "286eb8b201dfca10057620f8aba3232565e90a83c4462a7a2a9c4dd277ff43ed",
     "16777216:6E1E5095": "46db7e5d85684a74de5640379e906fa8668f2f1f447879503ff201e6d316165d",
     "16777216:519E0696": "52a324288d83d11556f6f7b13443a90b4426d06ef6b56b92e9f3107719fda4e2",
-    "16777216:5DAE93EA": "b4c38765487980f6f366078895005848bbd1641688abd95b60dac8b2e5f59590"
+    "16777216:5DAE93EA": "b4c38765487980f6f366078895005848bbd1641688abd95b60dac8b2e5f59590",
+    "16777216:43CAA1F3": "c050c38c3446c608114d56b9e344368f051c4a461ac62f387994129d12c0bf30"
   }
 }

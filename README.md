@@ -6,14 +6,18 @@
 
 <h1 align="center">Pokémon Team Rocket: Jessie & James Edition</h1>
 
-<p align="center"><strong>Unofficial English Translation</strong></p>
+<p align="center"><strong>Quality of Life (QoL) &amp; English Localisation</strong></p>
 
 <p align="center">
   <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/"><strong>Visit the Team Rocket website</strong></a>
   &nbsp;|&nbsp;
-  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases"><strong>Patch your ROM</strong></a>
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#official"><strong>Official English QoL</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases"><strong>Unofficial English</strong></a>
   &nbsp;|&nbsp;
   <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish">Español QoL</a>
+  &nbsp;|&nbsp;
+  <a href="#two-english-versions">Two English Versions?</a>
   &nbsp;|&nbsp;
   <a href="https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#changelog">Changelogs</a>
   &nbsp;|&nbsp;
@@ -26,13 +30,21 @@
 
 ## Releases
 
-**Unofficial English v1.04** -- 28 November 2026.
+**v1.04 -- 28 November 2026**
 
-[Patch your ROM](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases) or see the [v1.04 release notes and downloads](docs/RELEASE-v1.04.md). The patcher supports the original Spanish FINAL v1.1 ROM and earlier unofficial English builds. The output CRC32 for v1.04 is `43CAA1F3`. Keep backups of your ROM and save. No pre-patched ROMs.
+There are now three separate patches. Choose the one that matches the ROM you want to play.
 
-**Official English QoL v1.04** -- RasenVolt's [official English translation](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19) is now supported by its own [QoL patcher](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#official). Use the original official English v1.1 ROM (CRC32 `9ED6BE84`). Output CRC32: `EF0BB0A2`.
+| Edition | Required base ROM | BPS patch | Browser patcher |
+| --- | --- | --- | --- |
+| **Official English QoL v1.04** | RasenVolt's official English v1.1 (`9ED6BE84`) | [Download](downloads/jessie-james-official-english-qol-v1.04-ef0bb0a2.bps) | [Official English QoL](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#official) |
+| **Unofficial English v1.04** | Spanish FINAL v1.1 (`805E24CA`) or supported earlier unofficial English versions | [Download full patch](downloads/jessie-james-english-v1.04-43caa1f3.bps) | [Unofficial English](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases) |
+| **Spanish QoL v1.04** | Spanish FINAL v1.1 (`805E24CA`) or supported earlier Spanish QoL versions | [Download full patch](downloads/jessie-james-spanish-qol-v1.04-1c4a1771.bps) | [Español QoL](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish) |
 
-[Two English Versions?](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#two-english-versions)
+The full BPS patches are for the original ROMs listed above. If you're updating an earlier patched version, use the appropriate browser patcher or see the [v1.04 release notes and incremental patches](docs/RELEASE-v1.04.md).
+
+The official English QoL patch does **not** contain my unofficial translation. It retains RasenVolt's dialogue, original translation scripting and splash screen, with my QoL features, applicable fixes and Team Rocket theme music added. You'll need to get the [official English release](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19) first.
+
+The output CRC32 values are `EF0BB0A2` (official English QoL), `43CAA1F3` (unofficial English) and `1C4A1771` (Spanish QoL). The browser patchers verify compatibility and apply the patch locally on your device. Keep backups of your original ROM and save. No pre-patched ROMs are distributed here.
 
 ## Prefer to play español?
 
@@ -41,6 +53,8 @@ Si prefieres jugar a la versión original en español, he preparado otro parche 
 **Modo difícil opcional** -- He escrito scripts propios para mejorar la IA de los entrenadores, he ampliado sus equipos y he dado más variedad a sus movimientos, sin subir los niveles ni imponer restricciones al jugador.
 
 **Otras mejoras incluidas** -- Modos de combate Clásico y Moderno (con división físico/especial, habilidades actualizadas y MT reutilizables en Moderno), EXP. ALL opcional, estadísticas de naturaleza diferenciadas por colores, información de movimientos al pulsar L e indicadores de efectividad, Mentas de Naturaleza, Chapas Plateadas y Doradas, bayas que reducen los EV, los seis objetos Power para entrenar EV, lectores de EV e IV en la base del Team Rocket, mayor capacidad de la Mochila y precios de hasta cinco cifras.
+
+Novedades de v1.04: correcciones de errores, mejoras de IA y clases de entrenadores, restauración de la localización oficial en español de textos de movimientos, habilidades, Pokédex y mensajes de combate, y correcciones de los gráficos de la interfaz. Los textos originales de MrNightology se mantienen.
 
 [Ver las mejoras de la versión en español](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#spanish).
 
@@ -56,17 +70,33 @@ The game covers **Kanto and Johto**. It also includes the Battle Subway, shop ro
 
 [View MrNightology's original Spanish release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
 
-## Translation
+## Two English Versions?
 
-This is my unofficial English translation of the completed v1.1 game. I'm not affiliated with the original developer.
+There are two English releases for Pokémon Team Rocket: Jessie & James Edition. My [Unofficial English Translation](https://xbaconator9000x.github.io/Unofficial-Jessie-James-Edition-English-Translation/#releases), which was released on 17/11/2026, and the [Official English Translation](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19) by [RasenVolt](https://x.com/RasenVolt), which was released on 27/11/2026.
 
-I extracted the Spanish text and replaced matching FireRed lines with their official English versions. For the rest, I used Google Translate as a starting point, then went through the dialogue with the anime as a reference for the characters' voices. I also fixed text wrapping and page breaks where needed.
+I created my version without explicit permission from MrNightology. I started development in June 2026, prior to the official Spanish v1.1 release. I attempted to get approval from MrNightology very late in development, but when I didn't hear back from him, I went ahead and released my patch anyway. However, MrNightology requested that I not proceed with the release, as RasenVolt was already working on the official translation. Unfortunately, I had already published my translation by the time I saw his request. As such, I suspended downloads for my unofficial English translation until after RasenVolt's official translation was released.
 
-I also added optional gameplay features and quality-of-life changes, while keeping the original story intact.
+Now that the official translation has been released, I've added support for it so that players can enjoy my original Quality of Life (QoL) improvements in the official release! I've since reinstated downloads for my unofficial English translation.
+
+### Which version is better?
+
+The official translation by RasenVolt is <strong><u>the definitive release</u></strong> of MrNightology's original game! It follows the original Spanish text precisely and preserves MrNightology's intent in its wording and characterisation.
+
+The unofficial translation takes more liberties with the characters' voices. As someone who isn't fluent in Spanish, I took heavy inspiration from the anime to guide my translation and interpretation of the characters. The result is that the voices of the core characters in the game are heavily inspired by their characterisation in the English anime, in a way that the official translation doesn't replicate, for better or worse. This also means that my translation may deviate from some of MrNightology's original intent and characterisation.
+
+But which version is better? That comes down to personal taste. If you're unsure, I suggest you go with the official release, as it captures the developer's vision far more accurately than my translation.
+
+<a id="translation"></a>
+
+## Quality of life and translation
+
+With v1.04, I've adapted my QoL features and bug fixes for RasenVolt's official English translation, as well as updating my unofficial English translation and the Spanish QoL patch. I'm not affiliated with the original developer.
+
+For my unofficial English version, I extracted the Spanish text and replaced matching FireRed lines with their official English versions. For the rest, I used Google Translate as a starting point, then went through the dialogue with the anime as a reference for the characters' voices. I also fixed text wrapping and page breaks where needed.
 
 ### Quality of life
 
-These are the gameplay options and conveniences I've added to the English release:
+These are the gameplay options and conveniences I've added across all three editions:
 
 - **Classic / Modern battles** -- Choose the original Gen 3 battle mechanics or the physical/special split and updated ability effects. TMs remain single-use in Classic Mode and are reusable in Modern Mode.
 - **Optional Hard Mode** -- Smarter trainer AI, revised teams and more strategic battles without simply raising enemy levels.
@@ -138,7 +168,18 @@ No sign-in or personal details needed. Reports and attachments aren't public. Pl
 
 ### QoL / Translation v1.04 -- 28 November 2026
 
-See the [full v1.04 changelog](docs/RELEASE-v1.04.md#changelog).
+- Support for the official English translation by RasenVolt. All previous QoL features and applicable bug fixes are included; the official translation and original splash screen are retained, with the Team Rocket theme music.
+- Unofficial English translation:
+  - Additional bug fixes
+  - Additional line wrapping fixes
+  - Trainer AI enhancements
+  - Trainer class reclassifications
+- Spanish QoL:
+  - Restored official Spanish localisation for previously English text, including moves, abilities, Pokédex entries and battle messages. MrNightology’s original Spanish text remains unchanged.
+  - Repaired UI graphics to use official Spanish localisation.
+- Applicable bug fixes, trainer AI improvements and previous QoL features are included across all three editions.
+
+[Full v1.04 changelog and incremental download links](docs/RELEASE-v1.04.md#changelog).
 
 ### English v1.03 -- 22 November 2026
 
@@ -186,10 +227,12 @@ Full credit for the original game, story, maps, artwork and gameplay goes to **M
 
 Official English translation -- [RasenVolt](https://x.com/RasenVolt). [Official English release](https://x.com/TeamRocketGBA/status/2126289020783096072?a=-cS06P4WTo4NdA5naok&s=19).
 
-English localisation and patcher maintenance -- [@xbaconator9000x](https://github.com/xbaconator9000x).
+Unofficial English localisation and patcher maintenance (including QoL additions) -- [@xbaconator9000x](https://github.com/xbaconator9000x).
 
 <a id="art-credit"></a>
 Box art and logos -- **u/SnowMudK99**, used with permission.
+
+Unofficial fan project. Not endorsed by the original developer.
 
 Small Team Rocket R icons and the website favicon are sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Team_Rocket_Logo.svg). Original Spanish screenshots are from [MrNightology's release](https://www.whackahack.com/juegos/pokemon-team-rocket-jessie-james/).
 
